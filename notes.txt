@@ -1,0 +1,85 @@
+MEMORY LAYOUT:
+0x0000 - 0x00FF - zero page
+0x0100 - 0x01FF - stack
+0x0200 - 0xFFFF - general purpose
+
+INSTRUCTION LAYOUT:
+xxxxxxyy
+zcaxxxxx - opcode
+z - zero flag
+c - carry flag
+a - addressing mode
+xxxxx - opcode
+
+REGISTERS:
+%A  -  connected to ALU
+%B  -  connected to ALU
+
+INSTRUCTION SET:
+-- moves value
+MOV     %REG    %REG
+MOV     %MEM    %REG
+MOV     %REG    %MEM
+MOV     $VAL    %REG
+MOV     $VAL    %MEM
+-- adds %A and %B, stores result in %REG or %MEM
+ADD     %REG
+ADD     %MEM
+-- subtracts %A from %B, stores result in %REG or %MEM
+SUBA    %REG
+SUBA    %MEM
+-- subtracts %B from %A, stores result in %REG or %MEM
+SUBB    %REG
+SUBB    %MEM
+-- ors %A and %B, stores result in %REG or %MEM
+OR      %REG
+OR      %MEM
+-- ands %A and %B, stores result in %REG or %MEM
+AND     %REG
+AND     %MEM
+-- negates bits of %REG, stores result in %REG or %MEM
+NEG     %REG    %REG
+NEG     %REG    %MEM
+-- arithmetical inverse of %REG, stores result in %REG or %MEM
+INV     %REG    %REG
+INV     %REG    %MEM
+-- shifts %REG right, stores result in %REG or %MEM
+SHR     %REG    %REG
+SHR     %REG    %MEM
+-- shifts %REG left, stores result in %REG or %MEM
+SHL     %REG    %REG
+SHL     %REG    %MEM
+-- pushes value to stack
+PUSH    %REG
+PUSH    %MEM
+PUSH    $VAL
+-- pops value from stack
+POP     %REG
+POP     %MEM
+-- jumps to address
+JMP     %REG
+JMP     %MEM
+
+Signals:
+HLT
+AI          (BUS -> %A)
+AO          (%A  -> BUS)
+BI          (BUS -> %B)
+BO          (%B  -> BUS)
+ALUOUT      (ALU -> BUS)
+MI          (BUS -> %MBR)
+LMAI        (BUS -> %LMAR)
+HMAI        (BUS -> %HMAR)
+M1
+M2
+ALU1
+ALU2
+ALU3
+ALU4
+ALU5
+ALU6
+ALU7
+ALU8
+PCI         (%PC -> %PC + 1)
+PCLL        (BUS -> %PCL)
+PCLH        (BUS -> %PCH)

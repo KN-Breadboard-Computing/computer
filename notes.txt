@@ -1,7 +1,7 @@
 MEMORY LAYOUT:
-0x0000 - 0x00FF - zero page
-0x0100 - 0x01FF - stack
-0x0200 - 0xFFFF - general purpose
+0x00000 - 0x000FF - zero page
+0x00200 - 0x0FFFF - general purpose
+0x10000 - 0x1FFFF - stack
 
 INSTRUCTION LAYOUT:
 xxxxxxyy
@@ -83,3 +83,8 @@ ALU8
 PCI         (%PC -> %PC + 1)
 PCLL        (BUS -> %PCL)
 PCLH        (BUS -> %PCH)
+SI
+SO
+SINC
+SDEC
+

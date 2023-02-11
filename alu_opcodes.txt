@@ -1,6 +1,6 @@
 code:		description:
 
-0000		don't send anything on the data bus
+0000		send 0 on the data bus
 0001		send A on the data bus
 0010		send B on the data bus
 0011		send A+B on the data bus

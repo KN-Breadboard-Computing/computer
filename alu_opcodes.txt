@@ -12,7 +12,7 @@ code:		description:
 1001		send NOT B on the data bus
 1010		send A OR B on the data bus
 1011		send A AND B on the data bus
-1100		send A >> 1 on the data bus
-1101		send A << 1 on the data bus
-1110		send B >> 1 on the data bus
-1111		send B << 1 on the data bus
+1100		send A << 1 on the data bus
+1101		send A >> 1 on the data bus
+1110		send B << 1 on the data bus
+1111		send B >> 1 on the data bus

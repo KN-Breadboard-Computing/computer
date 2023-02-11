@@ -32,13 +32,29 @@ uint8_t WORD_SIZE = 8;
 uint8_t ADDRESS_BITS[13] = { ADDRESS_BIT_0, ADDRESS_BIT_1, ADDRESS_BIT_2, ADDRESS_BIT_3, ADDRESS_BIT_4, ADDRESS_BIT_5, ADDRESS_BIT_6, ADDRESS_BIT_7, ADDRESS_BIT_8, ADDRESS_BIT_9, ADDRESS_BIT_10, ADDRESS_BIT_11, ADDRESS_BIT_12 };
 uint8_t ADDRESS_SIZE = 13;
 
-uint16_t NON_ZERO_MEMORY_SIZE = 5;
-uint16_t NON_ZERO_MEMORY[5][2] = {
-  { 0b0000000001111, 0b10000000 }, 
-  { 0b0000000001001, 0b10010011 }, 
-  { 0b0000000001011, 0b10000011 }, 
-  { 0b0000000001101, 0b10000111 }, 
-  { 0b0000000001010, 0b10001111 }
+typedef struct {
+  uint16_t address;
+  uint8_t value;
+} MemoryCell;
+
+uint16_t NON_ZERO_MEMORY_SIZE = 16;
+MemoryCell NON_ZERO_MEMORY[16] = {
+  { 0b0000000000000, 0b10000010 }, 
+  { 0b0000000000001, 0b10000100 }, 
+  { 0b0000000000010, 0b01000010 }, 
+  { 0b0000000000011, 0b00000110 }, 
+  { 0b0000000000100, 0b00010100 },
+  { 0b0000000000101, 0b00001010 }, 
+  { 0b0000000000110, 0b00001110 }, 
+  { 0b0000000000111, 0b00010110 },
+  { 0b0000000001000, 0b10010100 }, 
+  { 0b0000000001001, 0b01001010 }, 
+  { 0b0000000001010, 0b11000110 }, 
+  { 0b0000000001011, 0b11011111 }, 
+  { 0b0000000001100, 0b00100110 },
+  { 0b0000000001101, 0b10100110 }, 
+  { 0b0000000001110, 0b01100110 }, 
+  { 0b0000000001111, 0b11100110 },
 };
 
 
@@ -69,14 +85,14 @@ void output_address(uint16_t address) {
 void write_memory_to_eeprom() {
   for(uint16_t i = 0; i < NON_ZERO_MEMORY_SIZE; i++) {
     // save given value to register 
-    output_word((uint8_t) NON_ZERO_MEMORY[i][1]);
+    output_word(NON_ZERO_MEMORY[i].value);
 
     digitalWrite(REG_CLK, HIGH);
     delay(50);
     digitalWrite(REG_CLK, LOW);
 
     // save value at given address
-    output_address(NON_ZERO_MEMORY[i][0]);
+    output_address(NON_ZERO_MEMORY[i].address);
 
     digitalWrite(EEPROM_WE, LOW);
     delay(10);

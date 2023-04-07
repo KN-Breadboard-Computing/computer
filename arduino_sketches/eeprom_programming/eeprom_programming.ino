@@ -1,16 +1,42 @@
 #include "defines.h"
 
 //#include "alu_eeprom.h"
-//#include "control_unit_eeprom_a1.h"
-//#include "control_unit_eeprom_a2.h"
-//#include "control_unit_eeprom_b1.h"
-#include "control_unit_eeprom_b2.h"
-//#include "control_unit_eeprom_c1.h"
-//#include "control_unit_eeprom_c2.h"
-//#include "control_unit_eeprom_d1.h"
-//#include "control_unit_eeprom_d2.h"
-//#include "control_unit_eeprom_e1.h"
-//#include "control_unit_eeprom_e2.h"
+
+//#include "fetch/eeprom_a.h"
+//#include "manual_access/eeprom_a1.h"
+//#include "manual_access/eeprom_a2.h"
+//#include "manual_access/eeprom_a3.h"
+//#include "manual_access/eeprom_a4.h"
+//#include "decode/eeprom_a1.h"
+
+//#include "fetch/eeprom_b.h"
+//#include "manual_access/eeprom_b1.h"
+//#include "manual_access/eeprom_b2.h"
+//#include "manual_access/eeprom_b3.h"
+//#include "manual_access/eeprom_b4.h"
+//#include "decode/eeprom_b1.h"
+
+//#include "fetch/eeprom_c.h"
+//#include "manual_access/eeprom_c1.h"
+//#include "manual_access/eeprom_c2.h"
+//#include "manual_access/eeprom_c3.h"
+//#include "manual_access/eeprom_c4.h"
+//#include "decode/eeprom_c1.h"
+
+//#include "fetch/eeprom_d.h"
+//#include "manual_access/eeprom_d1.h"
+//#include "manual_access/eeprom_d2.h"
+//#include "manual_access/eeprom_d3.h"
+//#include "manual_access/eeprom_d4.h"
+#include "decode/eeprom_d1.h"
+
+//#include "fetch/eeprom_e.h"
+//#include "manual_access/eeprom_e1.h"
+//#include "manual_access/eeprom_e2.h"
+//#include "manual_access/eeprom_e3.h"
+//#include "manual_access/eeprom_e4.h"
+//#include "decode/eeprom_e1.h"
+
 
 void output_word(uint8_t word) {
   for(int i = 0; i < WORD_SIZE; i++) {
@@ -42,22 +68,22 @@ void write_memory_to_eeprom() {
     output_word(NON_ZERO_MEMORY[i].value);
 
     digitalWrite(REG_CLK, HIGH);
-    delay(50);
+    delay(5);
     digitalWrite(REG_CLK, LOW);
 
     // save value at given address
     output_address(NON_ZERO_MEMORY[i].address);
 
     digitalWrite(EEPROM_WE, LOW);
-    delay(10);
+    delay(1);
 
     digitalWrite(EEPROM_CE, HIGH);
-    delay(10);
+    delay(1);
     digitalWrite(EEPROM_CE, LOW);
-    delay(10);
+    delay(1);
     digitalWrite(EEPROM_CE, HIGH);
 
-    delay(10);
+    delay(1);
     digitalWrite(EEPROM_WE, HIGH);
   }
 }

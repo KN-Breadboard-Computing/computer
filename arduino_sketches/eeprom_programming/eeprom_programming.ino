@@ -28,14 +28,14 @@
 //#include "manual_access/eeprom_d2.h"
 //#include "manual_access/eeprom_d3.h"
 //#include "manual_access/eeprom_d4.h"
-#include "decode/eeprom_d1.h"
+//#include "decode/eeprom_d1.h"
 
 //#include "fetch/eeprom_e.h"
 //#include "manual_access/eeprom_e1.h"
 //#include "manual_access/eeprom_e2.h"
 //#include "manual_access/eeprom_e3.h"
 //#include "manual_access/eeprom_e4.h"
-//#include "decode/eeprom_e1.h"
+#include "decode/eeprom_e1.h"
 
 
 void output_word(uint8_t word) {

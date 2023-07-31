@@ -12,6 +12,14 @@ class MultiplexerOutput:
     SHIFT_RIGHT_LOGIC = 0b00000111
 
 
+class SignalMask:
+    INVERSE_REG_A = 0b00001000
+    INVERSE_REG_B = 0b00010000
+    NON_ZERO_REG_A = 0b00100000
+    NON_ZERO_REG_B = 0b01000000
+    INVERSE_OR_RESULT = 0b10000000
+
+
 class AluLogicEeprom(Eeprom):
     def __init__(self):
         super().__init__()
@@ -22,19 +30,19 @@ class AluLogicEeprom(Eeprom):
         word = 0b00000000
 
         if inverse_reg_a:
-            word |= 0b00001000
+            word |= SignalMask.INVERSE_REG_A
 
         if inverse_reg_b:
-            word |= 0b00010000
+            word |= SignalMask.INVERSE_REG_B
 
         if not zero_reg_a:
-            word |= 0b00100000
+            word |= SignalMask.NON_ZERO_REG_A
 
         if not zero_reg_b:
-            word |= 0b01000000
+            word |= SignalMask.NON_ZERO_REG_B
 
         if inverse_or_result:
-            word |= 0b10000000
+            word |= SignalMask.INVERSE_OR_RESULT
 
         word |= multiplexer_output
 

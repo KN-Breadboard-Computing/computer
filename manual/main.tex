@@ -64,6 +64,15 @@
 
 \pagebreak
 
+\subsection{Flags}
+\begin{itemize}
+  \item \texttt{REG\_F\_0}: sign flag(1 $\rightarrow$ result is negative; 0 $\rightarrow$ result is non-negative)
+  \item \texttt{REG\_F\_1}: parity flag(1 $\rightarrow$ result is odd; 0 $\rightarrow$ result is even)
+  \item \texttt{REG\_F\_2}: zero flag(1 $\rightarrow$ result is not equal to zero; 0 $\rightarrow$ result is equal to zero)
+  \item \texttt{REG\_F\_3}: carry flag(for unsigned number operations: 1 $\rightarrow$ result is out of range; 0 $\rightarrow$ result is correct)
+  \item \texttt{REG\_F\_4}: overflow flag(for signed number operations: 1 $\rightarrow$ result is out of range; 0 $\rightarrow$ result is correct)
+\end{itemize}
+
 \subsection{Signals}
 \begin{table}[ht!]
   \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}

@@ -37,8 +37,6 @@ class Eeprom:
 
             print(f'0b{address:0{INPUT_BITS_NUMBER}b} -> 0b{word:0{OUTPUT_BITS_NUMBER}b}')
 
-            #time.sleep(0.1)
-
             response = ''
             while response != 'D':
                 if serial_device.inWaiting():

@@ -1,20 +1,18 @@
 #include "defines.h"
 
-//#include "regs_move.h"
-#include "mem_move.h"
-
-int buttonState = 0;
+int buttonState;
+MessageBuffer messageBuffer;
 
 
 void tick() {
   digitalWrite(CLOCK_PIN, HIGH);
-  delay(20);
+  delay(5);
   digitalWrite(CLOCK_PIN, LOW);
 }
 
 
 void latchAddress(uint16_t address) {
-  for(int i = 0; i < ADDR_SIZE_LOW; i++) {
+  for(int i = 0; i < ADDR_LOW_SIZE; i++) {
     if(address & (1 << i)) {
       digitalWrite(DATA_BITS[i], HIGH);
     }
@@ -24,20 +22,20 @@ void latchAddress(uint16_t address) {
   }
 
   digitalWrite(LATCH_ADDR_LOW, HIGH);
-  delay(50);
+  delay(5);
   digitalWrite(LATCH_ADDR_LOW, LOW);
 
-  for(int i = ADDR_SIZE_LOW; i < ADDR_SIZE_HIGH + ADDR_SIZE_LOW; i++) {
+  for(int i = ADDR_LOW_SIZE; i < ADDR_HIGH_SIZE + ADDR_LOW_SIZE; i++) {
     if(address & (1 << i)) {
-      digitalWrite(DATA_BITS[i - ADDR_SIZE_LOW], HIGH);
+      digitalWrite(DATA_BITS[i - ADDR_LOW_SIZE], HIGH);
     }
     else {
-      digitalWrite(DATA_BITS[i - ADDR_SIZE_LOW], LOW);
+      digitalWrite(DATA_BITS[i - ADDR_LOW_SIZE], LOW);
     }
   }
 
   digitalWrite(LATCH_ADDR_HIGH, HIGH);
-  delay(50);
+  delay(5);
   digitalWrite(LATCH_ADDR_HIGH, LOW);
 }
 
@@ -53,28 +51,15 @@ void latchWord(uint8_t word) {
   }
 
   digitalWrite(LATCH_WORD, HIGH);
-  delay(50);
+  delay(5);
   digitalWrite(LATCH_WORD, LOW);
 }
 
 
-void writeProgram() {
-  for(uint16_t i = 0; i < PROGRAM_SIZE; i++) {
-    tick();
-    tick();
-    tick();
-    tick();
-    latchAddress(PROGRAM[i].address);
-    latchWord(PROGRAM[i].word);
-    tick();
-    tick();
-    tick();
-    tick();
-  }
-}
-
-
 void setup() {
+  Serial.begin(115200);
+  while (!Serial) { }
+  
   for(uint8_t i = 0; i < DATA_SIZE; i++) {
     pinMode(DATA_BITS[i], OUTPUT);
   }
@@ -82,7 +67,8 @@ void setup() {
   pinMode(LATCH_WORD, OUTPUT);
   pinMode(LATCH_ADDR_HIGH, OUTPUT);
   pinMode(LATCH_ADDR_LOW, OUTPUT);
-  pinMode(OUT_REGISTERS, OUTPUT);
+  pinMode(OUT_WORD, OUTPUT);
+  pinMode(OUT_ADDR, OUTPUT);
 
   pinMode(CLOCK_PIN, OUTPUT);
 
@@ -95,30 +81,41 @@ void setup() {
 
   digitalWrite(CLOCK_PIN, LOW);
   digitalWrite(LED_BUILTIN, LOW);
+
+  digitalWrite(OUT_WORD, HIGH);
+  digitalWrite(OUT_ADDR, HIGH);
 }
 
 
 void loop() { 
   buttonState = digitalRead(BUTTON_PIN);
-  if(buttonState == HIGH) {
-    delay(1000);
+  if(buttonState == HIGH) {  }
 
-    digitalWrite(LED_BUILTIN, HIGH);
-    digitalWrite(OUT_REGISTERS, LOW);
+  if(Serial.available() >= 4) {
+    Serial.readBytes(messageBuffer.bytes, 4);
 
-    writeProgram();
-
-    digitalWrite(LED_BUILTIN, LOW);
-    digitalWrite(OUT_REGISTERS, HIGH);
-
-    
-    while(1) {
-      buttonState = digitalRead(BUTTON_PIN);
-      if(buttonState == HIGH) {
-        tick();
-        delay(100);
-      }
+    if(messageBuffer.message.action & OUT_WORD_BIT) {
+      digitalWrite(OUT_WORD, LOW);
     }
-    
+    else {
+      digitalWrite(OUT_WORD, HIGH);
+    }
+
+    if(messageBuffer.message.action & OUT_ADDR_BIT) {
+      digitalWrite(OUT_ADDR, LOW);
+    }
+    else {
+      digitalWrite(OUT_ADDR, HIGH);
+    }
+
+    if(messageBuffer.message.action & SAVE_WORD_BIT) {
+      latchWord(messageBuffer.message.word);
+    }
+
+    if(messageBuffer.message.action & SAVE_ADDR_BIT) {
+      latchAddress(messageBuffer.message.address); 
+    }
+
+    Serial.println(CALLBACK_CODE);
   }
 }

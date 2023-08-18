@@ -1,5 +1,8 @@
 #include "defines.h"
 
+MessageBuffer messageBuffer;
+
+
 void output_word(uint8_t word) {
   for(uint8_t i = 0; i < WORD_SIZE; i++) {
     if(word & (1 << i)) {
@@ -21,11 +24,8 @@ void output_address(uint16_t address) {
       digitalWrite(ADDRESS_BITS[i], LOW);
     }
   }
-}
+} 
 
-
-MessageBuffer messageBuffer;
- 
 
 void setup() {
   Serial.begin(115200);

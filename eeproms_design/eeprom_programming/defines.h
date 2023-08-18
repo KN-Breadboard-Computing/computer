@@ -29,6 +29,9 @@
 #define EEPROM_CE       16
 
 
+#define CALLBACK_CODE        'D' 
+
+
 uint8_t WORD_BITS[8] = { WORD_BIT_7, WORD_BIT_6, WORD_BIT_5, WORD_BIT_4, WORD_BIT_3, WORD_BIT_2, WORD_BIT_1, WORD_BIT_0 };
 uint8_t WORD_SIZE = 8;
 

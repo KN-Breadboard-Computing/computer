@@ -52,6 +52,8 @@
     \item A Register: \texttt{REG\_A\_0}, \texttt{REG\_A\_1}, \dots, \texttt{REG\_A\_7}
     \item B Register: \texttt{REG\_B\_0}, \texttt{REG\_B\_1}, \dots, \texttt{REG\_B\_7}
     \item Temporary Register: \texttt{REG\_TMP\_00}, \texttt{REG\_TMP\_01}, \dots, \texttt{REG\_TMP\_15}
+    \item Memory Address Register: \texttt{REG\_MAR\_00}, \texttt{REG\_MAR\_01}, \dots, \texttt{REG\_MAR\_15}
+    \item Memory Buffer Register: \texttt{REG\_MBR\_0}, \texttt{REG\_MBR\_1}, \dots, \texttt{REG\_MBR\_7}
     \item Flag Register:  \texttt{REG\_F\_0}, \texttt{REG\_F\_1}, \dots, \texttt{REG\_F\_7}
     \item Instruction Register: \texttt{REG\_IR\_0}, \texttt{REG\_IR\_1}, \dots, \texttt{REG\_IR\_7}
 \end{itemize}
@@ -75,7 +77,7 @@
 
 \subsection{Signals}
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
   \multicolumn{4}{|c|}{\textbf{Clock}} \\
   \hline
@@ -88,136 +90,138 @@
 \end{table}
 
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
-  \multicolumn{4}{|c|}{\textbf{Registers}} \\
+  \multicolumn{4}{|c|}{\textbf{Arithmetic Logic Unit}} \\
   \hline
   \texttt{REG\_A\_LOAD} & A0 & load data from data bus to register A & combined with \texttt{CLK} \\
   \hline
   \texttt{REG\_B\_LOAD} & A1 & load data from data bus to register B & combined with \texttt{CLK} \\
   \hline
-  \texttt{TMP\_H\_LOAD} & A2 & load data from data/address bus to higher bits of temporary register & combined with \texttt{CLK} \\
+  \texttt{ALU\_OPC\_0} & A2 & bit 0 of operation code to perform & \\
   \hline
-  \texttt{TMP\_L\_LOAD} & A3 & load data from data/address bus to lower bits of temporary register &  combined with \texttt{CLK} \\
+  \texttt{ALU\_OPC\_1} & A3 & bit 1 of operation code to perform & \\
   \hline
-  $\overline{\texttt{TMP\_H\_OUT}}$ & A4 & pass data from higher bits of temporary register to data/address bus & \\
+  \texttt{ALU\_OPC\_2} & A4 & bit 2 of operation code to perform & \\
   \hline
-  $\overline{\texttt{TMP\_L\_OUT}}$ & A5 & pass data from lower bits of temporary register to data/address bus & \\
+  \texttt{ALU\_OPC\_3} & A5 & bit 3 of operation code to perform & \\
   \hline
-  $\overline{\texttt{PASS\_DATA}}$ & A6 & enable passing data from data bus/temporary register to temporary register/data bus  & \\
+  \texttt{ALU\_OPC\_4} & A6 & bit 4 of operation code to perform & \\
   \hline
-  $\overline{\texttt{PASS\_ADDRESS}}$ & A7 & enable passing address from address bus/temporary register to temporary register/address bus & \\
+  \texttt{REG\_F\_LOAD} & A7 & load flags of current operation to flag register & combined with \texttt{CLK} \\
   \hline
-  \texttt{DATA\_DIR} & B0 & data flow direction selector: pass data from data bus/temporary register to temporary register/data bus & \\
+  $\overline{\texttt{REG\_F\_OUT}}$ & B0 & pass data from flag register to data bus & \\
   \hline
-  \texttt{ADDRESS\_DIR} & B1 & address direction selector: pass data from address bus/temporary register to temporary register/address bus  & \\
-  \hline
-  \end{tabularx}
-  \caption{Registers Signals Description}
-\end{table}
-
-\begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
-  \hline
-  \multicolumn{4}{|c|}{\textbf{Arithmetic Logic Unit}} \\
-  \hline
-  \texttt{ALU\_OPC\_0} & B2 & bit 0 of operation code to perform & \\
-  \hline
-  \texttt{ALU\_OPC\_1} & B3 & bit 1 of operation code to perform & \\
-  \hline
-  \texttt{ALU\_OPC\_2} & B4 & bit 2 of operation code to perform & \\
-  \hline
-  \texttt{ALU\_OPC\_3} & B5 & bit 3 of operation code to perform & \\
-  \hline
-  \texttt{ALU\_OPC\_4} & B6 & bit 4 of operation code to perform & \\
-  \hline
-  \texttt{REG\_F\_LOAD} & B7 & load flags of current operation to flag register & combined with \texttt{CLK} \\
-  \hline
-  $\overline{\texttt{REG\_F\_OUT}}$ & C0 & pass data from flag register to data bus & \\
-  \hline
-  $\overline{\texttt{ALU\_OUT}}$ & C1 & pass current operation result to data bus & \\
+  $\overline{\texttt{ALU\_OUT}}$ & B1 & pass current operation result to data bus & \\
   \hline
   \end{tabularx}
   \caption{Arithmetic Logic Unit Signals Description}
 \end{table}
 
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
-  \multicolumn{4}{|c|}{\textbf{Memory Unit}} \\
+  \multicolumn{4}{|c|}{\textbf{Data Bus - Address Bus Connector}} \\
   \hline
-  \texttt{MAR\_LOAD} & C2 & load data from address bus to memory address register & combined with \texttt{CLK} \\
+  \texttt{REG\_TMPH\_LOAD} & B2 & load data from data/address bus to higher bits of temporary register & combined with \texttt{CLK} \\
   \hline
-  \texttt{MBR\_LOAD} & C3 & load data from data bus to memory buffer register & combined with \texttt{CLK} \\
+  \texttt{REG\_TMPL\_LOAD} & B3 & load data from data/address bus to lower bits of temporary register &  combined with \texttt{CLK} \\
   \hline
-  $\overline{\texttt{MAR\_OUT}}$ & C4 & pass data from memory address register to address bus & \\
+  $\overline{\texttt{REG\_TMPH\_OUT}}$ & B4 & pass data from higher bits of temporary register to data/address bus & \\
   \hline
-  $\overline{\texttt{MBR\_OUT}}$ & C5 & pass data from memory buffer register to data bus & \\
+  $\overline{\texttt{REG\_TMPL\_OUT}}$ & B5 & pass data from lower bits of temporary register to data/address bus & \\
   \hline
-  $\overline{\texttt{MEM\_OUT}}$ & C6 & read data to memory buffer register from memory at address from memory address register & \\
+  $\overline{\texttt{REG\_TMP\_PASS\_ADDRESS}}$ & B6 & enable passing address from address bus/temporary register to temporary register/address bus & \\
   \hline
-  $\overline{\texttt{MEM\_IN}}$ & C7 & write data from memory buffer register to memory at address from memory address register & \\
+  $\overline{\texttt{REG\_TMPH\_PASS\_DATA}}$ & B7 & enable passing data from data bus/msb of temporary register to msb of temporary register/data bus  & \\
   \hline
-  \texttt{WORD\_DIR} & D0 & data flow direction selector: pass data from data bus/memory buffer register to memory buffer register/data bus & \\
+  $\overline{\texttt{REG\_TMPL\_PASS\_DATA}}$ & C0 & enable passing data from data bus/lsb of temporary register to lsb of temporary register/data bus  & \\
   \hline
-  $\overline{\texttt{PASS\_WORD}}$ & D1 &  enable passing data from data bus/memory buffer register to memory buffer register/data bus & \\
+  \texttt{REG\_TMP\_ADDRESS\_DIR} & C1 & address direction selector: from address bus/temporary register to temporary register/address bus  & \\
   \hline
-  \texttt{MEM\_PART} & D2 & additional bit of memory address; it is used to easy memory division & \\
+  \texttt{REG\_TMPH\_DATA\_DIR} & C2 & data flow direction selector: from data bus/msb of temporary register to msb of temporary register/data bus & \\
   \hline
-  $\overline{\texttt{ZERO\_PAGE}}$ & D3 & clear higher bits of memory address; it is used to faster access to memory at low addresses & \\
-  \hline
-  $\overline{\texttt{MAN\_INPUT}}$ & D4 & memory access selector: access to memory address register and memory buffer register by buttons or by buses & \\
+  \texttt{REG\_TMPL\_DATA\_DIR} & C3 & data flow direction selector: from data bus/lsb of temporary register to lsb temporary register/data bus & \\
   \hline
   \end{tabularx}
-  \caption{Memory Unit Signals Description}
+  \caption{Data Bus - Address Bus Connector Signals Description}
 \end{table}
 
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
   \multicolumn{4}{|c|}{\textbf{Program Counter}} \\
   \hline
-  $\overline{\texttt{PC\_LOAD}}$ & D5 & load address from address bus to program counter & \\
+  $\overline{\texttt{PC\_LOAD}}$ & C4 & load address from address bus to program counter & \\
   \hline
-  $\overline{\texttt{PC\_RST}}$ &  & set program counter to 0 & \\
+  $\overline{\texttt{PC\_RST}}$ & C5 & set program counter to 0x0000 & \\
   \hline
-  \texttt{PC\_TICK} & D6 & increment program counter & combined with $\overline{\texttt{CLK}}$ \\
+  \texttt{PC\_TICK} & C6 & increment program counter & combined with $\overline{\texttt{CLK}}$ \\
   \hline
-  $\overline{\texttt{PC\_OUT}}$ & D7 & pass data from program counter to address bus & \\
+  $\overline{\texttt{PC\_OUT}}$ & C7 & pass data from program counter to address bus & \\
   \hline
   \end{tabularx}
   \caption{Program Counter Signals Description}
 \end{table}
 
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
   \multicolumn{4}{|c|}{\textbf{Stack Counter}} \\
   \hline
-  $\overline{\texttt{STC\_LOAD}}$ & E0 & load address from address bus to stack counter & \\
+  $\overline{\texttt{STC\_LOAD}}$ & D0 & load address from address bus to stack counter & \\
   \hline
-  \texttt{STC\_RST} &  & set stack counter to 0 & \\
+  \texttt{STC\_RST} & D1 & set stack counter to 0x0000 & \\
   \hline
-  \texttt{STC\_TICK} & E1 & increment/decrement stack counter; increment/decrement depends on mode & combined with $\overline{\texttt{CLK}}$ \\
+  \texttt{STC\_TICK} & D2 & increment/decrement stack counter; increment/decrement depends on mode & combined with $\overline{\texttt{CLK}}$ \\
   \hline
-  \texttt{STC\_MODE} & E2 & stack counter operation selector: increment or decrement & \\
+  \texttt{STC\_MODE} & D3 & stack counter operation selector: increment or decrement & \\
   \hline
-  $\overline{\texttt{STC\_OUT}}$ & E3 & pass data from stack counter to address bus & \\
+  $\overline{\texttt{STC\_OUT}}$ & D4 & pass data from stack counter to address bus & \\
   \hline
   \end{tabularx}
   \caption{Stack Counter Signals Description}
 \end{table}
 
 \begin{table}[ht!]
-  \begin{tabularx}{\textwidth}{|M{2.5cm}|M{1cm}|m{8cm}|Y|}
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
+  \hline
+  \multicolumn{4}{|c|}{\textbf{Memory Unit}} \\
+  \hline
+  \texttt{REG\_MAR\_LOAD} & D5 & load data from address bus to memory address register & combined with \texttt{CLK} \\
+  \hline
+  \texttt{REG\_MBR\_LOAD} & D6 & load data from data bus to memory buffer register & combined with \texttt{CLK} \\
+  \hline
+  $\overline{\texttt{MEM\_OUT}}$ & D7 & read data to memory buffer register from memory at address from memory address register & \\
+  \hline
+  $\overline{\texttt{MEM\_IN}}$ & E0 & write data from memory buffer register to memory at address from memory address register & \\
+  \hline
+  \texttt{MEM\_PART} & E1 & additional bit of memory address; it is used to easy memory division & \\
+  \hline
+  $\overline{\texttt{ZERO\_PAGE}}$ & E2 & clear higher bits of memory address; it is used to faster access to memory at low addresses & \\
+  \hline
+  \texttt{REG\_MBR\_WORD\_DIR} & E3 & data flow direction selector: pass data from data bus/memory buffer register to memory buffer register/data bus & \\
+  \hline
+  $\overline{\texttt{REG\_MAR\_USE\_BTTNS}}$ & E4 & use buttons to enter value to set to memory address register & \\
+  \hline
+  $\overline{\texttt{REG\_MBR\_USE\_BTTNS}}$ & E5 & use buttons to enter value to set to memory buffer register & \\
+  \hline
+  $\overline{\texttt{REG\_MBR\_USE\_BUS}}$ & E6 & use bus to pass value to set to memory buffer register or get value from memory buffer register & \\
+  \hline
+  \end{tabularx}
+  \caption{Memory Unit Signals Description}
+\end{table}
+
+\begin{table}[ht!]
+  \begin{tabularx}{\textwidth}{|M{3.5cm}|M{1cm}|m{8cm}|Y|}
   \hline
   \multicolumn{4}{|c|}{\textbf{Control Unit}} \\
   \hline
-  \texttt{IR\_LOAD} & E4 & load instruction from data bus & combined with $\overline{\texttt{CLK}}$  \\
+  \texttt{IR\_LOAD} & F0 & load instruction from data bus & combined with $\overline{\texttt{CLK}}$  \\
   \hline
-  \texttt{MCC\_TICK} & E5 & increment microcode counter & combined with $\overline{\texttt{CLK}}$  \\
+  \texttt{MCC\_TICK} & F1 & increment microcode counter & combined with $\overline{\texttt{CLK}}$  \\
   \hline
-  $\overline{\texttt{MCC\_RST}}$ & E6 & set microcode counter to 0 & \\
+  $\overline{\texttt{MCC\_RST}}$ & F2 & set microcode counter to 0 & \\
   \hline
   \end{tabularx}
   \caption{Control Unit Signals Description}

@@ -33,6 +33,15 @@ def send_config(out_word, out_address, save_word, save_address, word = 0, addres
         if serial_device.inWaiting():
             response = serial_device.readline().decode('utf').strip()
 
+def get_val(num_str):
+    if 'x' in num_str:
+        return int(num_str, base=16)
+    
+    if 'b' in num_str:
+        return int(num_str, base=2)
+
+    return int(num_str, base=10)
+
 
 if __name__ == '__main__':
     device_name = '/dev/ttyUSB0'
@@ -71,9 +80,15 @@ if __name__ == '__main__':
                 out_address_enable = True
                 send_config(out_word_enable, True, False, False)
             elif tokens_count == 2 and tokens[0] == 'writeword':
-                send_config(out_word_enable, out_address_enable, True, False, word=0b11001100)
+                word_val = get_val(tokens[1])
+                send_config(out_word_enable, out_address_enable, True, False, word=word_val)
             elif tokens_count == 2 and tokens[0] == 'writeaddress':
-                send_config(out_word_enable, out_address_enable, False, True, address=0b1111000011110000)
+                address_val = get_val(tokens[1])
+                send_config(out_word_enable, out_address_enable, False, True, address=address_val)
+            elif tokens_count == 3 and tokens[0] == 'writewordaddress':
+                word_val = get_val(tokens[1])
+                address_val = get_val(tokens[2])
+                send_config(out_word_enable, out_address_enable, True, True, word=word_val, address=address_val)
 
         serial_device.flushInput()
         serial_device.flushOutput()

@@ -11,8 +11,8 @@
 #define DATA_BIT_7        9     // D9 
 
 #define LATCH_WORD        15    // A1
-#define LATCH_ADDR_HIGH   16    // A2
-#define LATCH_ADDR_LOW    17    // A3
+#define LATCH_ADDR_LOW    16    // A2
+#define LATCH_ADDR_HIGH   17    // A3
 #define OUT_WORD          18    // A4
 #define OUT_ADDR          19    // A5
 

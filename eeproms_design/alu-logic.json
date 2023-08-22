@@ -1,0 +1,252 @@
+{
+    "config": {
+        "INVERSE_REG_A": "0b00001000",
+        "INVERSE_REG_B": "0b00010000",
+        "NON_ZERO_REG_A": "0b00100000",
+        "NON_ZERO_REG_B": "0b01000000",
+        "INVERSE_OR_RESULT": "0b10000000",
+
+        "multiplexer-output": {
+            "CONST_ONE": "0b00000000",
+            "CONST_MINUS_ONE": "0b00000001",
+            "ARITHMETIC_RESULT": "0b00000010",
+            "LOGIC_RESULT": "0b00000011",
+            "XOR_RESULT": "0b00000100",
+            "SHIFT_LEFT": "0b00000101",
+            "SHIFT_RIGHT_ARITHMETIC": "0b00000110",
+            "SHIFT_RIGHT_LOGIC": "0b00000111"
+        }
+    },
+
+    "codes": {
+        "CONST_ZERO": { 
+            "CODE": "0b0000000000000",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "CONST_ONE": { 
+            "CODE": "0b0000000000001",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "CONST_ONE"
+        },
+
+        "CONST_MINUS_ONE": { 
+            "CODE": "0b0000000000010",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "CONST_MINUS_ONE"
+        },
+
+        "REG_A": { 
+            "CODE": "0b0000000000011",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "REG_B": { 
+            "CODE": "0b0000000000100",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "MINUS_REG_A": { 
+            "CODE": "0b0000000000101",
+            "INVERSE_REG_A": true,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "MINUS_REG_B": { 
+            "CODE": "0b0000000000110",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": true,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "REG_A_PLUS_REG_B": { 
+            "CODE": "0b0000000000111",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "REG_A_MINUS_REG_B": { 
+            "CODE": "0b0000000001000",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": true,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "REG_B_MINUS_REG_A": { 
+            "CODE": "0b0000000001001",
+            "INVERSE_REG_A": true,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "ARITHMETIC_RESULT"
+        },
+
+        "NOT_REG_A": { 
+            "CODE": "0b0000000001010",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": true,
+            "MULTIPLEXER_OUTPUT": "LOGIC_RESULT"
+        },
+
+        "NOT_REG_B": { 
+            "CODE": "0b0000000001011",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": true,
+            "MULTIPLEXER_OUTPUT": "LOGIC_RESULT"
+        },
+
+        "REG_A_OR_REG_B": { 
+            "CODE": "0b0000000001100",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "LOGIC_RESULT"
+        },
+
+        "REG_A_AND_REG_B": { 
+            "CODE": "0b0000000001101",
+            "INVERSE_REG_A": true,
+            "INVERSE_REG_B": true,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": true,
+            "MULTIPLEXER_OUTPUT": "LOGIC_RESULT"
+        },
+
+        "REG_A_XOR_REG_B": { 
+            "CODE": "0b0000000001110",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "XOR_RESULT"
+        },
+
+        "ARITHMETIC_RIGHT_SHIFT_REG_A": { 
+            "CODE": "0b0000000001111",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_RIGHT_ARITHMETIC"
+        },
+
+        "ARITHMETIC_RIGHT_SHIFT_REG_B": { 
+            "CODE": "0b0000000010000",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_RIGHT_ARITHMETIC"
+        },
+
+        "ARITHMETIC_LEFT_SHIFT_REG_A": { 
+            "CODE": "0b0000000010001",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_LEFT"
+        },
+
+        "ARITHMETIC_LEFT_SHIFT_REG_B": { 
+            "CODE": "0b0000000010010",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_LEFT"
+        },
+
+        "LOGIC_RIGHT_SHIFT_REG_A": { 
+            "CODE": "0b0000000010011",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true ,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_RIGHT_LOGIC"
+        },
+
+        "LOGIC_RIGHT_SHIFT_REG_B": { 
+            "CODE": "0b0000000010100",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_RIGHT_LOGIC"
+        },
+
+        "LOGIC_LEFT_SHIFT_REG_A": { 
+            "CODE": "0b0000000010101",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": false,
+            "ZERO_REG_B": true,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_LEFT"
+        },
+
+        "LOGIC_LEFT_SHIFT_REG_B": { 
+            "CODE": "0b0000000010110",
+            "INVERSE_REG_A": false,
+            "INVERSE_REG_B": false,
+            "ZERO_REG_A": true,
+            "ZERO_REG_B": false,
+            "INVERSE_OR_RESULT": false,
+            "MULTIPLEXER_OUTPUT": "SHIFT_LEFT"
+        }
+    }
+}

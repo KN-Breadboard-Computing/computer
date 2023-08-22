@@ -6,6 +6,8 @@ import time
 INPUT_BITS_NUMBER = 13
 OUTPUT_BITS_NUMBER = 8
 
+PRINT = True
+
 
 class Eeprom:
     def __init__(self):
@@ -22,24 +24,27 @@ class Eeprom:
         self._values[description] = (address, word)
 
     def send_to_serial(self, serial_device):
-        print('Initializing...')
+        if PRINT:
+            print('Initializing...')
         time.sleep(5)
 
         data = [0 for _ in range(2**INPUT_BITS_NUMBER)]
         for desc, val in self._values.items():
             data[val[0]] = val[1]
 
-        print('Writing to EEPROM...')
+        if PRINT:
+            print('Writing to EEPROM...')
 
         for address, word in enumerate(data):
             serial_device.write(address.to_bytes(length=2, byteorder='little'))
             serial_device.write(word.to_bytes(length=1, byteorder='little'))
-
-            print(f'0b{address:0{INPUT_BITS_NUMBER}b} -> 0b{word:0{OUTPUT_BITS_NUMBER}b}')
+            if PRINT:
+                print(f'0b{address:0{INPUT_BITS_NUMBER}b} -> 0b{word:0{OUTPUT_BITS_NUMBER}b}')
 
             response = ''
             while response != 'D':
                 if serial_device.inWaiting():
                     response = serial_device.readline().decode('utf').strip()
-
-        print('Writing to EEPROM done!')
+        
+        if PRINT:
+            print('Writing to EEPROM done!')

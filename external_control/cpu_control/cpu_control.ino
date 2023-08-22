@@ -3,11 +3,15 @@
 int buttonState;
 MessageBuffer messageBuffer;
 
+uint16_t midTickDelay = 5;
+uint16_t afterTickDelay = 5;
+
 
 void tick() {
   digitalWrite(CLOCK_PIN, HIGH);
-  delay(5);
+  delay(midTickDelay);
   digitalWrite(CLOCK_PIN, LOW);
+  delay(afterTickDelay);
 }
 
 
@@ -114,6 +118,20 @@ void loop() {
 
     if(messageBuffer.message.action & SAVE_ADDR_BIT) {
       latchAddress(messageBuffer.message.address); 
+    }
+
+    if(messageBuffer.message.action & SET_MID_TICK_DELAY) {
+      midTickDelay = messageBuffer.message.address;
+    }
+
+    if(messageBuffer.message.action & SET_AFTER_TICK_DELAY) {
+      afterTickDelay = messageBuffer.message.address;
+    }
+
+    if(messageBuffer.message.action & TICK_BIT) {
+      for(uint8_t i = 0; i < messageBuffer.word; i++) {
+        tick();
+      }
     }
 
     Serial.println(CALLBACK_CODE);

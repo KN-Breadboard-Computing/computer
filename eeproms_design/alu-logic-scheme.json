@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ALU Logic",
+    "description": "All codes used to control ALU",
+    "type": "object",
+    "properties": {
+        "CODE": {"type": "string", "pattern": "^0b[01]{13}$"},
+        "INVERSE_REG_A": {"type": "boolean"},
+        "INVERSE_REG_B": {"type": "boolean"},
+        "ZERO_REG_A": {"type": "boolean"},
+        "ZERO_REG_B": {"type": "boolean"},
+        "INVERSE_OR_RESULT": {"type": "boolean"},
+        "MULTIPLEXER_OUTPUR": {"type": "string"}
+    },
+    "minProperties": 7,
+    "maxProperties": 7,
+    "additionalItems": false
+}

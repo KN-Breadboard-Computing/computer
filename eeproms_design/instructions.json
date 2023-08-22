@@ -1,0 +1,151 @@
+{
+    "NOP": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "DO_NOTHING",
+
+        "RST_MC"
+    ],
+
+    "MOVAB": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_B_TO_A",
+
+        "RST_MC"
+    ],
+
+    "MOVBA": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_A_TO_B",
+
+        "RST_MC"
+    ],
+
+    "MOVAIMM": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_A_PC++",
+
+        "RST_MC"
+    ],
+
+    "MOVBIMM": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_B_PC++",
+
+        "RST_MC"
+    ],
+
+    "MOVAABS": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
+        "LOAD_TMP_TO_MAR",
+        "LOAD_MEM[MAR]_TO_A",
+
+        "RST_MC"
+    ],
+
+    "MOVBABS": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
+        "LOAD_TMP_TO_MAR",
+        "LOAD_MEM[MAR]_TO_B",
+
+        "RST_MC"
+    ],
+
+    "MOVABSA": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR_LOAD_A_TO_MBR",
+        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
+        "LOAD_TMP_TO_MAR",
+        "LOAD_MBR_TO_MEM[MAR]",
+
+        "RST_MC"
+    ],
+
+    "MOVABSB": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR_LOAD_B_TO_MBR",
+        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
+        "LOAD_TMP_TO_MAR",
+        "LOAD_MBR_TO_MEM[MAR]",
+
+
+        "RST_MC"
+    ],
+    
+    "MOVABSIMM": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_MBR_PC++",
+        "LOAD_TMP_TO_MAR",
+        "LOAD_MBR_TO_MEM[MAR]",
+
+        "RST_MC"
+    ],
+
+    "MOVAF": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_F_TO_A",
+
+        "RST_MC"
+    ],
+
+    "MOVBF": 
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+
+        "LOAD_F_TO_B",
+
+        "RST_MC"
+    ]
+}

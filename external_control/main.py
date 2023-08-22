@@ -4,15 +4,19 @@ import serial
 import time
 
 
-SAVE_WORD_BIT = 1
-SAVE_ADDR_BIT = 2
-OUT_WORD_BIT  = 4
-OUT_ADDR_BIT  = 8
+SAVE_WORD_BIT         = 1
+SAVE_ADDR_BIT         = 2
+OUT_WORD_BIT          = 4
+OUT_ADDR_BIT          = 8
+TICK_BIT              = 16
+SET_MID_TICK_DELAY    = 32
+SET_AFTER_TICK_DELAY  = 64
+
 
 out_word_enable = False
 out_address_enable = False
 
-def send_config(out_word, out_address, save_word, save_address, word = 0, address = 0):
+def send_config(out_word, out_address, save_word, save_address, tick_clock, word = 0, address = 0):
     action = 0
     if out_word:
         action |= OUT_WORD_BIT
@@ -32,6 +36,52 @@ def send_config(out_word, out_address, save_word, save_address, word = 0, addres
     while response != 'D':
         if serial_device.inWaiting():
             response = serial_device.readline().decode('utf').strip()
+
+
+def make_ticks(tick_num):
+    action = TICK_BIT
+    empty = 0
+
+    time.sleep(1)
+    serial_device.write(action.to_bytes(length=1, byteorder='little'))
+    serial_device.write(tick_num.to_bytes(length=1, byteorder='little'))
+    serial_device.write(empty.to_bytes(length=2, byteorder='little'))
+
+    response = ''
+    while response != 'D':
+        if serial_device.inWaiting():
+            response = serial_device.readline().decode('utf').strip()
+
+
+def set_mid_tick_delay(val):
+    action = SET_MID_TICK_DELAY
+    empty = 0
+
+    time.sleep(1)
+    serial_device.write(action.to_bytes(length=1, byteorder='little'))
+    serial_device.write(empty.to_bytes(length=1, byteorder='little'))
+    serial_device.write(val.to_bytes(length=2, byteorder='little'))
+
+    response = ''
+    while response != 'D':
+        if serial_device.inWaiting():
+            response = serial_device.readline().decode('utf').strip()
+
+
+def set_after_tick_delay(val):
+    action = SET_AFTER_TICK_DELAY
+    empty = 0
+
+    time.sleep(1)
+    serial_device.write(action.to_bytes(length=1, byteorder='little'))
+    serial_device.write(empty.to_bytes(length=1, byteorder='little'))
+    serial_device.write(val.to_bytes(length=2, byteorder='little'))
+
+    response = ''
+    while response != 'D':
+        if serial_device.inWaiting():
+            response = serial_device.readline().decode('utf').strip()
+            
 
 def get_val(num_str):
     if 'x' in num_str:
@@ -89,6 +139,14 @@ if __name__ == '__main__':
                 word_val = get_val(tokens[1])
                 address_val = get_val(tokens[2])
                 send_config(out_word_enable, out_address_enable, True, True, word=word_val, address=address_val)
+            elif tokens_count == 2 and tokens[0] == 'setmiddelay':
+                set_mid_tick_delay(int(tokens[1]))
+            elif tokens_count == 2 and tokens[0] == 'setafterdelay':
+                set_after_tick_delay(int(tokens[1]))
+            elif tokens_count == 1 and tokens[0] == 'tick':
+                make_ticks(1)
+            elif tokens_count == 2 and tokens[0] == 'tick':
+                make_ticks(int(tokens_count[1]))
 
         serial_device.flushInput()
         serial_device.flushOutput()

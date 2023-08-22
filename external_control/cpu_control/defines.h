@@ -26,6 +26,9 @@
 #define SAVE_ADDR_BIT             2
 #define OUT_WORD_BIT              4
 #define OUT_ADDR_BIT              8
+#define TICK_BIT                  16
+#define SET_MID_TICK_DELAY        32
+#define SET_AFTER_TICK_DELAY      64
 #define CALLBACK_CODE             'D' 
 
 

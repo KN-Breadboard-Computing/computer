@@ -217,15 +217,17 @@
   \hline
   \multicolumn{4}{|c|}{\textbf{Control Unit}} \\
   \hline
-  \texttt{IR\_LOAD} & F0 & load instruction from data bus & combined with $\overline{\texttt{CLK}}$  \\
+  \texttt{REG\_IR\_LOAD} & F0 & load instruction from data bus & combined with $\overline{\texttt{CLK}}$  \\
   \hline
   \texttt{MCC\_TICK} & F1 & increment microcode counter & combined with $\overline{\texttt{CLK}}$  \\
   \hline
-  $\overline{\texttt{MCC\_RST}}$ & F2 & set microcode counter to 0 & \\
+  $\overline{\texttt{MCC\_RST}}$ & F2 & set microcode counter to 0x0000 & \\
   \hline
   \end{tabularx}
   \caption{Control Unit Signals Description}
 \end{table}
+
+\pagebreak
 
 \subsection{Instructions}
 

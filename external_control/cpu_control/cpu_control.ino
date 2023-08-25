@@ -120,18 +120,27 @@ void loop() {
       latchAddress(messageBuffer.message.address); 
     }
 
-    if(messageBuffer.message.action & SET_MID_TICK_DELAY) {
+    if(messageBuffer.message.action & SET_MID_TICK_DELAY_BIT) {
       midTickDelay = messageBuffer.message.address;
     }
 
-    if(messageBuffer.message.action & SET_AFTER_TICK_DELAY) {
+    if(messageBuffer.message.action & SET_AFTER_TICK_DELAY_BIT) {
       afterTickDelay = messageBuffer.message.address;
     }
 
     if(messageBuffer.message.action & TICK_BIT) {
-      for(uint8_t i = 0; i < messageBuffer.word; i++) {
+      for(uint8_t i = 0; i < messageBuffer.message.word; i++) {
         tick();
       }
+    }
+
+    if(messageBuffer.message.action & WRITE_INSTRUCTION_TO_MEMORY_BIT) {
+      tick();
+      latchWord(messageBuffer.message.word);
+      latchAddress(messageBuffer.message.address);
+      tick();
+      tick();
+      tick();
     }
 
     Serial.println(CALLBACK_CODE);

@@ -14,6 +14,6 @@ if __name__ == '__main__':
     for key, value in microcodes.items():
         try:
             jsonschema.validate(instance=value, schema=schema)
-            print(f"{key:30}Validation successful")
+            print(f"{key:40}Validation successful")
         except jsonschema.exceptions.ValidationError as e:
-            print(f"{key:30}Validation failed")
+            print(f"{key:40}Validation failed")

@@ -2,7 +2,7 @@
     "NOP": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "DO_NOTHING",
 
@@ -12,7 +12,7 @@
     "MOVAB": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_B_TO_A",
 
@@ -22,7 +22,7 @@
     "MOVBA": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_A_TO_B",
 
@@ -32,7 +32,7 @@
     "MOVAIMM": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_A_PC++",
@@ -43,7 +43,7 @@
     "MOVBIMM": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_B_PC++",
@@ -54,7 +54,7 @@
     "MOVAABS": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_TMPH_PC++",
@@ -69,7 +69,7 @@
     "MOVBABS": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_TMPH_PC++",
@@ -84,7 +84,7 @@
     "MOVABSA": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR_LOAD_A_TO_MBR",
         "LOAD_MEM[MAR]_TO_TMPH_PC++",
@@ -99,7 +99,7 @@
     "MOVABSB": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR_LOAD_B_TO_MBR",
         "LOAD_MEM[MAR]_TO_TMPH_PC++",
@@ -115,7 +115,7 @@
     "MOVABSIMM": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_TMPH_PC++",
@@ -132,7 +132,7 @@
     "MOVAF": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_F_TO_A",
 
@@ -142,7 +142,7 @@
     "MOVBF": 
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++",
 
         "LOAD_F_TO_B",
 

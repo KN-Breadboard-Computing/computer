@@ -2,7 +2,7 @@
     "FETCH":
     [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++"
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++"
     ],
 
     "ENTER_PROGRAM":

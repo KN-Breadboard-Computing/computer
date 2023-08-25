@@ -22,13 +22,15 @@
 
 
 // action bits description
-#define SAVE_WORD_BIT             1
-#define SAVE_ADDR_BIT             2
-#define OUT_WORD_BIT              4
-#define OUT_ADDR_BIT              8
-#define TICK_BIT                  16
-#define SET_MID_TICK_DELAY        32
-#define SET_AFTER_TICK_DELAY      64
+#define SAVE_WORD_BIT                       1
+#define SAVE_ADDR_BIT                       2
+#define OUT_WORD_BIT                        4
+#define OUT_ADDR_BIT                        8
+#define TICK_BIT                            16
+#define SET_MID_TICK_DELAY_BIT              32
+#define SET_AFTER_TICK_DELAY_BIT            64
+#define WRITE_INSTRUCTION_TO_MEMORY_BIT     128
+
 #define CALLBACK_CODE             'D' 
 
 

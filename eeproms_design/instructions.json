@@ -1,4 +1,18 @@
 {
+    "FETCH":
+    [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++"
+    ],
+
+    "ENTER_PROGRAM":
+    [
+        "DO_NOTHING",
+        "LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR",
+        "LOAD_MBR_TO_MEM[MAR]",
+        "RST_MC"
+    ],
+
     "NOP": 
     [
         "LOAD_PC_TO_MAR",

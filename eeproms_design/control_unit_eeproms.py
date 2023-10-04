@@ -4,7 +4,6 @@ from eeprom import Eeprom
 
 MICROCODES_DESCRIPTION_FILENAME = 'microcodes.json'
 INSTRUCTIONS_DESCRIPTION_FILENAME  = 'instructions.json'
-AUXILIARY_INSTRUCTIONS_DESCRIPTION_FILENAME  = 'auxiliary-instructions.json'
 INSTRUCTIONS_OPCODES_FILENAME = 'instructions-opcodes.json'
 SIGNALS_IDENTIFIERS_FILENAME = 'signals-identifiers.json'
 
@@ -37,10 +36,7 @@ class ControlUnitEeproms():
     def _write_all(self):
         with open(INSTRUCTIONS_DESCRIPTION_FILENAME, 'r') as input_file:
             instructions = json.load(input_file)
-
-        with open(AUXILIARY_INSTRUCTIONS_DESCRIPTION_FILENAME, 'r') as input_file:
-            auxiliary_instructions = json.load(input_file)
-
+            
         with open(MICROCODES_DESCRIPTION_FILENAME, 'r') as input_file:
             microcodes = json.load(input_file)
 
@@ -54,8 +50,8 @@ class ControlUnitEeproms():
 
         # Code for entering program to memory
         for opcode in range(0, 2**INSTRUCTION_OPCODE_BITS_NUMBER):
-            mode_opcode_to_enter[ENTER_PROGRAM_TO_MEMORY_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + opcode] = {'name': f'ENTER_PROGRAM_{opcode}', 'microcodes': auxiliary_instructions['ENTER_PROGRAM']}
-                    
+            mode_opcode_to_enter[ENTER_PROGRAM_TO_MEMORY_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + opcode] = {'name': f'ENTER_PROGRAM_{opcode}', 'microcodes': instructions['ENTER_PROGRAM']}
+
         # Code for executing entered program:
         for instruction_name, instruction_steps in instructions.items():
             mode_opcode = EXECUTE_ENTERED_PROGRAM_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + int(instructions_opcodes[instruction_name], base=2)
@@ -63,7 +59,7 @@ class ControlUnitEeproms():
 
         for i in range(len(mode_opcode_to_enter)):
             if len(mode_opcode_to_enter[i]) == 0:
-                mode_opcode_to_enter[i] = {'name': f'ONLY_FETCH_{i}', 'microcodes': auxiliary_instructions['FETCH']}
+                mode_opcode_to_enter[i] = {'name': f'ONLY_FETCH_{i}', 'microcodes': instructions['FETCH']}
 
         for opcode, instruction in enumerate(mode_opcode_to_enter):
             if PRINT:

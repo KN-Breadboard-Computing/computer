@@ -3,14 +3,14 @@
 int buttonState;
 MessageBuffer messageBuffer;
 
-uint16_t midTickDelay = 5;
-uint16_t afterTickDelay = 5;
+uint16_t midTickDelay = 1000;
+uint16_t afterTickDelay = 1000;
 
 
 void tick() {
-  digitalWrite(CLOCK_PIN, HIGH);
-  delay(midTickDelay);
   digitalWrite(CLOCK_PIN, LOW);
+  delay(midTickDelay);
+  digitalWrite(CLOCK_PIN, HIGH);
   delay(afterTickDelay);
 }
 
@@ -83,7 +83,7 @@ void setup() {
   digitalWrite(LATCH_ADDR_HIGH, LOW);
   digitalWrite(LATCH_ADDR_LOW, LOW);
 
-  digitalWrite(CLOCK_PIN, LOW);
+  digitalWrite(CLOCK_PIN, HIGH);
   digitalWrite(LED_BUILTIN, LOW);
 
   digitalWrite(OUT_WORD, HIGH);

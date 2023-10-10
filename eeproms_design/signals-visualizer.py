@@ -30,32 +30,35 @@ def process_signals(instruction_names):
             name = instruction_name
         else:
             name = name + "-" + instruction_name
-        microcodes_to_process += instructions['FETCH'] 
+
+        if instruction_name  != 'FETCH' and instruction_name != 'ENTER_PROGRAM':
+            microcodes_to_process += instructions['FETCH'] 
+
         microcodes_to_process += instructions[instruction_name]
 
     descriptions = []
     ticks_number = len(microcodes_to_process)
 
-    clk_values = []
-    not_clk_values = []
+    clk_values = ['L']
+    not_clk_values = ['H']
     for i in range(ticks_number):
-        clk_values += ['L', 'H']
-        not_clk_values += ['H', 'L']
+        clk_values += ['H', 'L']
+        not_clk_values += ['L', 'H']
 
     descriptions.append(["CLK"] + clk_values)
     descriptions.append(["~CLK"] + not_clk_values)
 
     for key in signals.keys():
         values = []
-        for mc in microcodes_to_process:
-            if signals[key][1] == "CLK":
-                combined = " (&CLK)"
+        for index, mc in enumerate(microcodes_to_process):
+            if signals[key][1] == "~CLK":
+                combined = " (&~CLK)"
                 if(microcodes[mc][key] == 0):
                     values += ['L', 'L']
                 else:
                     values += ['L', 'H']
-            elif signals[key][1] == "~CLK":
-                combined = " (&~CLK)"
+            elif signals[key][1] == "CLK":
+                combined = " (&CLK)"
                 if(microcodes[mc][key] == 0):
                     values += ['L', 'L']
                 else:
@@ -66,6 +69,10 @@ def process_signals(instruction_names):
                     values += ['L', 'L']
                 else:
                     values += ['H', 'H']
+
+            if index == 0:
+                values = [values[1]] + values
+
         descriptions.append([key + combined] + values)
 
     return name, microcodes_to_process, descriptions
@@ -73,10 +80,16 @@ def process_signals(instruction_names):
 
 def draw_signals(name, microsteps, signals_description):
     microsteps_description = ""
-    for microstep in microsteps:
-        microsteps_description += """<tr><td>{microstep}</td></tr>""".format(microstep=microstep)
+    for index, microstep in enumerate(microsteps):
+        microsteps_description += """<tr><td style="background-color:purple; color:white;">{index}</td>  <td style="background-color:orange;">{microstep}</td></tr>""".format(microstep=microstep, index=index)
 
     signals_table_content = ""
+    signals_table_content += """<tr style="background-color:yellow;">"""
+    signals_table_content += """<td>signal name</td>    <td>init</td>"""
+    for index in range(len(microsteps)):
+        signals_table_content += """<td></td>   <td colspan="2">{index}</td>""".format(index = index)
+    signals_table_content += """</tr>"""
+
     for signal in signals_description:
         signals_table_content += """
         <tr>
@@ -84,7 +97,7 @@ def draw_signals(name, microsteps, signals_description):
         """.format(signal_name=signal[0])
 
         for index, val in enumerate(signal[1:]):
-            if index % 2 == 0:
+            if index % 2 == 1:
                 signals_table_content += """<td style="background-color:black;"></td>"""
 
             if val == 'L':
@@ -117,6 +130,7 @@ def draw_signals(name, microsteps, signals_description):
                     </table>
                     <p>LOAD works on LOW to HIGH tick</p>
                     <p>TICK works on LOW to HIGH tick</p>
+                    <p>EEPROM->REGS LATCHes are connected to CLK</p>
                 </td>
                 <td> 
                     <table>

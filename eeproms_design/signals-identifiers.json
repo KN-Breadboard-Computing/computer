@@ -1,17 +1,17 @@
 {
-    "REG_A_LOAD": ["A0", "CLK"],
-    "REG_B_LOAD": ["A1", "CLK"],
+    "REG_A_LOAD": ["A0", "~CLK"],
+    "REG_B_LOAD": ["A1", "~CLK"],
     "ALU_OPC_0": ["A2", ""],
     "ALU_OPC_1": ["A3", ""],
     "ALU_OPC_2": ["A4", ""],
     "ALU_OPC_3": ["A5", ""],
     "ALU_OPC_4": ["A6", ""],
-    "REG_F_LOAD": ["A7", "CLK"],
+    "REG_F_LOAD": ["A7", "~CLK"],
 
     "~REG_F_OUT": ["B0", ""],
     "~ALU_OUT": ["B1", ""],
-    "REG_TMPH_LOAD": ["B2", "CLK"],
-    "REG_TMPL_LOAD": ["B3", "CLK"],
+    "REG_TMPH_LOAD": ["B2", "~CLK"],
+    "REG_TMPL_LOAD": ["B3", "~CLK"],
     "~REG_TMPH_OUT": ["B4", ""],
     "~REG_TMPL_OUT": ["B5", ""],
     "~REG_TMP_PASS_ADDRESS": ["B6", ""],
@@ -31,8 +31,8 @@
     "STC_TICK": ["D2", "~CLK"],
     "STC_MODE": ["D3", ""],
     "~STC_OUT": ["D4", ""],
-    "REG_MAR_LOAD": ["D5", "CLK"],
-    "REG_MBR_LOAD": ["D6", "CLK"],
+    "REG_MAR_LOAD": ["D5", "~CLK"],
+    "REG_MBR_LOAD": ["D6", "~CLK"],
     "~MEM_OUT": ["D7", ""],
 
     "~MEM_IN": ["E0", ""],
@@ -44,6 +44,6 @@
     "~REG_MBR_USE_BUS": ["E6", ""],
 
     "REG_IR_LOAD": ["F0", "CLK"],
-    "MCC_TICK": ["F1", "~CLK"],
+    "MCC_TICK": ["F1", "CLK"],
     "~MCC_RST": ["F2", ""]
 }

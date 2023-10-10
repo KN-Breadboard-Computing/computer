@@ -133,7 +133,7 @@ def write_program_to_memory(filename):
                 address, word = line
 
                 write_instruction_to_memory(int(address, base=2), int(word, base=2))
-                time.sleep(2)
+                time.sleep(0.5)
 
                 print(f'{address}: {word}')
     except Exception as e:

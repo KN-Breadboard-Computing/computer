@@ -6,7 +6,7 @@ from alu_logic_eeprom import AluLogicEeprom
 from control_unit_eeproms import ControlUnitEeproms
 
 
-device_name = '/dev/ttyUSB0'
+device_name = '/dev/ttyUSB1'
 baud_rate = 115200
 
 alu_logic_eeprom = AluLogicEeprom()
@@ -34,7 +34,7 @@ if len(sys.argv) == 2:
     elif eeprom_id == 'decoderF':
         control_logic_eeproms.get_eeeprom('F').send_to_serial(serial_device)
     else:
-        print("Enter EEPROM name:\n[alu / decoderA / decoderB / decoderC / decoderD / decoderE / decoder F]")
+        print("Enter EEPROM name:\n[alu / decoderA / decoderB / decoderC / decoderD / decoderE / decoderF]")
 
     serial_device.flushInput()
     serial_device.flushOutput()

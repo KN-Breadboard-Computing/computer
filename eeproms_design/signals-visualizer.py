@@ -31,9 +31,6 @@ def process_signals(instruction_names):
         else:
             name = name + "-" + instruction_name
 
-        if instruction_name  != 'FETCH' and instruction_name != 'ENTER_PROGRAM':
-            microcodes_to_process += instructions['FETCH'] 
-
         microcodes_to_process += instructions[instruction_name]
 
     descriptions = []

@@ -54,6 +54,8 @@ class ControlUnitEeproms():
 
         # Code for executing entered program:
         for instruction_name, instruction_steps in instructions.items():
+            if instruction_name == 'FETCH' or instruction_name == 'ENTER_PROGRAM':
+                continue
             mode_opcode = EXECUTE_ENTERED_PROGRAM_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + int(instructions_opcodes[instruction_name], base=2)
             mode_opcode_to_enter[mode_opcode] = {'name': instruction_name, 'microcodes': instruction_steps}
 
@@ -85,7 +87,7 @@ class ControlUnitEeproms():
                 for signal_name, signal_id in signals_identifiers.items():
                     if PRINT:
                         print(f'{signal_id}: {signals[signal_name]}', end=' ')
-                    eeprom_outputs[signal_id[0]] = self._set_char(eeprom_outputs[signal_id[0]], 9 - int(signal_id[1]), str(signals[signal_name]))
+                    eeprom_outputs[signal_id[0][0]] = self._set_char(eeprom_outputs[signal_id[0][0]], 9 - int(signal_id[0][1]), str(signals[signal_name]))
 
                 for eeprom_id, eeprom in self._eeproms.items():
                     eeprom.write(description, int(eeprom_input, base=2), int(eeprom_outputs[eeprom_id], base=2))

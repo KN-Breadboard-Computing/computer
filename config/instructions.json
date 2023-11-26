@@ -536,5 +536,5 @@
         ],
         "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_B}",
         "microcodes-description": ""
-    }
+    },
 }

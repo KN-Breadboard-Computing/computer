@@ -4,13 +4,37 @@
     "description": "Microcodes of instructions",
     "type": "object",
     "properties": {
-        "id": {"type": "number"},
-        "name": {"type": "string"},
-        "opcode": {"type": "string", "pattern": "^0b[01]{8}$"},
-        "arguments": {"type": "array", "items": { "type": "string" }},
-        "microcodes": {"type": "array", "items": { "type": "string" }},
-        "description": {"type": "string"},
-        "microcodes-description": {"type": "string"}
+        "id": {
+            "type": "number"
+        },
+        "name": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "opcode": {
+            "type": "string",
+            "pattern": "^0b[01]{8}$"
+        },
+        "arguments": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "microcodes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "description": {
+            "type": "string"
+        },
+        "microcodes-description": {
+            "type": "string"
+        }
     },
     "minProperties": 7,
     "maxProperties": 7,

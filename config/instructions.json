@@ -2,15 +2,539 @@
     "MOVAB": {
         "id": 0,
         "name": "MOVAB",
+        "category": "Move Instructions",
         "opcode": "0b00000001",
-        "arguments": [ "A", "B" ],
+        "arguments": [
+            "A",
+            "B"
+        ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
             "LOAD_MEM[MAR]_TO_IR_PC++",
             "LOAD_B_TO_A",
             "RST_MC"
         ],
-        "description": "Mov value from \\texttt{REG_B} to \\texttt{REG_A}",
+        "description": "Move value from \\texttt{REG_B} to \\texttt{REG_A}",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_B} \\)"
+    },
+    "MOVBA": {
+        "id": 1,
+        "name": "MOVBA",
+        "category": "Move Instructions",
+        "opcode": "0b00000010",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_A_TO_B",
+            "RST_MC"
+        ],
+        "description": "Move value from \\texttt{REG_A} to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} \\)"
+    },
+    "MOVAF": {
+        "id": 2,
+        "name": "MOVAF",
+        "category": "Move Instructions",
+        "opcode": "0b00000011",
+        "arguments": [
+            "A",
+            "F"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_F} to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_F} \\)"
+    },
+    "MOVBF": {
+        "id": 3,
+        "name": "MOVBF",
+        "category": "Move Instructions",
+        "opcode": "0b00000100",
+        "arguments": [
+            "B",
+            "F"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_F} to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_F} \\)"
+    },
+    "MOVATH": {
+        "id": 4,
+        "name": "MOVATH",
+        "category": "Move Instructions",
+        "opcode": "0b00000101",
+        "arguments": [
+            "A",
+            "TMPH"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPH} to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\)"
+    },
+    "MOVBTH": {
+        "id": 5,
+        "name": "MOVBTH",
+        "category": "Move Instructions",
+        "opcode": "0b00000110",
+        "arguments": [
+            "B",
+            "TMPH"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPH} to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\)"
+    },
+    "MOVATL": {
+        "id": 6,
+        "name": "MOVATL",
+        "category": "Move Instructions",
+        "opcode": "0b00000111",
+        "arguments": [
+            "A",
+            "TMPL"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPL} to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\)"
+    },
+    "MOVBTL": {
+        "id": 7,
+        "name": "MOVBTL",
+        "category": "Move Instructions",
+        "opcode": "0b00001000",
+        "arguments": [
+            "B",
+            "TMPL"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPL} to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\)"
+    },
+    "MOVTHA": {
+        "id": 8,
+        "name": "MOVTHA",
+        "category": "Move Instructions",
+        "opcode": "0b00001001",
+        "arguments": [
+            "TMPH",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to \\texttt{REG_TMPH}",
+        "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_A} \\)"
+    },
+    "MOVTHB": {
+        "id": 9,
+        "name": "MOVTHB",
+        "category": "Move Instructions",
+        "opcode": "0b00001010",
+        "arguments": [
+            "TMPH",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to \\texttt{REG_TMPH}",
+        "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_B} \\)"
+    },
+    "MOVTLA": {
+        "id": 10,
+        "name": "MOVTLA",
+        "category": "Move Instructions",
+        "opcode": "0b00001011",
+        "arguments": [
+            "TMPL",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to \\texttt{REG_TMPL}",
+        "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\)"
+    },
+    "MOVTLB": {
+        "id": 11,
+        "name": "MOVTLB",
+        "category": "Move Instructions",
+        "opcode": "0b00001100",
+        "arguments": [
+            "TMPL",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to \\texttt{REG_TMPL}",
+        "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\)"
+    },
+    "MOVAIMM": {
+        "id": 12,
+        "name": "MOVAIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00001101",
+        "arguments": [
+            "A",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\)"
+    },
+    "MOVBIMM": {
+        "id": 13,
+        "name": "MOVBIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00001110",
+        "arguments": [
+            "B",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\)"
+    },
+    "MOVTHIMM": {
+        "id": 14,
+        "name": "MOVTHIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00001111",
+        "arguments": [
+            "TMPH",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to \\texttt{REG_TMPH}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\)"
+    },
+    "MOVTLIMM": {
+        "id": 15,
+        "name": "MOVTLIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00010000",
+        "arguments": [
+            "TMPL",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to \\texttt{REG_TMPL}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\)"
+    },
+    "MOVAABS": {
+        "id": 16,
+        "name": "MOVAABS",
+        "category": "Move Instructions",
+        "opcode": "0b00010001",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Move constant from memory at given address to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)"
+    },
+    "MOVAABSZP": {
+        "id": 17,
+        "name": "MOVAABSZP",
+        "category": "Move Instructions",
+        "opcode": "0b00010010",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Move constant from zero page memory at given address to \\texttt{REG_A}",
+        "microcodes-description": ""
+    },
+    "MOVBABS": {
+        "id": 18,
+        "name": "MOVBABS",
+        "category": "Move Instructions",
+        "opcode": "0b00010011",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Move constant from memory at given address to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\)"
+    },
+    "MOVBABSZP": {
+        "id": 19,
+        "name": "MOVBABSZP",
+        "category": "Move Instructions",
+        "opcode": "0b00010100",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Move constant from zero page memory at given address to \\texttt{REG_B}",
+        "microcodes-description": ""
+    },
+    "MOVABSA": {
+        "id": 20,
+        "name": "MOVABSA",
+        "category": "Move Instructions",
+        "opcode": "0b00010101",
+        "arguments": [
+            "MEM16",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "MOVABSAZP": {
+        "id": 21,
+        "name": "MOVABSAZP",
+        "category": "Move Instructions",
+        "opcode": "0b00010110",
+        "arguments": [
+            "MEM8",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "MOVABSB": {
+        "id": 22,
+        "name": "MOVABSB",
+        "category": "Move Instructions",
+        "opcode": "0b00010111",
+        "arguments": [
+            "MEM16",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "MOVABSBZP": {
+        "id": 23,
+        "name": "MOVABSBZP",
+        "category": "Move Instructions",
+        "opcode": "0b00011000",
+        "arguments": [
+            "MEM8",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "MOVABSIMM": {
+        "id": 24,
+        "name": "MOVABSIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00011001",
+        "arguments": [
+            "MEM16",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "MOVABSIMMZP": {
+        "id": 25,
+        "name": "MOVABSIMMZP",
+        "category": "Move Instructions",
+        "opcode": "0b00011010",
+        "arguments": [
+            "MEM8",
+            "CONST"
+        ],
+        "microcodes": [],
+        "description": "Move given constant to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "MOVATTMPA": {
+        "id": 26,
+        "name": "MOVATTMPA",
+        "category": "Move Instructions",
+        "opcode": "0b00011011",
+        "arguments": [
+            "TMP",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to memory at address given by value of \\texttt{REG_TMP}",
+        "microcodes-description": ""
+    },
+    "MOVATTMPB": {
+        "id": 27,
+        "name": "MOVATTMPB",
+        "category": "Move Instructions",
+        "opcode": "0b00011100",
+        "arguments": [
+            "TMP",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to memory at address given by value of \\texttt{REG_TMP}",
+        "microcodes-description": ""
+    },
+    "MOVATAB": {
+        "id": 28,
+        "name": "MOVATAB",
+        "category": "Move Instructions",
+        "opcode": "0b00011101",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to zero page memory at address given by value of \\texttt{REG_A}",
+        "microcodes-description": ""
+    },
+    "MOVATBA": {
+        "id": 29,
+        "name": "MOVATBA",
+        "category": "Move Instructions",
+        "opcode": "0b00011110",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to zero page memory at address given by value of \\texttt{REG_B}",
+        "microcodes-description": ""
+    },
+    "MOVATTHA": {
+        "id": 30,
+        "name": "MOVATTHA",
+        "category": "Move Instructions",
+        "opcode": "0b00011111",
+        "arguments": [
+            "TMPH",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to zero page memory at address given by value of \\texttt{REG_TMPH}",
+        "microcodes-description": ""
+    },
+    "MOVATTHB": {
+        "id": 31,
+        "name": "MOVATTHB",
+        "category": "Move Instructions",
+        "opcode": "0b00100000",
+        "arguments": [
+            "TMPH",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to zero page memory at address given by value of \\texttt{REG_TMPH}",
+        "microcodes-description": ""
+    },
+    "MOVATTLA": {
+        "id": 32,
+        "name": "MOVATTLA",
+        "category": "Move Instructions",
+        "opcode": "0b00100001",
+        "arguments": [
+            "TMPL",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_A} to zero page memory at address given by value of \\texttt{REG_TMPL}",
+        "microcodes-description": ""
+    },
+    "MOVATTLB": {
+        "id": 33,
+        "name": "MOVATTLB",
+        "category": "Move Instructions",
+        "opcode": "0b00100010",
+        "arguments": [
+            "TMPL",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_B} to zero page memory at address given by value of \\texttt{REG_TMPL}",
+        "microcodes-description": ""
+    },
+    "MOVATTLTH": {
+        "id": 34,
+        "name": "MOVATTLTH",
+        "category": "Move Instructions",
+        "opcode": "0b00100011",
+        "arguments": [
+            "TMPL",
+            "TMPH"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPH} to zero page memory at address given by value of \\texttt{REG_TMPL}",
+        "microcodes-description": ""
+    },
+    "MOVATTHTL": {
+        "id": 35,
+        "name": "MOVATTHTL",
+        "category": "Move Instructions",
+        "opcode": "0b00100100",
+        "arguments": [
+            "TMPH",
+            "TMPL"
+        ],
+        "microcodes": [],
+        "description": "Move value from \\texttt{REG_TMPL} to zero page memory at address given by value of \\texttt{REG_TMPH}",
+        "microcodes-description": ""
+    },
+    "MOVATTMPIMM": {
+        "id": 36,
+        "name": "MOVATTMPIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00100101",
+        "arguments": [
+            "TMP",
+            "CONST"
+        ],
+        "description": "Move given constant to memory at address given by value of \\texttt{REG_TMP}",
+        "microcodes-description": ""
+    },
+    "MOVATTMPHIMM": {
+        "id": 37,
+        "name": "MOVATTMPHIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00100110",
+        "arguments": [
+            "TMPH",
+            "CONST"
+        ],
+        "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_TMPH}",
+        "microcodes-description": ""
+    },
+    "MOVATTMPLIMM": {
+        "id": 38,
+        "name": "MOVATTMPLIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00100111",
+        "arguments": [
+            "TMPL",
+            "CONST"
+        ],
+        "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_TMPL}",
+        "microcodes-description": ""
+    },
+    "MOVATAIMM": {
+        "id": 39,
+        "name": "MOVATAIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00101000",
+        "arguments": [
+            "A",
+            "CONST"
+        ],
+        "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_A}",
+        "microcodes-description": ""
+    },
+    "MOVATBIMM": {
+        "id": 40,
+        "name": "MOVATBIMM",
+        "category": "Move Instructions",
+        "opcode": "0b00101001",
+        "arguments": [
+            "B",
+            "CONST"
+        ],
+        "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_B}",
+        "microcodes-description": ""
     }
 }

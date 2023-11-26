@@ -4,47 +4,293 @@
     "description": "Signals of microcodes",
     "type": "object",
     "properties": {
-        "REG_A_LOAD": {"type": "integer", "enum": [0, 1]},
-        "REG_B_LOAD": {"type": "integer", "enum": [0, 1]},
-        "ALU_OPC_0": {"type": "integer", "enum": [0, 1]},
-        "ALU_OPC_1": {"type": "integer", "enum": [0, 1]},
-        "ALU_OPC_2": {"type": "integer", "enum": [0, 1]},
-        "ALU_OPC_3": {"type": "integer", "enum": [0, 1]},
-        "ALU_OPC_4": {"type": "integer", "enum": [0, 1]},
-        "REG_F_LOAD": {"type": "integer", "enum": [0, 1]},
-        "~REG_F_OUT": {"type": "integer", "enum": [0, 1]},
-        "~ALU_OUT": {"type": "integer", "enum": [0, 1]},
-        "REG_TMPH_LOAD": {"type": "integer", "enum": [0, 1]},
-        "REG_TMPL_LOAD": {"type": "integer", "enum": [0, 1]},
-        "~REG_TMPH_OUT": {"type": "integer", "enum": [0, 1]},
-        "~REG_TMPL_OUT": {"type": "integer", "enum": [0, 1]},
-        "~REG_TMP_PASS_ADDRESS": {"type": "integer", "enum": [0, 1]},
-        "~REG_TMPH_PASS_DATA": {"type": "integer", "enum": [0, 1]},
-        "~REG_TMPL_PASS_DATA": {"type": "integer", "enum": [0, 1]},
-        "REG_TMP_ADDRESS_DIR": {"type": "integer", "enum": [0, 1]},
-        "REG_TMPH_DATA_DIR": {"type": "integer", "enum": [0, 1]},
-        "REG_TMPL_DATA_DIR": {"type": "integer", "enum": [0, 1]},
-        "~PC_LOAD": {"type": "integer", "enum": [0, 1]},
-        "~PC_RST": {"type": "integer", "enum": [0, 1]},
-        "PC_TICK": {"type": "integer", "enum": [0, 1]},
-        "~PC_OUT": {"type": "integer", "enum": [0, 1]},
-        "~STC_LOAD": {"type": "integer", "enum": [0, 1]},
-        "STC_RST": {"type": "integer", "enum": [0, 1]},
-        "STC_TICK": {"type": "integer", "enum": [0, 1]},
-        "STC_MODE": {"type": "integer", "enum": [0, 1]},
-        "~STC_OUT": {"type": "integer", "enum": [0, 1]},
-        "REG_MAR_LOAD": {"type": "integer", "enum": [0, 1]},
-        "REG_MBR_LOAD": {"type": "integer", "enum": [0, 1]},
-        "~MEM_OUT": {"type": "integer", "enum": [0, 1]},
-        "~MEM_IN": {"type": "integer", "enum": [0, 1]},
-        "MEM_PART": {"type": "integer", "enum": [0, 1]},
-        "~ZERO_PAGE": {"type": "integer", "enum": [0, 1]},
-        "REG_MBR_WORD_DIR": {"type": "integer", "enum": [0, 1]},
-        "~REG_MAR_USE_BTTNS": {"type": "integer", "enum": [0, 1]},
-        "~REG_MBR_USE_BTTNS": {"type": "integer", "enum": [0, 1]},
-        "~REG_IR_LOAD": {"type": "integer", "enum": [0, 1]},
-        "MCC_TICK": {"type": "integer", "enum": [0, 1]},
-        "~MCC_RST": {"type": "integer", "enum": [0, 1]}
+        "REG_A_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_B_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "ALU_OPC_0": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "ALU_OPC_1": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "ALU_OPC_2": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "ALU_OPC_3": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "ALU_OPC_4": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_F_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_F_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~ALU_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_TMPH_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_TMPL_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_TMPH_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_TMPL_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_TMP_PASS_ADDRESS": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_TMPH_PASS_DATA": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_TMPL_PASS_DATA": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_TMP_ADDRESS_DIR": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_TMPH_DATA_DIR": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_TMPL_DATA_DIR": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~PC_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~PC_RST": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "PC_TICK": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~PC_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~STC_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "STC_RST": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "STC_TICK": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "STC_MODE": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~STC_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_MAR_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_MBR_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~MEM_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~MEM_IN": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "MEM_PART": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~ZERO_PAGE": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "REG_MBR_WORD_DIR": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_MAR_USE_BTTNS": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_MBR_USE_BTTNS": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~REG_IR_LOAD": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "MCC_TICK": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~MCC_RST": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        }
     },
     "minProperties": 42,
     "maxProperties": 42,

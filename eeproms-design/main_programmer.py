@@ -2,8 +2,8 @@ import sys
 import os
 import serial
 
-from alu_logic_eeprom import AluLogicEeprom
-from control_unit_eeproms import ControlUnitEeproms
+from eeproms_design.eeproms.alu_eeprom import AluLogicEeprom
+from eeproms_design.eeproms.control_unit_eeproms import ControlUnitEeproms
 
 
 device_name = '/dev/ttyUSB1'

@@ -1,6 +1,6 @@
 import json
 
-from eeprom import Eeprom
+from eeproms_design.eeproms.eeprom import Eeprom
 
 MICROCODES_DESCRIPTION_FILENAME = 'microcodes.json'
 INSTRUCTIONS_DESCRIPTION_FILENAME  = 'instructions.json'

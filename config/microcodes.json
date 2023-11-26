@@ -199,7 +199,7 @@
         "~MCC_RST": 1
     },
 
-    "LOAD_MEM[MAR]_TO_IR_AND_MBR_PC++": {
+    "LOAD_MEM[MAR]_TO_IR_PC++": {
         "REG_A_LOAD": 0,
         "REG_B_LOAD": 0,
         "ALU_OPC_0": 0,

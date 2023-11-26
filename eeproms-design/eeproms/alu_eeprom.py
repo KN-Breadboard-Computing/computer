@@ -1,4 +1,4 @@
-from eeprom import Eeprom
+from eeproms_design.eeproms.eeprom import Eeprom
 import json
 
 ALU_LOGIC_DESCRIPTION_FILENAME = "alu-logic.json"

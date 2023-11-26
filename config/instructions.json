@@ -1,0 +1,16 @@
+{
+    "MOVAB": {
+        "id": 0,
+        "name": "MOVAB",
+        "opcode": "0b00000001",
+        "arguments": [ "A", "B" ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_B_TO_A",
+            "RST_MC"
+        ],
+        "description": "Mov value from \\texttt{REG_B} to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_B} \\)"
+    }
+}

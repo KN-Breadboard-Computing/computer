@@ -139,7 +139,7 @@ def draw_signals(name, microsteps, signals_description):
     </body>
     """.format(microsteps_description=microsteps_description, signals_table=signals_table_content)
 
-    index_file_path = f"instructions_visualisations/{name}.html"
+    index_file_path = f"visualisations/{name}.html"
 
     with open(index_file_path, 'w', encoding='utf-8') as html_file:
         html_file.write(html_string)

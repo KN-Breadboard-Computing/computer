@@ -17,6 +17,9 @@
             "type": "string",
             "pattern": "^0b[01]{8}$"
         },
+        "mnemonic": {
+            "type": "string"
+        },
         "arguments": {
             "type": "array",
             "items": {
@@ -36,7 +39,7 @@
             "type": "string"
         }
     },
-    "minProperties": 7,
-    "maxProperties": 7,
+    "minProperties": 9,
+    "maxProperties": 9,
     "additionalItems": false
 }

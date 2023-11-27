@@ -4,6 +4,7 @@
         "name": "MOVAB",
         "category": "Move Instructions",
         "opcode": "0b00000001",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "B"
@@ -22,6 +23,7 @@
         "name": "MOVBA",
         "category": "Move Instructions",
         "opcode": "0b00000010",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "A"
@@ -40,6 +42,7 @@
         "name": "MOVAF",
         "category": "Move Instructions",
         "opcode": "0b00000011",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "F"
@@ -53,6 +56,7 @@
         "name": "MOVBF",
         "category": "Move Instructions",
         "opcode": "0b00000100",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "F"
@@ -66,6 +70,7 @@
         "name": "MOVATH",
         "category": "Move Instructions",
         "opcode": "0b00000101",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "TMPH"
@@ -79,6 +84,7 @@
         "name": "MOVBTH",
         "category": "Move Instructions",
         "opcode": "0b00000110",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "TMPH"
@@ -92,6 +98,7 @@
         "name": "MOVATL",
         "category": "Move Instructions",
         "opcode": "0b00000111",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "TMPL"
@@ -105,6 +112,7 @@
         "name": "MOVBTL",
         "category": "Move Instructions",
         "opcode": "0b00001000",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "TMPL"
@@ -118,6 +126,7 @@
         "name": "MOVTHA",
         "category": "Move Instructions",
         "opcode": "0b00001001",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "A"
@@ -131,6 +140,7 @@
         "name": "MOVTHB",
         "category": "Move Instructions",
         "opcode": "0b00001010",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "B"
@@ -144,6 +154,7 @@
         "name": "MOVTLA",
         "category": "Move Instructions",
         "opcode": "0b00001011",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "A"
@@ -157,6 +168,7 @@
         "name": "MOVTLB",
         "category": "Move Instructions",
         "opcode": "0b00001100",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "B"
@@ -170,6 +182,7 @@
         "name": "MOVAIMM",
         "category": "Move Instructions",
         "opcode": "0b00001101",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "CONST"
@@ -183,6 +196,7 @@
         "name": "MOVBIMM",
         "category": "Move Instructions",
         "opcode": "0b00001110",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "CONST"
@@ -196,6 +210,7 @@
         "name": "MOVTHIMM",
         "category": "Move Instructions",
         "opcode": "0b00001111",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "CONST"
@@ -209,6 +224,7 @@
         "name": "MOVTLIMM",
         "category": "Move Instructions",
         "opcode": "0b00010000",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "CONST"
@@ -222,6 +238,7 @@
         "name": "MOVAABS",
         "category": "Move Instructions",
         "opcode": "0b00010001",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "MEM16"
@@ -235,6 +252,7 @@
         "name": "MOVAABSZP",
         "category": "Move Instructions",
         "opcode": "0b00010010",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "MEM8"
@@ -248,6 +266,7 @@
         "name": "MOVBABS",
         "category": "Move Instructions",
         "opcode": "0b00010011",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "MEM16"
@@ -261,6 +280,7 @@
         "name": "MOVBABSZP",
         "category": "Move Instructions",
         "opcode": "0b00010100",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "MEM8"
@@ -274,6 +294,7 @@
         "name": "MOVABSA",
         "category": "Move Instructions",
         "opcode": "0b00010101",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM16",
             "A"
@@ -287,6 +308,7 @@
         "name": "MOVABSAZP",
         "category": "Move Instructions",
         "opcode": "0b00010110",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM8",
             "A"
@@ -300,6 +322,7 @@
         "name": "MOVABSB",
         "category": "Move Instructions",
         "opcode": "0b00010111",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM16",
             "B"
@@ -313,6 +336,7 @@
         "name": "MOVABSBZP",
         "category": "Move Instructions",
         "opcode": "0b00011000",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM8",
             "B"
@@ -326,6 +350,7 @@
         "name": "MOVABSIMM",
         "category": "Move Instructions",
         "opcode": "0b00011001",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM16",
             "CONST"
@@ -339,6 +364,7 @@
         "name": "MOVABSIMMZP",
         "category": "Move Instructions",
         "opcode": "0b00011010",
+        "mnemonic": "MOV",
         "arguments": [
             "MEM8",
             "CONST"
@@ -352,6 +378,7 @@
         "name": "MOVATTMPA",
         "category": "Move Instructions",
         "opcode": "0b00011011",
+        "mnemonic": "MOV",
         "arguments": [
             "TMP",
             "A"
@@ -365,6 +392,7 @@
         "name": "MOVATTMPB",
         "category": "Move Instructions",
         "opcode": "0b00011100",
+        "mnemonic": "MOV",
         "arguments": [
             "TMP",
             "B"
@@ -378,6 +406,7 @@
         "name": "MOVATAB",
         "category": "Move Instructions",
         "opcode": "0b00011101",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "B"
@@ -391,6 +420,7 @@
         "name": "MOVATBA",
         "category": "Move Instructions",
         "opcode": "0b00011110",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "A"
@@ -404,6 +434,7 @@
         "name": "MOVATTHA",
         "category": "Move Instructions",
         "opcode": "0b00011111",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "A"
@@ -417,6 +448,7 @@
         "name": "MOVATTHB",
         "category": "Move Instructions",
         "opcode": "0b00100000",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "B"
@@ -430,6 +462,7 @@
         "name": "MOVATTLA",
         "category": "Move Instructions",
         "opcode": "0b00100001",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "A"
@@ -443,6 +476,7 @@
         "name": "MOVATTLB",
         "category": "Move Instructions",
         "opcode": "0b00100010",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "B"
@@ -456,6 +490,7 @@
         "name": "MOVATTLTH",
         "category": "Move Instructions",
         "opcode": "0b00100011",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "TMPH"
@@ -469,6 +504,7 @@
         "name": "MOVATTHTL",
         "category": "Move Instructions",
         "opcode": "0b00100100",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "TMPL"
@@ -482,10 +518,12 @@
         "name": "MOVATTMPIMM",
         "category": "Move Instructions",
         "opcode": "0b00100101",
+        "mnemonic": "MOV",
         "arguments": [
             "TMP",
             "CONST"
         ],
+        "microcodes": [],
         "description": "Move given constant to memory at address given by value of \\texttt{REG_TMP}",
         "microcodes-description": ""
     },
@@ -494,10 +532,12 @@
         "name": "MOVATTMPHIMM",
         "category": "Move Instructions",
         "opcode": "0b00100110",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPH",
             "CONST"
         ],
+        "microcodes": [],
         "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_TMPH}",
         "microcodes-description": ""
     },
@@ -506,10 +546,12 @@
         "name": "MOVATTMPLIMM",
         "category": "Move Instructions",
         "opcode": "0b00100111",
+        "mnemonic": "MOV",
         "arguments": [
             "TMPL",
             "CONST"
         ],
+        "microcodes": [],
         "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_TMPL}",
         "microcodes-description": ""
     },
@@ -518,10 +560,12 @@
         "name": "MOVATAIMM",
         "category": "Move Instructions",
         "opcode": "0b00101000",
+        "mnemonic": "MOV",
         "arguments": [
             "A",
             "CONST"
         ],
+        "microcodes": [],
         "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_A}",
         "microcodes-description": ""
     },
@@ -530,11 +574,1393 @@
         "name": "MOVATBIMM",
         "category": "Move Instructions",
         "opcode": "0b00101001",
+        "mnemonic": "MOV",
         "arguments": [
             "B",
             "CONST"
         ],
+        "microcodes": [],
         "description": "Move given constant to zero page memory at address given by value of \\texttt{REG_B}",
         "microcodes-description": ""
     },
+    "NEGAA": {
+        "id": 41,
+        "name": "NEGAA",
+        "category": "ALU instructions",
+        "opcode": "0b00101010",
+        "mnemonic": "NEG",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_A} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow -\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "NEGAB": {
+        "id": 42,
+        "name": "NEGAB",
+        "category": "ALU instructions",
+        "opcode": "0b00101011",
+        "mnemonic": "NEG",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_A} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow -\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "NEGAMEM": {
+        "id": 43,
+        "name": "NEGAMEM",
+        "category": "ALU instructions",
+        "opcode": "0b00101100",
+        "mnemonic": "NEG",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_A} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow -\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "NEGAMEMZP": {
+        "id": 44,
+        "name": "NEGAMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b00101101",
+        "mnemonic": "NEG",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_A} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "NEGASTC": {
+        "id": 45,
+        "name": "NEGASTC",
+        "category": "ALU instructions",
+        "opcode": "0b00101110",
+        "mnemonic": "NEG",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_A} and save it on stack",
+        "microcodes-description": ""
+    },
+    "NEGBA": {
+        "id": 46,
+        "name": "NEGBA",
+        "category": "ALU instructions",
+        "opcode": "0b00101111",
+        "mnemonic": "NEG",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow -\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "NEGBB": {
+        "id": 47,
+        "name": "NEGBB",
+        "category": "ALU instructions",
+        "opcode": "0b00110000",
+        "mnemonic": "NEG",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow -\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "NEGBMEM": {
+        "id": 48,
+        "name": "NEGBMEM",
+        "category": "ALU instructions",
+        "opcode": "0b00110001",
+        "mnemonic": "NEG",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow -\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "NEGBMEMZP": {
+        "id": 49,
+        "name": "NEGBMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b00110010",
+        "mnemonic": "NEG",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "NEGBSTC": {
+        "id": 50,
+        "name": "NEGBSTC",
+        "category": "ALU instructions",
+        "opcode": "0b00110011",
+        "mnemonic": "NEG",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate negation of \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "ADDA": {
+        "id": 51,
+        "name": "ADDA",
+        "category": "ALU instructions",
+        "opcode": "0b00110100",
+        "mnemonic": "ADD",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate sum of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} + \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ADDB": {
+        "id": 52,
+        "name": "ADDB",
+        "category": "ALU instructions",
+        "opcode": "0b00110101",
+        "mnemonic": "ADD",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate sum of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} + \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ADDMEM": {
+        "id": 53,
+        "name": "ADDMEM",
+        "category": "ALU instructions",
+        "opcode": "0b00110110",
+        "mnemonic": "ADD",
+        "arguments": [
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate sum of \\texttt{REG_A} and \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} + \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "ADDMEMZP": {
+        "id": 54,
+        "name": "ADDMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b00110111",
+        "mnemonic": "ADD",
+        "arguments": [
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate sum of \\texttt{REG_A} and \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "ADDSTC": {
+        "id": 55,
+        "name": "ADDSTC",
+        "category": "ALU instructions",
+        "opcode": "0b00111000",
+        "mnemonic": "ADD",
+        "arguments": [
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate sum of \\texttt{REG_A} and \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SUBABA": {
+        "id": 56,
+        "name": "SUBABA",
+        "category": "ALU instructions",
+        "opcode": "0b00111001",
+        "mnemonic": "SUB",
+        "arguments": [
+            "A",
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} - \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SUBABB": {
+        "id": 57,
+        "name": "SUBABB",
+        "category": "ALU instructions",
+        "opcode": "0b00111010",
+        "mnemonic": "SUB",
+        "arguments": [
+            "A",
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} - \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SUBABMEM": {
+        "id": 58,
+        "name": "SUBABMEM",
+        "category": "ALU instructions",
+        "opcode": "0b00111011",
+        "mnemonic": "SUB",
+        "arguments": [
+            "A",
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_A} and \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} - \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SUBABMEMZP": {
+        "id": 59,
+        "name": "SUBABMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b00111100",
+        "mnemonic": "SUB",
+        "arguments": [
+            "A",
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_A} and \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SUBABSTC": {
+        "id": 60,
+        "name": "SUBABSTC",
+        "category": "ALU instructions",
+        "opcode": "0b00111101",
+        "mnemonic": "SUB",
+        "arguments": [
+            "A",
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_A} and \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SUBBAA": {
+        "id": 61,
+        "name": "SUBBAA",
+        "category": "ALU instructions",
+        "opcode": "0b00111110",
+        "mnemonic": "SUB",
+        "arguments": [
+            "B",
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_B} and \\texttt{REG_A} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_B} - \\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SUBBAB": {
+        "id": 62,
+        "name": "SUBBAB",
+        "category": "ALU instructions",
+        "opcode": "0b00111111",
+        "mnemonic": "SUB",
+        "arguments": [
+            "B",
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_B} and \\texttt{REG_A} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B} - \\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SUBBAMEM": {
+        "id": 63,
+        "name": "SUBBAMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01000000",
+        "mnemonic": "SUB",
+        "arguments": [
+            "B",
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_B} and \\texttt{REG_A} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} - \\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SUBBAMEMZP": {
+        "id": 64,
+        "name": "SUBBAMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01000001",
+        "mnemonic": "SUB",
+        "arguments": [
+            "B",
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_B} and \\texttt{REG_A} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SUBBASTC": {
+        "id": 65,
+        "name": "SUBBASTC",
+        "category": "ALU instructions",
+        "opcode": "0b01000010",
+        "mnemonic": "SUB",
+        "arguments": [
+            "B",
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate difference of \\texttt{REG_B} and \\texttt{REG_A} and save it on stack",
+        "microcodes-description": ""
+    },
+    "MULA2A": {
+        "id": 66,
+        "name": "MULA2A",
+        "category": "ALU instructions",
+        "opcode": "0b01000011",
+        "mnemonic": "MUL",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_A} and \\texttt{2} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow *\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "MULA2B": {
+        "id": 67,
+        "name": "MULA2B",
+        "category": "ALU instructions",
+        "opcode": "0b01000100",
+        "mnemonic": "MUL",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_A} and \\texttt{2} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow *\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "MULA2MEM": {
+        "id": 68,
+        "name": "MULA2MEM",
+        "category": "ALU instructions",
+        "opcode": "0b01000101",
+        "mnemonic": "MUL",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_A} and \\texttt{2} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow *\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "MULA2MEMZP": {
+        "id": 69,
+        "name": "MULA2MEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01000110",
+        "mnemonic": "MUL",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_A} and \\texttt{2} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "MULA2STC": {
+        "id": 70,
+        "name": "MULA2STC",
+        "category": "ALU instructions",
+        "opcode": "0b01000111",
+        "mnemonic": "MUL",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_A} and \\texttt{2} and save it on stack",
+        "microcodes-description": ""
+    },
+    "MULB2A": {
+        "id": 71,
+        "name": "MULB2A",
+        "category": "ALU instructions",
+        "opcode": "0b01001000",
+        "mnemonic": "MUL",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_B} and \\texttt{2} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow *\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "MULB2B": {
+        "id": 72,
+        "name": "MULB2B",
+        "category": "ALU instructions",
+        "opcode": "0b01001001",
+        "mnemonic": "MUL",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_B} and \\texttt{2} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow *\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "MULB2MEM": {
+        "id": 73,
+        "name": "MULB2MEM",
+        "category": "ALU instructions",
+        "opcode": "0b01001010",
+        "mnemonic": "MUL",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_B} and \\texttt{2} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow *\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "MULB2MEMZP": {
+        "id": 74,
+        "name": "MULB2MEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01001011",
+        "mnemonic": "MUL",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_B} and \\texttt{2} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "MULB2STC": {
+        "id": 75,
+        "name": "MULB2STC",
+        "category": "ALU instructions",
+        "opcode": "0b01001100",
+        "mnemonic": "MUL",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate multiplication of \\texttt{REG_B} and \\texttt{2} and save it on stack",
+        "microcodes-description": ""
+    },
+    "DIVA2A": {
+        "id": 76,
+        "name": "DIVA2A",
+        "category": "ALU instructions",
+        "opcode": "0b01001101",
+        "mnemonic": "DIV",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_A} and \\texttt{2} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow /\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "DIVA2B": {
+        "id": 77,
+        "name": "DIVA2B",
+        "category": "ALU instructions",
+        "opcode": "0b01001110",
+        "mnemonic": "DIV",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_A} and \\texttt{2} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow /\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "DIVA2MEM": {
+        "id": 78,
+        "name": "DIVA2MEM",
+        "category": "ALU instructions",
+        "opcode": "0b01001111",
+        "mnemonic": "DIV",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_A} and \\texttt{2} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow /\\texttt{REG_A} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "DIVA2MEMZP": {
+        "id": 79,
+        "name": "DIVA2MEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01010000",
+        "mnemonic": "DIV",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_A} and \\texttt{2} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "DIVA2STC": {
+        "id": 80,
+        "name": "DIVA2STC",
+        "category": "ALU instructions",
+        "opcode": "0b01010001",
+        "mnemonic": "DIV",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_A} and \\texttt{2} and save it on stack",
+        "microcodes-description": ""
+    },
+    "DIVB2A": {
+        "id": 81,
+        "name": "DIVB2A",
+        "category": "ALU instructions",
+        "opcode": "0b01010010",
+        "mnemonic": "DIV",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_B} and \\texttt{2} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow /\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "DIVB2B": {
+        "id": 82,
+        "name": "DIVB2B",
+        "category": "ALU instructions",
+        "opcode": "0b01010011",
+        "mnemonic": "DIV",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_B} and \\texttt{2} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow /\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "DIVB2MEM": {
+        "id": 83,
+        "name": "DIVB2MEM",
+        "category": "ALU instructions",
+        "opcode": "0b01010100",
+        "mnemonic": "DIV",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_B} and \\texttt{2} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow /\\texttt{REG_B} and \\texttt{2} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "DIVB2MEMZP": {
+        "id": 84,
+        "name": "DIVB2MEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01010101",
+        "mnemonic": "DIV",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_B} and \\texttt{2} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "DIVB2STC": {
+        "id": 85,
+        "name": "DIVB2STC",
+        "category": "ALU instructions",
+        "opcode": "0b01010110",
+        "mnemonic": "DIV",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate quotient of \\texttt{REG_B} and \\texttt{2} and save it on stack",
+        "microcodes-description": ""
+    },
+    "INVAA": {
+        "id": 86,
+        "name": "INVAA",
+        "category": "ALU instructions",
+        "opcode": "0b01010111",
+        "mnemonic": "INV",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_A} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow ~\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "INVAB": {
+        "id": 87,
+        "name": "INVAB",
+        "category": "ALU instructions",
+        "opcode": "0b01011000",
+        "mnemonic": "INV",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_A} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow ~\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "INVAMEM": {
+        "id": 88,
+        "name": "INVAMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01011001",
+        "mnemonic": "INV",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_A} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow ~\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "INVAMEMZP": {
+        "id": 89,
+        "name": "INVAMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01011010",
+        "mnemonic": "INV",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_A} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "INVASTC": {
+        "id": 90,
+        "name": "INVASTC",
+        "category": "ALU instructions",
+        "opcode": "0b01011011",
+        "mnemonic": "INV",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_A} and save it on stack",
+        "microcodes-description": ""
+    },
+    "INVBA": {
+        "id": 91,
+        "name": "INVBA",
+        "category": "ALU instructions",
+        "opcode": "0b01011100",
+        "mnemonic": "INV",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow ~\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "INVBB": {
+        "id": 92,
+        "name": "INVBB",
+        "category": "ALU instructions",
+        "opcode": "0b01011101",
+        "mnemonic": "INV",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow ~\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "INVBMEM": {
+        "id": 93,
+        "name": "INVBMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01011110",
+        "mnemonic": "INV",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow ~\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "INVBMEMZP": {
+        "id": 94,
+        "name": "INVBMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01011111",
+        "mnemonic": "INV",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "INVBSTC": {
+        "id": 95,
+        "name": "INVBSTC",
+        "category": "ALU instructions",
+        "opcode": "0b01100000",
+        "mnemonic": "INV",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate bit inversion of \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "ORA": {
+        "id": 96,
+        "name": "ORA",
+        "category": "ALU instructions",
+        "opcode": "0b01100001",
+        "mnemonic": "OR",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate alternative of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} OR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ORB": {
+        "id": 97,
+        "name": "ORB",
+        "category": "ALU instructions",
+        "opcode": "0b01100010",
+        "mnemonic": "OR",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate alternative of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} OR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ORMEM": {
+        "id": 98,
+        "name": "ORMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01100011",
+        "mnemonic": "OR",
+        "arguments": [
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate alternative of \\texttt{REG_A} and \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} OR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "ORMEMZP": {
+        "id": 99,
+        "name": "ORMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01100100",
+        "mnemonic": "OR",
+        "arguments": [
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate alternative of \\texttt{REG_A} and \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "ORSTC": {
+        "id": 100,
+        "name": "ORSTC",
+        "category": "ALU instructions",
+        "opcode": "0b01100101",
+        "mnemonic": "OR",
+        "arguments": [
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate alternative of \\texttt{REG_A} and \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "ANDA": {
+        "id": 101,
+        "name": "ANDA",
+        "category": "ALU instructions",
+        "opcode": "0b01100110",
+        "mnemonic": "AND",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate conjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} AND \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ANDB": {
+        "id": 102,
+        "name": "ANDB",
+        "category": "ALU instructions",
+        "opcode": "0b01100111",
+        "mnemonic": "AND",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate conjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} AND \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "ANDMEM": {
+        "id": 103,
+        "name": "ANDMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01101000",
+        "mnemonic": "AND",
+        "arguments": [
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate conjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} AND \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "ANDMEMZP": {
+        "id": 104,
+        "name": "ANDMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01101001",
+        "mnemonic": "AND",
+        "arguments": [
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate conjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "ANDSTC": {
+        "id": 105,
+        "name": "ANDSTC",
+        "category": "ALU instructions",
+        "opcode": "0b01101010",
+        "mnemonic": "AND",
+        "arguments": [
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate conjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "XORA": {
+        "id": 106,
+        "name": "XORA",
+        "category": "ALU instructions",
+        "opcode": "0b01101011",
+        "mnemonic": "XOR",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate exclusive disjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} XOR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "XORB": {
+        "id": 107,
+        "name": "XORB",
+        "category": "ALU instructions",
+        "opcode": "0b01101100",
+        "mnemonic": "XOR",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate exclusive disjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} XOR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "XORMEM": {
+        "id": 108,
+        "name": "XORMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01101101",
+        "mnemonic": "XOR",
+        "arguments": [
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate exclusive disjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} XOR \\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "XORMEMZP": {
+        "id": 109,
+        "name": "XORMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01101110",
+        "mnemonic": "XOR",
+        "arguments": [
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate exclusive disjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "XORSTC": {
+        "id": 110,
+        "name": "XORSTC",
+        "category": "ALU instructions",
+        "opcode": "0b01101111",
+        "mnemonic": "XOR",
+        "arguments": [
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate exclusive disjunction of \\texttt{REG_A} and \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SHRAA": {
+        "id": 111,
+        "name": "SHRAA",
+        "category": "ALU instructions",
+        "opcode": "0b01110000",
+        "mnemonic": "SHR",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_A} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow >>\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHRAB": {
+        "id": 112,
+        "name": "SHRAB",
+        "category": "ALU instructions",
+        "opcode": "0b01110001",
+        "mnemonic": "SHR",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_A} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow >>\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHRAMEM": {
+        "id": 113,
+        "name": "SHRAMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01110010",
+        "mnemonic": "SHR",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_A} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow >>\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SHRAMEMZP": {
+        "id": 114,
+        "name": "SHRAMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01110011",
+        "mnemonic": "SHR",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_A} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SHRASTC": {
+        "id": 115,
+        "name": "SHRASTC",
+        "category": "ALU instructions",
+        "opcode": "0b01110100",
+        "mnemonic": "SHR",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_A} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SHRBA": {
+        "id": 116,
+        "name": "SHRBA",
+        "category": "ALU instructions",
+        "opcode": "0b01110101",
+        "mnemonic": "SHR",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow >>\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHRBB": {
+        "id": 117,
+        "name": "SHRBB",
+        "category": "ALU instructions",
+        "opcode": "0b01110110",
+        "mnemonic": "SHR",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow >>\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHRBMEM": {
+        "id": 118,
+        "name": "SHRBMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01110111",
+        "mnemonic": "SHR",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow >>\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SHRBMEMZP": {
+        "id": 119,
+        "name": "SHRBMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01111000",
+        "mnemonic": "SHR",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SHRBSTC": {
+        "id": 120,
+        "name": "SHRBSTC",
+        "category": "ALU instructions",
+        "opcode": "0b01111001",
+        "mnemonic": "SHR",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate right shift of \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SHLAA": {
+        "id": 121,
+        "name": "SHLAA",
+        "category": "ALU instructions",
+        "opcode": "0b01111010",
+        "mnemonic": "SHL",
+        "arguments": [
+            "A",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_A} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow <<\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHLAB": {
+        "id": 122,
+        "name": "SHLAB",
+        "category": "ALU instructions",
+        "opcode": "0b01111011",
+        "mnemonic": "SHL",
+        "arguments": [
+            "A",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_A} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow <<\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHLAMEM": {
+        "id": 123,
+        "name": "SHLAMEM",
+        "category": "ALU instructions",
+        "opcode": "0b01111100",
+        "mnemonic": "SHL",
+        "arguments": [
+            "A",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_A} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow <<\\texttt{REG_A} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SHLAMEMZP": {
+        "id": 124,
+        "name": "SHLAMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b01111101",
+        "mnemonic": "SHL",
+        "arguments": [
+            "A",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_A} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SHLASTC": {
+        "id": 125,
+        "name": "SHLASTC",
+        "category": "ALU instructions",
+        "opcode": "0b01111110",
+        "mnemonic": "SHL",
+        "arguments": [
+            "A",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_A} and save it on stack",
+        "microcodes-description": ""
+    },
+    "SHLBA": {
+        "id": 126,
+        "name": "SHLBA",
+        "category": "ALU instructions",
+        "opcode": "0b01111111",
+        "mnemonic": "SHL",
+        "arguments": [
+            "B",
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_B} and save it to \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow <<\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHLBB": {
+        "id": 127,
+        "name": "SHLBB",
+        "category": "ALU instructions",
+        "opcode": "0b10000000",
+        "mnemonic": "SHL",
+        "arguments": [
+            "B",
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_B} and save it to \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow <<\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\)"
+    },
+    "SHLBMEM": {
+        "id": 128,
+        "name": "SHLBMEM",
+        "category": "ALU instructions",
+        "opcode": "0b10000001",
+        "mnemonic": "SHL",
+        "arguments": [
+            "B",
+            "MEM8"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_B} and save it to memory at given address",
+        "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\quad \\& \\quad \\texttt{PC} \\leftarrow \\texttt{PC+1} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow <<\\texttt{REG_B} \\quad \\& \\quad \\texttt{save flags to } \\texttt{REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)"
+    },
+    "SHLBMEMZP": {
+        "id": 129,
+        "name": "SHLBMEMZP",
+        "category": "ALU instructions",
+        "opcode": "0b10000010",
+        "mnemonic": "SHL",
+        "arguments": [
+            "B",
+            "MEM16"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_B} and save it to zero page memory at given address",
+        "microcodes-description": ""
+    },
+    "SHLBSTC": {
+        "id": 130,
+        "name": "SHLBSTC",
+        "category": "ALU instructions",
+        "opcode": "0b10000011",
+        "mnemonic": "SHL",
+        "arguments": [
+            "B",
+            "STC"
+        ],
+        "microcodes": [],
+        "description": "Calculate left shift of \\texttt{REG_B} and save it on stack",
+        "microcodes-description": ""
+    },
+    "INCA": {
+        "id": 142,
+        "name": "INCA",
+        "category": "ALU instructions",
+        "opcode": "0b10001111",
+        "mnemonic": "INC",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Increment value of \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A + 1}  \\)"
+    },
+    "INCB": {
+        "id": 143,
+        "name": "INCB",
+        "category": "ALU instructions",
+        "opcode": "0b10010000",
+        "mnemonic": "INC",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Increment value of \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B + 1}  \\)"
+    },
+    "INCTMP": {
+        "id": 144,
+        "name": "INCTMP",
+        "category": "ALU instructions",
+        "opcode": "0b10010001",
+        "mnemonic": "INC",
+        "arguments": [
+            "TMP"
+        ],
+        "microcodes": [],
+        "description": "Increment value of \\texttt{REG_TMP}",
+        "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP + 1}  \\)"
+    },
+    "INCTH": {
+        "id": 145,
+        "name": "INCTH",
+        "category": "ALU instructions",
+        "opcode": "0b10010010",
+        "mnemonic": "INC",
+        "arguments": [
+            "TH"
+        ],
+        "microcodes": [],
+        "description": "Increment value of \\texttt{REG_TH}",
+        "microcodes-description": "\\( \\texttt{REG_TH} \\leftarrow \\texttt{REG_TH + 1}  \\)"
+    },
+    "INCTL": {
+        "id": 146,
+        "name": "INCTL",
+        "category": "ALU instructions",
+        "opcode": "0b10010011",
+        "mnemonic": "INC",
+        "arguments": [
+            "TL"
+        ],
+        "microcodes": [],
+        "description": "Increment value of \\texttt{REG_TL}",
+        "microcodes-description": "\\( \\texttt{REG_TL} \\leftarrow \\texttt{REG_TL + 1}  \\)"
+    },
+    "DECA": {
+        "id": 147,
+        "name": "DECA",
+        "category": "ALU instructions",
+        "opcode": "0b10010100",
+        "mnemonic": "DEC",
+        "arguments": [
+            "A"
+        ],
+        "microcodes": [],
+        "description": "Decrement value of \\texttt{REG_A}",
+        "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A - 1}  \\)"
+    },
+    "DECB": {
+        "id": 148,
+        "name": "DECB",
+        "category": "ALU instructions",
+        "opcode": "0b10010101",
+        "mnemonic": "DEC",
+        "arguments": [
+            "B"
+        ],
+        "microcodes": [],
+        "description": "Decrement value of \\texttt{REG_B}",
+        "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B - 1}  \\)"
+    },
+    "DECTMP": {
+        "id": 149,
+        "name": "DECTMP",
+        "category": "ALU instructions",
+        "opcode": "0b10010110",
+        "mnemonic": "DEC",
+        "arguments": [
+            "TMP"
+        ],
+        "microcodes": [],
+        "description": "Decrement value of \\texttt{REG_TMP}",
+        "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP - 1}  \\)"
+    },
+    "DECTH": {
+        "id": 150,
+        "name": "DECTH",
+        "category": "ALU instructions",
+        "opcode": "0b10010111",
+        "mnemonic": "DEC",
+        "arguments": [
+            "TH"
+        ],
+        "microcodes": [],
+        "description": "Decrement value of \\texttt{REG_TH}",
+        "microcodes-description": "\\( \\texttt{REG_TH} \\leftarrow \\texttt{REG_TH - 1}  \\)"
+    },
+    "DECTL": {
+        "id": 151,
+        "name": "DECTL",
+        "category": "ALU instructions",
+        "opcode": "0b10011000",
+        "mnemonic": "DEC",
+        "arguments": [
+            "TL"
+        ],
+        "microcodes": [],
+        "description": "Decrement value of \\texttt{REG_TL}",
+        "microcodes-description": "\\( \\texttt{REG_TL} \\leftarrow \\texttt{REG_TL - 1}  \\)"
+    }
 }

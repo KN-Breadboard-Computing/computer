@@ -1962,5 +1962,16 @@
         "microcodes": [],
         "description": "Decrement value of \\texttt{REG_TL}",
         "microcodes-description": "\\( \\texttt{REG_TL} \\leftarrow \\texttt{REG_TL - 1}  \\)"
+    },
+    "HALT": {
+        "id": 152,
+        "name": "HALT",
+        "category": "General instructions",
+        "opcode": "0b11111111",
+        "mnemonic": "HLT",
+        "arguments": [],
+        "microcodes": [],
+        "description": "Halts program execution",
+        "microcodes-description": ""
     }
 }

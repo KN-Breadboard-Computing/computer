@@ -22,7 +22,7 @@ OPERATIONS = [
     ["NEG",  [["REG_A"], ["REG_B"]],                    "negation",             "-"],
     ["ADD",  [[]],                                      "sum",                  "+"],
     ["SUB",  [["REG_A", "REG_B"], ["REG_B", "REG_A"]],  "difference",           "-"],
-    ["MUL2", [["REG_A"], ["REG_B"]],                    "product",              "*"],
+    #["MUL2", [["REG_A"], ["REG_B"]],                    "product",              "*"],
     ["DIV2", [["REG_A"], ["REG_B"]],                    "quotient",             "/"],
     ["INV",  [["REG_A"], ["REG_B"]],                    "bit inversion",        "not"],
     ["OR",   [[]],                                      "alternative",          "or"],

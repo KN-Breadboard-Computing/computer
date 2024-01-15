@@ -1,44 +1,48 @@
 from typing import List
 
-MMB = "\\\\("                    # math mode begin symbol
-MME = "\\\\)"                    # math mode end symbol
-TEXT = "\\\\texttt"              # text mode function name
-LEFTARROW = "\\\\leftarrow"      # left arrow symbol
-AND = "\\\\ \\\\& \\\\"          # and symbol
-SPACE = "\\\\ "                  # space symbol
+MMB = "\\\\("  # math mode begin symbol
+MME = "\\\\)"  # math mode end symbol
+TEXT = "\\\\texttt"  # text mode function name
+LEFTARROW = "\\\\leftarrow"  # left arrow symbol
+AND = "\\\\ \\\\& \\\\"  # and symbol
+SPACE = "\\\\ "  # space symbol
 
-REGS8 = ["REG_A", "REG_B", "REG_TMPH", "REG_TMPL", "REG_F"]     # names of 8bit registers
-REGS16 = ["REG_TMP"]                                            # names of 16bit registers
+REGS8 = ["REG_A", "REG_B", "REG_TMPH", "REG_TMPL", "REG_F"]  # names of 8bit registers
+REGS16 = ["REG_TMP"]  # names of 16bit registers
 
-REGS8ABR = { "REG_A": "A", "REG_B": "B", "REG_TMPH": "TH", "REG_TMPL": "TL", "REG_F": "F" }     # abbreviated names of 8bit registers
-REGS16ABR = { "REG_TMP": "T" }                                                                  # abbreviated names of 16bit registers
+REGS8ABR = {"REG_A": "A", "REG_B": "B", "REG_TMPH": "TH", "REG_TMPL": "TL",
+            "REG_F": "F"}  # abbreviated names of 8bit registers
+REGS16ABR = {"REG_TMP": "T"}  # abbreviated names of 16bit registers
 
-FLAGS = ["S", "P", "Z", "C", "O"]                                                               # abbreviated names of flags
-FLAGS_DESCRIPTION = ["sign", "parity", "zero", "carry", "overflow"]                             # names of flags
+FLAGS = ["S", "P", "Z", "C", "O"]  # abbreviated names of flags
+FLAGS_DESCRIPTION = ["sign", "parity", "zero", "carry", "overflow"]  # names of flags
 
 # available operations with descriptions
 # [mnemonic, possible arguments, operation name, math operator]
 OPERATIONS = [
-    ["NEG",  [["REG_A"], ["REG_B"]],                    "negation",             "-"],
-    ["ADD",  [[]],                                      "sum",                  "+"],
-    ["SUB",  [["REG_A", "REG_B"], ["REG_B", "REG_A"]],  "difference",           "-"],
-    #["MUL2", [["REG_A"], ["REG_B"]],                    "product",              "*"],
-    ["DIV2", [["REG_A"], ["REG_B"]],                    "quotient",             "/"],
-    ["INV",  [["REG_A"], ["REG_B"]],                    "bit inversion",        "not"],
-    ["OR",   [[]],                                      "alternative",          "or"],
-    ["AND",  [[]],                                      "conjunction",          "and"],     
-    ["XOR",  [[]],                                      "exclusive disjunction","xor"],
-    ["SHR",  [["REG_A"], ["REG_B"]],                    "right shift",          ">>"],
-    ["SHL",  [["REG_A"], ["REG_B"]],                    "left shift",           "<<"]
+    ["NEG", [["REG_A"], ["REG_B"]], "negation", "-"],
+    ["ADD", [[]], "sum", "+"],
+    ["SUB", [["REG_A", "REG_B"], ["REG_B", "REG_A"]], "difference", "-"],
+    # ["MUL2", [["REG_A"], ["REG_B"]],                    "product",              "*"],
+    ["DIV2", [["REG_A"], ["REG_B"]], "quotient", "/"],
+    ["INV", [["REG_A"], ["REG_B"]], "bit inversion", "not"],
+    ["OR", [[]], "alternative", "or"],
+    ["AND", [[]], "conjunction", "and"],
+    ["XOR", [[]], "exclusive disjunction", "xor"],
+    ["SHR", [["REG_A"], ["REG_B"]], "right shift", ">>"],
+    ["SHL", [["REG_A"], ["REG_B"]], "left shift", "<<"]
 ]
 
-# available operation result destinations with descriptions 
-OPERATION_DESTINATIONS = [["A", "REG_A", "REG_A"], ["B", "REG_B", "REG_B"], ["MEM", "memory at given address", "MEM[MAR]"], ["MEMZP", "zero page memory at given address", "ZP_MEM[MAR]"], ["STC", "stack", "STC_MEM[MAR]"]]
-
+# available operation result destinations with descriptions
+OPERATION_DESTINATIONS = [["A", "REG_A", "REG_A"], ["B", "REG_B", "REG_B"],
+                          ["MEM", "memory at given address", "MEM[MAR]"],
+                          ["MEMZP", "zero page memory at given address", "ZP_MEM[MAR]"],
+                          ["STC", "stack", "STC_MEM[MAR]"]]
 
 instructions_counter = 0
 
-def build_text(text: str)-> str:
+
+def build_text(text: str) -> str:
     return f"{TEXT}{{{text}}}"
 
 
@@ -53,11 +57,18 @@ def build_list_of_strings(strings: List[str]) -> str:
     return f"[{list_str}]"
 
 
-def build_instruction(name: str, category: str, mnemonic: str, 
-    arguments: List[str], microcodes: List[str], description: str, 
-    microcodes_description: str, total_microcodes_number: str = '', last_instruction: bool = False) -> str:
+def build_instruction(name: str, category: str, mnemonic: str,
+                      arguments: List[str], microcodes: List[str], description: str,
+                      microcodes_description: str, total_microcodes_number: str = '',
+                      last_instruction: bool = False) -> str:
     comma = "," if not last_instruction else ""
+    min_cycles = ""
+    max_cycles = ""
+    if total_microcodes_number != '':
+        max_cycles, min_cycles = [x.strip() for x in total_microcodes_number.split("or")]
     microcodes_number = str(len(microcodes) - 1) if total_microcodes_number == '' else total_microcodes_number
+    if max_cycles == '':
+        max_cycles = min_cycles = microcodes_number
     return f"""
     "{name}": {{
         "id": {instructions_counter},
@@ -69,6 +80,8 @@ def build_instruction(name: str, category: str, mnemonic: str,
         "microcodes": {build_list_of_strings(microcodes)},
         "description": "{description}",
         "microcodes-description": "{microcodes_description}",
+        "min-cycles-number": {min_cycles},
+        "max-cycles-number": {max_cycles},
         "total-mircocodes-number": "{microcodes_number}"
     }}{comma}
     """
@@ -99,7 +112,8 @@ for reg1_index in range(len(REGS8)):
         description = f"Move value from {MMB} {build_text(reg2)} {MME} to {MMB} {build_text(reg1)} {MME}"
         microcodes_description = f"{MMB} {build_text(reg1)} {LEFTARROW} {build_text(reg2)} {MME}"
 
-        print(build_instruction(name, category, mnemonic, [REGS8ABR[reg1], REGS8ABR[reg2]], microcodes, description, microcodes_description))
+        print(build_instruction(name, category, mnemonic, [REGS8ABR[reg1], REGS8ABR[reg2]], microcodes, description,
+                                microcodes_description))
         instructions_counter += 1
 
 # Moves of constants to register
@@ -118,7 +132,8 @@ for reg in REGS8:
     description = f"Move given constant to {MMB} {build_text(reg)} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text(reg)} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME}"
 
-    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'CONST'], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'CONST'], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
 # Moves from memory at address given by constant to register
@@ -138,7 +153,8 @@ for reg in ["REG_A", "REG_B"]:
     description = f"Move constant from memory at given address to {MMB} {build_text(reg)} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPH')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPL')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {MME} <br> {MMB} {build_text('REG_A')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'MEM16'], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'MEM16'], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
     name = f"{mnemonic}{REGS8ABR[reg]}ABSZP"
@@ -154,7 +170,8 @@ for reg in ["REG_A", "REG_B"]:
     description = f"Move constant from zero page memory at given address to {MMB} {build_text(reg)} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPH')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {MME} <br> {MMB} {build_text(reg)} {LEFTARROW} {build_text('MEM[REG_MAR]')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'MEM8'], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'MEM8'], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
 # Moves from register to memory at address given by constant
@@ -175,7 +192,8 @@ for reg in ["REG_A", "REG_B"]:
     description = f"Move value from {MMB} {build_text(reg)} {MME} to memory at given address"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPH')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPL')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {AND} {build_text('REG_MBR')} {LEFTARROW} {build_text(reg)} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, ['MEM16', REGS8ABR[reg]], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, ['MEM16', REGS8ABR[reg]], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
     name = f"{mnemonic}ABS{REGS8ABR[reg]}ZP"
@@ -191,7 +209,8 @@ for reg in ["REG_A", "REG_B"]:
     description = f"Move value from {MMB} {build_text(reg)} {MME} to zero page memory at given address"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_TMPH')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {AND} {build_text('REG_MBR')} {LEFTARROW} {build_text(reg)} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, ['MEM8', REGS8ABR[reg]], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, ['MEM8', REGS8ABR[reg]], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
 # Moves constants to memory at address given by constant
@@ -247,7 +266,8 @@ for reg in ["REG_A", "REG_B"]:
     description = f"Move value from {MMB} {build_text(reg)} {MME} to memory at address given by value of {MMB} {build_text('REG_TMP')} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {AND} {build_text('REG_MBR')} {LEFTARROW} {build_text(reg)} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, [REGS16ABR['REG_TMP'], REGS8ABR[reg]], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, [REGS16ABR['REG_TMP'], REGS8ABR[reg]], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
 # Moves from registers to zero page memory at address given by other register
@@ -282,7 +302,8 @@ for reg1_index in range(len(REGS8)):
             description = f"Move value from {MMB} {build_text(reg2)} {MME} to zero page memory at address given by value of {MMB} {build_text(reg1)} {MME}"
             microcodes_description = f"{MMB} {build_text('REG_TMPL')} {LEFTARROW} {build_text(reg1)} {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {AND} {build_text('REG_MBR')} {LEFTARROW} {build_text(reg2)} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-        print(build_instruction(name, category, mnemonic, [REGS8ABR[reg1], REGS8ABR[reg2]], microcodes, description, microcodes_description))
+        print(build_instruction(name, category, mnemonic, [REGS8ABR[reg1], REGS8ABR[reg2]], microcodes, description,
+                                microcodes_description))
         instructions_counter += 1
 
 # Moves constants to memory at address given by REG_TMP
@@ -299,7 +320,8 @@ microcodes = [
 description = f"Move given constant to memory at address given by value of {MMB} {build_text('REG_TMP')} {MME}"
 microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {MME} <br> {MMB} {build_text('REG_MBR')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-print(build_instruction(name, category, mnemonic, [REGS16ABR['REG_TMP'], 'CONST'], microcodes, description, microcodes_description))
+print(build_instruction(name, category, mnemonic, [REGS16ABR['REG_TMP'], 'CONST'], microcodes, description,
+                        microcodes_description))
 instructions_counter += 1
 
 # Moves constants to zero page memory at address given by register
@@ -320,7 +342,8 @@ for reg in REGS8:
     description = f"Move given constant to zero page memory at address given by value of {MMB} {build_text(reg)} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('PC')} {AND} {build_text('REG_TMPL')} {LEFTARROW} {build_text(reg)} {MME} <br> {MMB} {build_text('REG_MBR')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('REG_TMP')} {MME} <br> {MMB} {build_text('MEM[REG_MAR]')} {LEFTARROW} {build_text('REG_MBR')} {MME}"
 
-    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'CONST'], microcodes, description, microcodes_description))
+    print(build_instruction(name, category, mnemonic, [REGS8ABR[reg], 'CONST'], microcodes, description,
+                            microcodes_description))
     instructions_counter += 1
 
 # Generating ALU instructions
@@ -351,7 +374,7 @@ for operation in OPERATIONS:
             else:
                 operation_args = f"{MMB} {build_text(args[0])} {MME} and {MMB} {build_text(args[1])} {MME}"
                 operation_args_mc = f"{build_text(f'{args[0]} {operation[3]} {args[1]}')}"
-            
+
             if destination[0] == "A" or destination[0] == "B":
                 operation_destination = f"{MMB} {build_text(destination[1])} {MME}"
                 operation_destination_mc = f"{build_text(destination[2])}"
@@ -397,16 +420,17 @@ for operation in OPERATIONS:
                 microcodes_description = f""
 
             microcodes = [
-                "LOAD_PC_TO_MAR",
-                "LOAD_MEM[MAR]_TO_IR_PC++",
-            ] + microcodes_core + ["RST_MC"]
+                             "LOAD_PC_TO_MAR",
+                             "LOAD_MEM[MAR]_TO_IR_PC++",
+                         ] + microcodes_core + ["RST_MC"]
 
-            print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
+            print(
+                build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
             instructions_counter += 1
 
 # Generating compare operations
 mnemonic = "CMP"
-for reg1, reg2 in [("REG_A", "REG_B"), ("REG_B", "REG_A")]:        
+for reg1, reg2 in [("REG_A", "REG_B"), ("REG_B", "REG_A")]:
     name = f"{mnemonic}{REGS8ABR[reg1]}{REGS8ABR[reg2]}"
     arguments = [REGS8ABR[reg1], REGS8ABR[reg2]]
     microcodes = [
@@ -417,7 +441,7 @@ for reg1, reg2 in [("REG_A", "REG_B"), ("REG_B", "REG_A")]:
     ]
     description = f"Save flags of operation {MMB} {build_text(reg1)} - {build_text(reg2)} {MME} to {MMB} {build_text('REG_F')} {MME}"
     microcodes_description = f"{MMB} {build_text(f'calculate {reg1} - {reg2}')} {MME} <br> {MMB} {AND} {build_text('save flags to REG_F')} {MME}"
-    
+
     print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
     instructions_counter += 1
 
@@ -434,11 +458,12 @@ for reg1, reg2 in [("REG_TMPH", "REG_TMPL"), ("REG_TMPL", "REG_TMPH")]:
     ]
     description = f"Move {MMB} {build_text(reg1)} {MME} to {MMB} {build_text('REG_A')} {MME}, {MMB} {build_text(reg2)} {MME} to {MMB} {build_text('REG_B')} {MME} and save flags of operation {MMB} {build_text('REG_A')} - {build_text('REG_B')} {MME} to {MMB} {build_text('REG_F')} {MME}"
     microcodes_description = f"{MMB} {build_text('REG_A')} {LEFTARROW} {build_text(reg1)} {MME} <br> {MMB} {build_text('REG_B')} {LEFTARROW} {build_text(reg2)} {MME} <br> {MMB} {build_text('calculate REG_A - REG_B')} {MME} <br> {MMB} {AND} {build_text('save flags to REG_F')} {MME}"
-    
+
     print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
     instructions_counter += 1
 
-for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "REG_A"), ("REG_TMPL", "REG_A", "REG_B"), ("REG_TMPL", "REG_B", "REG_A")]:
+for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "REG_A"), ("REG_TMPL", "REG_A", "REG_B"),
+                         ("REG_TMPL", "REG_B", "REG_A")]:
     name = f"{mnemonic}{REGS8ABR[reg1]}{REGS8ABR[reg2]}"
     arguments = [REGS8ABR[reg1], REGS8ABR[reg2]]
     microcodes = [
@@ -464,7 +489,7 @@ for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "
         "RST_MC"
     ]
     description = f"Move {MMB} {build_text(reg1)} {MME} to {MMB} {build_text(reg3)} {MME} and save flags of operation {MMB} {build_text('REG_B')} - {build_text('REG_A')} {MME} to {MMB} {build_text('REG_F')} {MME}"
-    microcodes_description = f"{MMB} {build_text(reg3)} {LEFTARROW} {build_text(reg1)} {MME} <br> {MMB} {build_text('calculate REG_B - REG_A')} {MME} <br> {MMB} {AND} {build_text('save flags to REG_F')} {MME}"    
+    microcodes_description = f"{MMB} {build_text(reg3)} {LEFTARROW} {build_text(reg1)} {MME} <br> {MMB} {build_text('calculate REG_B - REG_A')} {MME} <br> {MMB} {AND} {build_text('save flags to REG_F')} {MME}"
 
     print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
     instructions_counter += 1
@@ -474,7 +499,7 @@ mnemonic = "CLR"
 for reg in REGS8:
     if reg == "REG_F":
         continue
-    
+
     name = f"{mnemonic}{REGS8ABR[reg]}"
     arguments = [REGS8ABR[reg]]
     microcodes = [
@@ -553,7 +578,7 @@ for reg in ["REG_A", "REG_B"]:
     ]
     description = f"Decrement value of {MMB} {build_text(reg)} {MME} and save flags to {MMB} {build_text('REG_F')} {MME}"
     microcodes_description = f"{MMB} {build_text(reg)} {LEFTARROW} {build_text(reg)} - 1 {MME} <br> {MMB} {AND} {build_text('save flags to REG_F')} {MME}"
-    
+
     print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description))
     instructions_counter += 1
 
@@ -622,7 +647,9 @@ for flag_index, flag in enumerate(FLAGS):
                 description = f"Jump to {type_name} if {FLAGS_DESCRIPTION[flag_index]} flag is not set"
                 microcodes_description = f"{MMB} {build_text('if')} {SPACE} {build_text(f'REG_F[{flag_index}]')} {SPACE} {build_text('is not set:')} {MME} <br> {MMB} {SPACE} {SPACE} {build_text(target_instruction)} {MME} <br> {MMB} {build_text('else:')} {MME} <br> {MMB} {SPACE} {SPACE} {build_text('SKIP2')} {MME}"
 
-            print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description, total_microcodes_number='7 or 4'))
+            print(
+                build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
+                                  total_microcodes_number='7 or 4'))
             instructions_counter += 1
 
 mnemonic = "JMPREL"
@@ -672,7 +699,9 @@ for flag_index, flag in enumerate(FLAGS):
                 description = f"Jump to {type_name} if {FLAGS_DESCRIPTION[flag_index]} flag is not set"
                 microcodes_description = f"{MMB} {build_text('if')} {SPACE} {build_text(f'REG_F[{flag_index}]')} {SPACE} {build_text('is not set:')} {MME} <br> {MMB} {SPACE} {SPACE} {build_text(target_instruction)} {MME} <br> {MMB} {build_text('else:')} {MME} <br> {MMB} {SPACE} {SPACE} {build_text('SKIP1')} {MME}"
 
-            print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description, total_microcodes_number='6 or 3'))
+            print(
+                build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
+                                  total_microcodes_number='6 or 3'))
             instructions_counter += 1
 
 name = f"{mnemonic}FUN"
@@ -966,10 +995,11 @@ microcodes = [
     "LOAD_MEM[MAR]_TO_IR_PC++",
     "HALT"
 ]
-description = f"Stop executing program"         
+description = f"Stop executing program"
 microcodes_description = f"{MMB} {build_text('HALT')} {MME}"
 
-print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description, last_instruction=True))
+print(build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
+                        last_instruction=True))
 instructions_counter += 1
 
 print("}")

@@ -17,6 +17,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_B} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVATH": {
@@ -37,6 +39,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVATL": {
@@ -57,6 +61,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVAF": {
@@ -77,6 +83,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVBA": {
@@ -97,6 +105,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVBTH": {
@@ -117,6 +127,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVBTL": {
@@ -137,6 +149,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVBF": {
@@ -157,6 +171,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTHA": {
@@ -177,6 +193,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_A} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTHB": {
@@ -197,6 +215,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_B} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTHTL": {
@@ -217,6 +237,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_TMPL} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTHF": {
@@ -237,6 +259,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTLA": {
@@ -257,6 +281,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTLB": {
@@ -277,6 +303,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTLTH": {
@@ -297,6 +325,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVTLF": {
@@ -317,6 +347,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "MOVAIMM": {
@@ -338,6 +370,8 @@
         ],
         "description": "Move given constant to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVBIMM": {
@@ -359,6 +393,8 @@
         ],
         "description": "Move given constant to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVTHIMM": {
@@ -380,6 +416,8 @@
         ],
         "description": "Move given constant to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVTLIMM": {
@@ -401,6 +439,8 @@
         ],
         "description": "Move given constant to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVAABS": {
@@ -426,6 +466,8 @@
         ],
         "description": "Move constant from memory at given address to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "MOVAABSZP": {
@@ -449,6 +491,8 @@
         ],
         "description": "Move constant from zero page memory at given address to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVBABS": {
@@ -474,6 +518,8 @@
         ],
         "description": "Move constant from memory at given address to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "MOVBABSZP": {
@@ -497,6 +543,8 @@
         ],
         "description": "Move constant from zero page memory at given address to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATABSA": {
@@ -522,6 +570,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "MOVATABSAZP": {
@@ -545,6 +595,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATABSB": {
@@ -570,6 +622,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "MOVATABSBZP": {
@@ -593,6 +647,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATABSIMM": {
@@ -620,6 +676,8 @@
         ],
         "description": "Move given constant to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 10,
+        "max-cycles-number": 10,
         "total-mircocodes-number": "10"
     },
     "MOVATABSIMMZP": {
@@ -645,6 +703,8 @@
         ],
         "description": "Move given constant to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "MOVATTA": {
@@ -666,6 +726,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVATTB": {
@@ -687,6 +749,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVATAB": {
@@ -709,6 +773,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATATH": {
@@ -731,6 +797,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATATL": {
@@ -753,6 +821,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATBA": {
@@ -775,6 +845,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATBTH": {
@@ -797,6 +869,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATBTL": {
@@ -819,6 +893,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATTHA": {
@@ -841,6 +917,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATTHB": {
@@ -863,6 +941,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATTHTL": {
@@ -885,6 +965,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "MOVATTLA": {
@@ -906,6 +988,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVATTLB": {
@@ -927,6 +1011,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVATTLTH": {
@@ -948,6 +1034,8 @@
         ],
         "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "MOVATTIMM": {
@@ -971,6 +1059,8 @@
         ],
         "description": "Move given constant to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATAIMM": {
@@ -994,6 +1084,8 @@
         ],
         "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATBIMM": {
@@ -1017,6 +1109,8 @@
         ],
         "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATTHIMM": {
@@ -1040,6 +1134,8 @@
         ],
         "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "MOVATTLIMM": {
@@ -1063,6 +1159,8 @@
         ],
         "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "NEGAA": {
@@ -1083,6 +1181,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "NEGAB": {
@@ -1103,6 +1203,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "NEGBA": {
@@ -1123,6 +1225,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "NEGBB": {
@@ -1143,6 +1247,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "NEGMEMA": {
@@ -1169,6 +1275,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "NEGMEMB": {
@@ -1195,6 +1303,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "NEGMEMZPA": {
@@ -1219,6 +1329,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "NEGMEMZPB": {
@@ -1243,6 +1355,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "NEGSTCA": {
@@ -1264,6 +1378,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "NEGSTCB": {
@@ -1285,6 +1401,8 @@
         ],
         "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "ADDA": {
@@ -1304,6 +1422,8 @@
         ],
         "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ADDB": {
@@ -1323,6 +1443,8 @@
         ],
         "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ADDMEM": {
@@ -1348,6 +1470,8 @@
         ],
         "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "ADDMEMZP": {
@@ -1371,6 +1495,8 @@
         ],
         "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "ADDSTC": {
@@ -1391,6 +1517,8 @@
         ],
         "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SUBAAB": {
@@ -1412,6 +1540,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SUBABA": {
@@ -1433,6 +1563,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SUBBAB": {
@@ -1454,6 +1586,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SUBBBA": {
@@ -1475,6 +1609,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SUBMEMAB": {
@@ -1502,6 +1638,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SUBMEMBA": {
@@ -1529,6 +1667,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SUBMEMZPAB": {
@@ -1554,6 +1694,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SUBMEMZPBA": {
@@ -1579,6 +1721,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SUBSTCAB": {
@@ -1601,6 +1745,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SUBSTCBA": {
@@ -1623,6 +1769,8 @@
         ],
         "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "DIV2AA": {
@@ -1643,6 +1791,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DIV2AB": {
@@ -1663,6 +1813,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DIV2BA": {
@@ -1683,6 +1835,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DIV2BB": {
@@ -1703,6 +1857,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DIV2MEMA": {
@@ -1729,6 +1885,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "DIV2MEMB": {
@@ -1755,6 +1913,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "DIV2MEMZPA": {
@@ -1779,6 +1939,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "DIV2MEMZPB": {
@@ -1803,6 +1965,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "DIV2STCA": {
@@ -1824,6 +1988,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "DIV2STCB": {
@@ -1845,6 +2011,8 @@
         ],
         "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "INVAA": {
@@ -1865,6 +2033,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INVAB": {
@@ -1885,6 +2055,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INVBA": {
@@ -1905,6 +2077,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INVBB": {
@@ -1925,6 +2099,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INVMEMA": {
@@ -1951,6 +2127,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "INVMEMB": {
@@ -1977,6 +2155,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "INVMEMZPA": {
@@ -2001,6 +2181,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "INVMEMZPB": {
@@ -2025,6 +2207,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "INVSTCA": {
@@ -2046,6 +2230,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "INVSTCB": {
@@ -2067,6 +2253,8 @@
         ],
         "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "ORA": {
@@ -2086,6 +2274,8 @@
         ],
         "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ORB": {
@@ -2105,6 +2295,8 @@
         ],
         "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ORMEM": {
@@ -2130,6 +2322,8 @@
         ],
         "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "ORMEMZP": {
@@ -2153,6 +2347,8 @@
         ],
         "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "ORSTC": {
@@ -2173,6 +2369,8 @@
         ],
         "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "ANDA": {
@@ -2192,6 +2390,8 @@
         ],
         "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ANDB": {
@@ -2211,6 +2411,8 @@
         ],
         "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "ANDMEM": {
@@ -2236,6 +2438,8 @@
         ],
         "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "ANDMEMZP": {
@@ -2259,6 +2463,8 @@
         ],
         "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "ANDSTC": {
@@ -2279,6 +2485,8 @@
         ],
         "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "XORA": {
@@ -2298,6 +2506,8 @@
         ],
         "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "XORB": {
@@ -2317,6 +2527,8 @@
         ],
         "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "XORMEM": {
@@ -2342,6 +2554,8 @@
         ],
         "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "XORMEMZP": {
@@ -2365,6 +2579,8 @@
         ],
         "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "XORSTC": {
@@ -2385,6 +2601,8 @@
         ],
         "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SHRAA": {
@@ -2405,6 +2623,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHRAB": {
@@ -2425,6 +2645,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHRBA": {
@@ -2445,6 +2667,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHRBB": {
@@ -2465,6 +2689,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHRMEMA": {
@@ -2491,6 +2717,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SHRMEMB": {
@@ -2517,6 +2745,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SHRMEMZPA": {
@@ -2541,6 +2771,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SHRMEMZPB": {
@@ -2565,6 +2797,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SHRSTCA": {
@@ -2586,6 +2820,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SHRSTCB": {
@@ -2607,6 +2843,8 @@
         ],
         "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SHLAA": {
@@ -2627,6 +2865,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHLAB": {
@@ -2647,6 +2887,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHLBA": {
@@ -2667,6 +2909,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHLBB": {
@@ -2687,6 +2931,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SHLMEMA": {
@@ -2713,6 +2959,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SHLMEMB": {
@@ -2739,6 +2987,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 9,
+        "max-cycles-number": 9,
         "total-mircocodes-number": "9"
     },
     "SHLMEMZPA": {
@@ -2763,6 +3013,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SHLMEMZPB": {
@@ -2787,6 +3039,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "SHLSTCA": {
@@ -2808,6 +3062,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "SHLSTCB": {
@@ -2829,6 +3085,8 @@
         ],
         "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to stack",
         "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPAB": {
@@ -2849,6 +3107,8 @@
         ],
         "description": "Save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CMPBA": {
@@ -2869,6 +3129,8 @@
         ],
         "description": "Save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CMPTHTL": {
@@ -2891,6 +3153,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\), \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "CMPTLTH": {
@@ -2913,6 +3177,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\), \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 5,
+        "max-cycles-number": 5,
         "total-mircocodes-number": "5"
     },
     "CMPTHA": {
@@ -2934,6 +3200,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPATH": {
@@ -2955,6 +3223,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPTHB": {
@@ -2976,6 +3246,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPBTH": {
@@ -2997,6 +3269,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPTLA": {
@@ -3018,6 +3292,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPATL": {
@@ -3039,6 +3315,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPTLB": {
@@ -3060,6 +3338,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CMPBTL": {
@@ -3081,6 +3361,8 @@
         ],
         "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "CLRA": {
@@ -3100,6 +3382,8 @@
         ],
         "description": "Set value of \\( \\texttt{REG_A} \\) to \\( \\texttt{0} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{0} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CLRB": {
@@ -3119,6 +3403,8 @@
         ],
         "description": "Set value of \\( \\texttt{REG_B} \\) to \\( \\texttt{0} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{0} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CLRTH": {
@@ -3138,6 +3424,8 @@
         ],
         "description": "Set value of \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{0} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{0} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CLRTL": {
@@ -3157,6 +3445,8 @@
         ],
         "description": "Set value of \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{0} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{0} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "CLRT": {
@@ -3176,6 +3466,8 @@
         ],
         "description": "Set value of \\( \\texttt{REG_TMP} \\) to \\( \\texttt{0} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{0} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{0} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INCA": {
@@ -3195,6 +3487,8 @@
         ],
         "description": "Increment value of \\( \\texttt{REG_A} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INCB": {
@@ -3214,6 +3508,8 @@
         ],
         "description": "Increment value of \\( \\texttt{REG_B} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "INCT": {
@@ -3233,6 +3529,8 @@
         ],
         "description": "Increment value of \\( \\texttt{REG_TMP} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DECA": {
@@ -3252,6 +3550,8 @@
         ],
         "description": "Decrement value of \\( \\texttt{REG_A} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DECB": {
@@ -3271,6 +3571,8 @@
         ],
         "description": "Decrement value of \\( \\texttt{REG_B} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "DECT": {
@@ -3290,6 +3592,8 @@
         ],
         "description": "Decrement value of \\( \\texttt{REG_TMP} \\) and save flags to \\( \\texttt{REG_F} \\)",
         "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "JMPIMM": {
@@ -3313,6 +3617,8 @@
         ],
         "description": "Jump to given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\)",
+        "min-cycles-number": 7,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7"
     },
     "JMPIMMS": {
@@ -3330,6 +3636,8 @@
         ],
         "description": "Jump to given address if sign flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMNS": {
@@ -3347,6 +3655,8 @@
         ],
         "description": "Jump to given address if sign flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTS": {
@@ -3364,6 +3674,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if sign flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTNS": {
@@ -3381,6 +3693,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if sign flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMP": {
@@ -3398,6 +3712,8 @@
         ],
         "description": "Jump to given address if parity flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMNP": {
@@ -3415,6 +3731,8 @@
         ],
         "description": "Jump to given address if parity flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTP": {
@@ -3432,6 +3750,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if parity flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTNP": {
@@ -3449,6 +3769,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if parity flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMZ": {
@@ -3466,6 +3788,8 @@
         ],
         "description": "Jump to given address if zero flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMNZ": {
@@ -3483,6 +3807,8 @@
         ],
         "description": "Jump to given address if zero flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTZ": {
@@ -3500,6 +3826,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if zero flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTNZ": {
@@ -3517,6 +3845,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if zero flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMC": {
@@ -3534,6 +3864,8 @@
         ],
         "description": "Jump to given address if carry flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMNC": {
@@ -3551,6 +3883,8 @@
         ],
         "description": "Jump to given address if carry flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTC": {
@@ -3568,6 +3902,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if carry flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTNC": {
@@ -3585,6 +3921,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if carry flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMO": {
@@ -3602,6 +3940,8 @@
         ],
         "description": "Jump to given address if overflow flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMNO": {
@@ -3619,6 +3959,8 @@
         ],
         "description": "Jump to given address if overflow flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTO": {
@@ -3636,6 +3978,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if overflow flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPIMMTNO": {
@@ -3653,6 +3997,8 @@
         ],
         "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if overflow flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 7,
         "total-mircocodes-number": "7 or 4"
     },
     "JMPREL": {
@@ -3675,6 +4021,8 @@
         ],
         "description": "Jump to address with given offset from current address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{REG_TMP} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} + \\texttt{REG_B} \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "JMPRELS": {
@@ -3692,6 +4040,8 @@
         ],
         "description": "Jump to address with given offset if sign flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELNS": {
@@ -3709,6 +4059,8 @@
         ],
         "description": "Jump to address with given offset if sign flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLS": {
@@ -3726,6 +4078,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if sign flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLNS": {
@@ -3743,6 +4097,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if sign flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELP": {
@@ -3760,6 +4116,8 @@
         ],
         "description": "Jump to address with given offset if parity flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELNP": {
@@ -3777,6 +4135,8 @@
         ],
         "description": "Jump to address with given offset if parity flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLP": {
@@ -3794,6 +4154,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if parity flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLNP": {
@@ -3811,6 +4173,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if parity flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELZ": {
@@ -3828,6 +4192,8 @@
         ],
         "description": "Jump to address with given offset if zero flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELNZ": {
@@ -3845,6 +4211,8 @@
         ],
         "description": "Jump to address with given offset if zero flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLZ": {
@@ -3862,6 +4230,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if zero flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLNZ": {
@@ -3879,6 +4249,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if zero flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELC": {
@@ -3896,6 +4268,8 @@
         ],
         "description": "Jump to address with given offset if carry flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELNC": {
@@ -3913,6 +4287,8 @@
         ],
         "description": "Jump to address with given offset if carry flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLC": {
@@ -3930,6 +4306,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if carry flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLNC": {
@@ -3947,6 +4325,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if carry flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELO": {
@@ -3964,6 +4344,8 @@
         ],
         "description": "Jump to address with given offset if overflow flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELNO": {
@@ -3981,6 +4363,8 @@
         ],
         "description": "Jump to address with given offset if overflow flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLO": {
@@ -3998,6 +4382,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if overflow flag is set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELTLNO": {
@@ -4015,6 +4401,8 @@
         ],
         "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if overflow flag is not set",
         "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6 or 3"
     },
     "JMPRELFUN": {
@@ -4043,6 +4431,8 @@
         ],
         "description": "Push \\( \\texttt{PC} \\) to stack and jump to given address",
         "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\)",
+        "min-cycles-number": 12,
+        "max-cycles-number": 12,
         "total-mircocodes-number": "12"
     },
     "JMPRELRET": {
@@ -4065,6 +4455,8 @@
         ],
         "description": "Pop address from stack and jump to it",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "PUSHA": {
@@ -4085,6 +4477,8 @@
         ],
         "description": "Push value of \\( \\texttt{REG_A} \\) to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "PUSHB": {
@@ -4105,6 +4499,8 @@
         ],
         "description": "Push value of \\( \\texttt{REG_B} \\) to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "PUSHTH": {
@@ -4125,6 +4521,8 @@
         ],
         "description": "Push value of \\( \\texttt{REG_TMPH} \\) to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "PUSHTL": {
@@ -4145,6 +4543,8 @@
         ],
         "description": "Push value of \\( \\texttt{REG_TMPL} \\) to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "PUSHT": {
@@ -4167,6 +4567,8 @@
         ],
         "description": "Push value of \\( \\texttt{REG_TMP} \\) to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "PUSHIMM": {
@@ -4189,6 +4591,8 @@
         ],
         "description": "Push given constant to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "PUSHABS": {
@@ -4215,6 +4619,8 @@
         ],
         "description": "Push value from given address to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 10,
+        "max-cycles-number": 10,
         "total-mircocodes-number": "10"
     },
     "PUSHABSZP": {
@@ -4239,6 +4645,8 @@
         ],
         "description": "Push value from given zero page address to stack",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "POPA": {
@@ -4259,6 +4667,8 @@
         ],
         "description": "Pop value from stack to \\( \\texttt{REG_A} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "POPB": {
@@ -4279,6 +4689,8 @@
         ],
         "description": "Pop value from stack to \\( \\texttt{REG_B} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "POPTH": {
@@ -4299,6 +4711,8 @@
         ],
         "description": "Pop value from stack to \\( \\texttt{REG_TMPH} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "POPTL": {
@@ -4319,6 +4733,8 @@
         ],
         "description": "Pop value from stack to \\( \\texttt{REG_TMPL} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "POPT": {
@@ -4341,6 +4757,8 @@
         ],
         "description": "Pop value from stack to \\( \\texttt{REG_TMP} \\)",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
+        "min-cycles-number": 6,
+        "max-cycles-number": 6,
         "total-mircocodes-number": "6"
     },
     "POPMEM": {
@@ -4367,6 +4785,8 @@
         ],
         "description": "Pop value from stack to memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 10,
+        "max-cycles-number": 10,
         "total-mircocodes-number": "10"
     },
     "POPMEMZP": {
@@ -4391,6 +4811,8 @@
         ],
         "description": "Pop value from stack to zero page memory at given address",
         "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
+        "min-cycles-number": 8,
+        "max-cycles-number": 8,
         "total-mircocodes-number": "8"
     },
     "NOP": {
@@ -4408,6 +4830,8 @@
         ],
         "description": "No nothing for one cycle",
         "microcodes-description": "\\( \\texttt{do nothing} \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SKIP": {
@@ -4424,6 +4848,8 @@
         ],
         "description": "Skip instruction",
         "microcodes-description": "",
+        "min-cycles-number": 2,
+        "max-cycles-number": 2,
         "total-mircocodes-number": "2"
     },
     "SKIP1": {
@@ -4441,6 +4867,8 @@
         ],
         "description": "Skip next program line",
         "microcodes-description": "\\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 3,
+        "max-cycles-number": 3,
         "total-mircocodes-number": "3"
     },
     "SKIP2": {
@@ -4459,6 +4887,8 @@
         ],
         "description": "Skip next two program lines",
         "microcodes-description": "\\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
+        "min-cycles-number": 4,
+        "max-cycles-number": 4,
         "total-mircocodes-number": "4"
     },
     "HALT": {
@@ -4475,6 +4905,8 @@
         ],
         "description": "Stop executing program",
         "microcodes-description": "\\( \\texttt{HALT} \\)",
+        "min-cycles-number": 2,
+        "max-cycles-number": 2,
         "total-mircocodes-number": "2"
     }
 }

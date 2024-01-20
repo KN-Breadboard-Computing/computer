@@ -59,7 +59,7 @@ def build_list_of_strings(strings: List[str]) -> str:
 
 def build_instruction(name: str, category: str, mnemonic: str,
                       arguments: List[str], microcodes: List[str], description: str,
-                      microcodes_description: str, total_microcodes_number: str = '',
+                      microcodes_description: str, total_microcodes_number: str = '', flag: str = '',
                       last_instruction: bool = False) -> str:
     comma = "," if not last_instruction else ""
     min_cycles = ""
@@ -80,6 +80,7 @@ def build_instruction(name: str, category: str, mnemonic: str,
         "microcodes": {build_list_of_strings(microcodes)},
         "description": "{description}",
         "microcodes-description": "{microcodes_description}",
+        "depend-on-flag": "{flag}",
         "min-cycles-number": {min_cycles},
         "max-cycles-number": {max_cycles},
         "total-mircocodes-number": "{microcodes_number}"
@@ -649,6 +650,7 @@ for flag_index, flag in enumerate(FLAGS):
 
             print(
                 build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
+                                  flag=condition + flag,
                                   total_microcodes_number='7 or 4'))
             instructions_counter += 1
 
@@ -701,6 +703,7 @@ for flag_index, flag in enumerate(FLAGS):
 
             print(
                 build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
+                                  flag=condition + flag,
                                   total_microcodes_number='6 or 3'))
             instructions_counter += 1
 

@@ -2,11 +2,12 @@ import json
 
 from argparse import ArgumentParser
 from pathlib import Path
+from itertools import permutations
 
 class Reg:
     def __init__(self, name, altname = None):
         self._name = name.upper()
-        self._altname = altname.upper() if altname is not None else ''
+        self._altname = altname.upper() if altname is not None else self._name
 
     def __str__(self):
         return self._name
@@ -36,7 +37,24 @@ REG_F = Reg('F')
 
 class Microcode:
     _alu_lut = {
-            'a+b': 'REG_A_PLUS_REG_B'
+            'a+b': 'REG_A_PLUS_REG_B',
+            '-a': 'MINUS_REG_A',
+            '-b': 'MINUS_REG_B',
+            'a-b': 'REG_A_MINUS_REG_B',
+            'b-a': 'REG_B_MINUS_REG_A',
+            'a>>>1': 'ARITHMETIC_RIGHT_SHIFT_REG_A',
+            'b>>>1': 'ARITHMETIC_RIGHT_SHIFT_REG_B',
+            '~a': 'NOT_REG_A',
+            '~b': 'NOT_REG_B',
+            'a|b': 'REG_A_OR_REG_B',
+            'a&b': 'REG_A_AND_REG_B',
+            'a^b': 'REG_A_XOR_REG_B',
+            'a>>1': 'LOGIC_RIGHT_SHIFT_REG_A',
+            'b>>1': 'LOGIC_RIGHT_SHIFT_REG_B',
+            'a<<1': 'LOGIC_LEFT_SHIFT_REG_A',
+            'b<<1': 'LOGIC_LEFT_SHIFT_REG_B',
+            '0': 'CONST_ZERO',
+
     }
 
     def __init__(self, name):
@@ -129,6 +147,10 @@ class Microcode:
         self._signals['~PC_OUT'] = 0
         return self
 
+    def pc_in(self):
+        self._signals['~PC_LOAD'] = 0
+        return self
+
     def pc_inc(self):
         self._signals['PC_TICK'] = 1
         return self
@@ -141,29 +163,41 @@ class Microcode:
         self._signals['REG_IR_LOAD'] = 1
         return self
 
-    def mem_to_bus(self):
+    def mbr_in(self):
+        self._signals['REG_MBR_LOAD'] = 1
+        self._signals['~REG_MBR_USE_BUS'] = 0
+        self._signals['REG_MBR_WORD_DIR'] = 1
+        return self
+
+    def mem_to_bus(self, zero_page=False):
         self._signals['REG_MBR_WORD_DIR'] = 0
         self._signals['~MEM_OUT'] = 0
         self._signals['~REG_MBR_USE_BUS'] = 0
+        self._signals['~ZERO_PAGE'] = 0 if zero_page else 1
         return self
 
-    def mem_to_mbr(self):
+    def mem_to_mbr(self, zero_page=False):
         self._signals['REG_MBR_LOAD'] = 1
         self._signals['~MEM_OUT'] = 0
+        self._signals['~ZERO_PAGE'] = 0 if zero_page else 1
         return self
 
-    def mbr_to_mem(self):
+    def mbr_to_mem(self, zero_page=False, stack=False):
         self._signals['~MEM_IN'] = 0
+        self._signals['~ZERO_PAGE'] = 0 if zero_page else 1
+        self._signals['MEM_PART'] = 1 if stack else 0
         return self
 
     def alu_operation(self, op, dst, latch_flags):
-        assert dst in DATA_REGS or dst == REG_MBR
-        self._signals[f'REG_{dst}_LOAD'] = 1
+        self._alu_operation(self.alu_opcodes[self._alu_lut[op.lower()]])
         self._signals[f'REG_F_LOAD'] = 1 if latch_flags else 0
-        self._alu_operation(self.alu_opcodes[self._alu_lut[op]])
 
-        if dst == REG_MBR:
-            self._signals['~REG_MBR_USE_BUS'] = 0
+        if dst is not None:
+            assert dst in DATA_REGS or dst == REG_MBR
+            self._signals[f'REG_{dst}_LOAD'] = 1
+
+            if dst == REG_MBR:
+                self._signals['~REG_MBR_USE_BUS'] = 0
 
         return self
 
@@ -174,6 +208,22 @@ class Microcode:
         self._signals['~REG_TMP_PASS_ADDRESS'] = 0
         return self
 
+    def tmp_in(self):
+        return self.reg_from_bus(REG_TL).reg_from_bus(REG_TH)
+
+    def stc_out(self):
+        self._signals['~STC_OUT'] = 0
+        return self
+
+    def stc_dec(self):
+        self._signals['STC_TICK'] = 1
+        return self
+
+    def stc_inc(self):
+        self._signals['STC_TICK'] = 1
+        self._signals['STC_MODE'] = 1
+        return self
+
     def to_json(self):
         return self._signals
 
@@ -181,7 +231,7 @@ class Microcode:
     def load_alu_opcodes(cls, path):
         def extract_code(t):
             key, value = t
-            bin_value = int(value['CODE'], 2) & 0x1FF
+            bin_value = int(value['CODE'], 2) & 0x1F
             return key, bin_value
 
         with open(path) as file:
@@ -224,29 +274,106 @@ Microcode.load_alu_opcodes(Path(args.alu_config))
 
 microcodes = Microcodes()
 
-LOAD_PC_TO_MAR = microcodes.add('LOAD_PC_TO_MAR').pc_out().mar_in()
-LOAD_MEM_AT_MAR_TO_IR_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_IR_PC++').mem_to_bus().ir_in().pc_inc()
-RST_MC = microcodes.add('RST_MC').no_mcc_tick().mcc_rst()
-LOAD_B_TO_A = microcodes.add('LOAD_B_TO_A').reg_to_bus(REG_B).reg_from_bus(REG_A)
-LOAD_A_TO_B = microcodes.add('LOAD_A_TO_B').reg_to_bus(REG_A).reg_from_bus(REG_B)
-LOAD_TH_TO_A = microcodes.add('LOAD_TH_TO_A').reg_to_bus(REG_TH).reg_from_bus(REG_A)
-LOAD_TL_TO_A = microcodes.add('LOAD_TL_TO_A').reg_to_bus(REG_TL).reg_from_bus(REG_A)
-LOAD_SUM_TO_A_LATCH_FLAGS = microcodes.add('LOAD_(A+B)_TO_A_LATCH_FLAGS').alu_operation('a+b', REG_A, True)
-LOAD_SUM_TO_B_LATCH_FLAGS = microcodes.add('LOAD_(A+B)_TO_B_LATCH_FLAGS').alu_operation('a+b', REG_B, True)
-LOAD_SUM_TO_MBR_LATCH_FLAGS = microcodes.add('LOAD_(A+B)_TO_MBR_LATCH_FLAGS').alu_operation('a+b', REG_MBR, True)
-LOAD_MEM_AT_MAR_TO_A = microcodes.add('LOAD_MEM[MAR]_TO_A').mem_to_bus().reg_from_bus(REG_A)
-LOAD_MEM_AT_MAR_TO_A_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_A_PC++').mem_to_bus().reg_from_bus(REG_A).pc_inc()
-LOAD_MEM_AT_MAR_TO_B = microcodes.add('LOAD_MEM[MAR]_TO_B').mem_to_bus().reg_from_bus(REG_B)
-LOAD_MEM_AT_MAR_TO_B_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_B_PC++').mem_to_bus().reg_from_bus(REG_B).pc_inc()
-LOAD_MEM_AT_MAR_TO_TMPH_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_TMPH_PC++').mem_to_bus().reg_from_bus(REG_TH).pc_inc()
-LOAD_MEM_AT_MAR_TO_TMPL_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_TMPL_PC++').mem_to_bus().reg_from_bus(REG_TL).pc_inc()
-LOAD_TMP_TO_MAR = microcodes.add('LOAD_TMP_TO_MAR').tmp_out().mar_in()
-LOAD_MEM_AT_MAR_TO_MBR_PCpp = microcodes.add('LOAD_MEM[MAR]_TO_MBR_PC++').mem_to_mbr().pc_inc()
-LOAD_F_TO_A = microcodes.add('LOAD_F_TO_A').reg_to_bus(REG_F).reg_from_bus(REG_A)
-LOAD_F_TO_B = microcodes.add('LOAD_F_TO_B').reg_to_bus(REG_F).reg_from_bus(REG_B)
-LOAD_MBR_TO_MEM_AT_MAR = microcodes.add('LOAD_MBR_TO_MEM[MAR]').mbr_to_mem()
-DO_NOTHING = microcodes.add('DO_NOTHING')
-HALT_PROGRAM = microcodes.add('HALT_PROGRAM').no_mcc_tick()
+microcodes.add('LOAD_PC_TO_MAR').pc_out().mar_in()
+microcodes.add('LOAD_MEM[MAR]_TO_IR_PC++').mem_to_bus().ir_in().pc_inc()
+microcodes.add('RST_MC').no_mcc_tick().mcc_rst()
+
+mov_srcs = WORD_REGS + [ REG_F ]
+mov_dsts = WORD_REGS
+for dst in mov_dsts:
+    microcodes.add(f'LOAD_TMP_TO_MAR_{dst.altname()}_TO_MBR').tmp_out().mar_in().reg_to_bus(dst).mbr_in()
+    microcodes.add(f'LOAD_STC_TO_MAR_{dst.altname()}_TO_MBR').stc_out().mar_in().reg_to_bus(dst).mbr_in()
+    microcodes.add(f'LOAD_MEM[MAR]_TO_{dst.altname()}_STC++').stc_inc().mem_to_bus().reg_from_bus(dst)
+    microcodes.add(f'MOV_0_TO_{dst.altname()}').alu_operation('0', None, False).reg_from_bus(dst)
+    for src in mov_srcs:
+         if src == dst: continue
+         microcodes.add(f'LOAD_{src.altname()}_TO_{dst.altname()}').reg_to_bus(src).reg_from_bus(dst)
+         microcodes.add(f'LOAD_{src.altname()}_TO_{dst}').reg_to_bus(src).reg_from_bus(dst)
+         microcodes.add(f'LOAD_{src}_TO_{dst}').reg_to_bus(src).reg_from_bus(dst)
+
+microcodes.add('LOAD_MEM[MAR]_TO_A').mem_to_bus().reg_from_bus(REG_A)
+microcodes.add('LOAD_MEM[MAR]_TO_A_PC++').mem_to_bus().reg_from_bus(REG_A).pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_B').mem_to_bus().reg_from_bus(REG_B)
+microcodes.add('LOAD_MEM[MAR]_TO_B_PC++').mem_to_bus().reg_from_bus(REG_B).pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPH_PC++').mem_to_bus().reg_from_bus(REG_TH).pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TH_PC++').mem_to_bus().reg_from_bus(REG_TH).pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPL_PC++').mem_to_bus().reg_from_bus(REG_TL).pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TL_PC++').mem_to_bus().reg_from_bus(REG_TL).pc_inc()
+microcodes.add('LOAD_TMP_TO_MAR').tmp_out().mar_in()
+microcodes.add('LOAD_MEM[MAR]_TO_MBR_PC++').mem_to_mbr().pc_inc()
+microcodes.add('LOAD_MBR_TO_MEM[MAR]').mbr_to_mem()
+microcodes.add('LOAD_ZP_MEM[MAR]_TO_A').mem_to_bus(zero_page=True).reg_from_bus(REG_A)
+microcodes.add('LOAD_ZP_MEM[MAR]_TO_B').mem_to_bus(zero_page=True).reg_from_bus(REG_B)
+microcodes.add('LOAD_MBR_TO_ZP_MEM[MAR]').mbr_to_mem(zero_page=True)
+microcodes.add('LOAD_PC_TO_MAR_A_TO_TMPL').pc_out().mar_in().reg_to_bus(REG_A).reg_from_bus(REG_TL)
+microcodes.add('LOAD_PC_TO_MAR_B_TO_TMPL').pc_out().mar_in().reg_to_bus(REG_B).reg_from_bus(REG_TL)
+microcodes.add('LOAD_PC_TO_MAR_TH_TO_TMPL').pc_out().mar_in().reg_to_bus(REG_TH).reg_from_bus(REG_TL)
+microcodes.add('LOAD_PC_TO_MAR_TL_TO_TMPL').pc_out().mar_in().reg_to_bus(REG_TL).reg_from_bus(REG_TL)
+
+for reg in DATA_REGS:
+    for dst in DATA_REGS:
+        microcodes.add(f'MOV_NEG{reg}_TO_{dst}').alu_operation(f'-{reg}', dst, True)
+        microcodes.add(f'MOV_DIV2{reg}_TO_{dst}').alu_operation(f'{reg}>>>1', dst, True)
+        microcodes.add(f'MOV_INV{reg}_TO_{dst}').alu_operation(f'~{reg}', dst, True)
+        microcodes.add(f'MOV_SHR{reg}_TO_{dst}').alu_operation(f'{reg}>>1', dst, True)
+        microcodes.add(f'MOV_SHL{reg}_TO_{dst}').alu_operation(f'{reg}<<1', dst, True)
+
+    microcodes.add(f'MOV_NEG{reg}_TO_MBR_SAVE_FLAGS').alu_operation(f'-{reg}', REG_MBR, latch_flags=True)
+    microcodes.add(f'MOV_NEG{reg}_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation(f'-{reg}', REG_MBR, latch_flags=True).stc_out().mar_in()
+    microcodes.add(f'MOV_ADD_TO_{reg}').alu_operation('a+b', reg, True)
+    microcodes.add(f'MOV_SUBAB_TO_{reg}').alu_operation('a-b', reg, True)
+    microcodes.add(f'MOV_SUBBA_TO_{reg}').alu_operation('b-a', reg, True)
+    microcodes.add(f'MOV_DIV2{reg}_TO_MBR_SAVE_FLAGS').alu_operation(f'{reg}>>>1', reg, True)
+    microcodes.add(f'MOV_DIV2{reg}_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation(f'{reg}>>>1', reg, True).stc_out().mar_in()
+    microcodes.add(f'MOV_INV{reg}_TO_MBR_SAVE_FLAGS').alu_operation(f'~{reg}', reg, True)
+    microcodes.add(f'MOV_INV{reg}_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation(f'~{reg}', reg, True).stc_out().mar_in()
+    microcodes.add(f'MOV_OR_TO_{reg}').alu_operation('a|b', reg, True)
+    microcodes.add(f'MOV_AND_TO_{reg}').alu_operation('a&b', reg, True)
+    microcodes.add(f'MOV_XOR_TO_{reg}').alu_operation('a^b', reg, True)
+    microcodes.add(f'MOV_SHR{reg}_TO_MBR_SAVE_FLAGS').alu_operation(f'{reg}>>1', reg, True)
+    microcodes.add(f'MOV_SHR{reg}_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation(f'{reg}>>1', reg, True).stc_out().mar_in()
+    microcodes.add(f'MOV_SHL{reg}_TO_MBR_SAVE_FLAGS').alu_operation(f'{reg}<<1', reg, True)
+    microcodes.add(f'MOV_SHL{reg}_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation(f'{reg}<<1', reg, True).stc_out().mar_in()
+
+microcodes.add('LOAD_MBR_TO_STC_MEM[MAR]_STC--').mbr_to_mem(stack=True).stc_dec()
+microcodes.add('MOV_ADD_TO_MBR_SAVE_FLAGS').alu_operation('a+b', REG_MBR, True)
+microcodes.add('MOV_ADD_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a+b', REG_MBR, True).stc_out().mar_in()
+microcodes.add(f'MOV_SUBAB_TO_MBR_SAVE_FLAGS').alu_operation('a-b', REG_MBR, True)
+microcodes.add(f'MOV_SUBBA_TO_MBR_SAVE_FLAGS').alu_operation('b-a', REG_MBR, True)
+microcodes.add(f'MOV_SUBAB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a-b', REG_MBR, True).stc_out().mar_in()
+microcodes.add(f'MOV_SUBBA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('b-a', REG_MBR, True).stc_out().mar_in()
+microcodes.add('MOV_OR_TO_MBR_SAVE_FLAGS').alu_operation('a|b', REG_MBR, True)
+microcodes.add('MOV_OR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a|b', REG_MBR, True).stc_out().mar_in()
+microcodes.add('MOV_AND_TO_MBR_SAVE_FLAGS').alu_operation('a&b', REG_MBR, True)
+microcodes.add('MOV_AND_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a&b', REG_MBR, True).stc_out().mar_in()
+microcodes.add('MOV_XOR_TO_MBR_SAVE_FLAGS').alu_operation('a^b', REG_MBR, True)
+microcodes.add('MOV_XOR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a^b', REG_MBR, True).stc_out().mar_in()
+microcodes.add('CALCULATE_A-B_SAVE_FLAGS_TO_REG_F').alu_operation('a-b', None, True)
+microcodes.add('CALCULATE_B-A_SAVE_FLAGS_TO_REG_F').alu_operation('b-a', None, True)
+microcodes.add(f'MOV_0_TO_TMPH_AND_TMPL').alu_operation('0', None, False).reg_from_bus(REG_TL).reg_from_bus(REG_TH)
+# TODO: Fix increment microcodes, for now make them noops
+microcodes.add('MOV_A+1_TOA_SAVE_FLAGS_TO_REG_F')
+microcodes.add('MOV_B+1_TOB_SAVE_FLAGS_TO_REG_F')
+microcodes.add('MOV_TL+1_TOTL_SAVE_FLAGS_TO_REG_F')
+microcodes.add('MOV_A-1_TOA_SAVE_FLAGS_TO_REG_F')
+microcodes.add('MOV_B-1_TOB_SAVE_FLAGS_TO_REG_F')
+microcodes.add('MOV_TL-1_TOTL_SAVE_FLAGS_TO_REG_F')
+
+microcodes.add('LOAD_TMP_TO_PC').tmp_out().pc_in()
+microcodes.add('LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP').mem_to_bus().reg_from_bus(REG_A).tmp_out().pc_in()
+microcodes.add('MOV_A+B_TO_TMPL').alu_operation('a+b', None, False).reg_from_bus(REG_TL)
+microcodes.add('LOAD_PC_TO_TMP').tmp_in().pc_out()
+microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
+microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem()
+microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
+microcodes.add('LOAD_STC_TO_MAR').stc_out().mar_in()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus().reg_from_bus(REG_TH).stc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPL_STC++').mem_to_bus().reg_from_bus(REG_TL).stc_inc()
+microcodes.add('PC++').pc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
+microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr().stc_inc()
+microcodes.add('DO_NOTHING')
+microcodes.add('HALT').no_mcc_tick()
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

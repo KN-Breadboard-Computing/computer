@@ -374,6 +374,7 @@ microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr().stc_inc()
 microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
+microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

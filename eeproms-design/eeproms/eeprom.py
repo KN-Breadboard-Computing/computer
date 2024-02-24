@@ -52,3 +52,9 @@ class Eeprom:
         
         if PRINT:
             print('Writing to EEPROM done!')
+
+    def save_to_file(self, path):
+        data = self._bake()
+        with open(path, 'wb') as file:
+            file.write(bytes(data))
+

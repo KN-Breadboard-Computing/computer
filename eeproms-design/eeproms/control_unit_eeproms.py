@@ -1,11 +1,7 @@
 import json
 
-from eeproms_design.eeproms.eeprom import Eeprom
-
-MICROCODES_DESCRIPTION_FILENAME = 'microcodes.json'
-INSTRUCTIONS_DESCRIPTION_FILENAME  = 'instructions.json'
-INSTRUCTIONS_OPCODES_FILENAME = 'instructions-opcodes.json'
-SIGNALS_IDENTIFIERS_FILENAME = 'signals-identifiers.json'
+from eeproms.eeprom import Eeprom
+from eeproms.config import Config
 
 ENTER_PROGRAM_TO_MEMORY_MSB = 1
 EXECUTE_ENTERED_PROGRAM_MSB = 0
@@ -16,9 +12,12 @@ MICROCODE_COUNTER_BITS_NUMBER = 4
 
 PRINT = False
 
+# FIXME: the new config does not contain these instructions
+FETCH_MICROCODES = [ "LOAD_PC_TO_MAR", "LOAD_MEM[MAR]_TO_IR_PC++" ]
+ENTER_PROGRAM_MICROCODES = [ "DO_NOTHING", "LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR", "LOAD_MBR_TO_MEM[MAR]", "RST_MC"]
 
 class ControlUnitEeproms():
-    def __init__(self):
+    def __init__(self, config=Config()):
         self._eeproms = {
             "A": Eeprom(),
             "B": Eeprom(),
@@ -27,41 +26,39 @@ class ControlUnitEeproms():
             "E": Eeprom(),
             "F": Eeprom()
         }
+        self._config = config
 
         self._write_all()
 
-    def get_eeeprom(self, name):
+    def get_eeprom(self, name):
         return self._eeproms[name]
 
     def _write_all(self):
-        with open(INSTRUCTIONS_DESCRIPTION_FILENAME, 'r') as input_file:
+        with open(self._config.get_instructions(), 'r') as input_file:
             instructions = json.load(input_file)
             
-        with open(MICROCODES_DESCRIPTION_FILENAME, 'r') as input_file:
+        with open(self._config.get_microcodes(), 'r') as input_file:
             microcodes = json.load(input_file)
 
-        with open(INSTRUCTIONS_OPCODES_FILENAME, 'r') as input_file:
-            instructions_opcodes = json.load(input_file)
-
-        with open(SIGNALS_IDENTIFIERS_FILENAME, 'r') as input_file:
+        with open(self._config.get_signals(), 'r') as input_file:
             signals_identifiers = json.load(input_file)
 
         mode_opcode_to_enter = [{} for _ in range(2**(OPERATING_MODE_BITS_NUMBER + INSTRUCTION_OPCODE_BITS_NUMBER))]
 
         # Code for entering program to memory
         for opcode in range(0, 2**INSTRUCTION_OPCODE_BITS_NUMBER):
-            mode_opcode_to_enter[ENTER_PROGRAM_TO_MEMORY_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + opcode] = {'name': f'ENTER_PROGRAM_{opcode}', 'microcodes': instructions['ENTER_PROGRAM']}
+            mode_opcode_to_enter[ENTER_PROGRAM_TO_MEMORY_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + opcode] = {'name': f'ENTER_PROGRAM_{opcode}', 'microcodes': ENTER_PROGRAM_MICROCODES }
 
         # Code for executing entered program:
-        for instruction_name, instruction_steps in instructions.items():
+        for instruction_name, instruction in instructions.items():
             if instruction_name == 'FETCH' or instruction_name == 'ENTER_PROGRAM':
                 continue
-            mode_opcode = EXECUTE_ENTERED_PROGRAM_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + int(instructions_opcodes[instruction_name], base=2)
-            mode_opcode_to_enter[mode_opcode] = {'name': instruction_name, 'microcodes': instruction_steps}
+            mode_opcode = EXECUTE_ENTERED_PROGRAM_MSB * 2**(INSTRUCTION_OPCODE_BITS_NUMBER) + int(instruction['opcode'], 2)
+            mode_opcode_to_enter[mode_opcode] = {'name': instruction_name, 'microcodes': instruction['microcodes']}
 
         for i in range(len(mode_opcode_to_enter)):
             if len(mode_opcode_to_enter[i]) == 0:
-                mode_opcode_to_enter[i] = {'name': f'ONLY_FETCH_{i}', 'microcodes': instructions['FETCH']}
+                mode_opcode_to_enter[i] = {'name': f'ONLY_FETCH_{i}', 'microcodes': FETCH_MICROCODES }
 
         for opcode, instruction in enumerate(mode_opcode_to_enter):
             if PRINT:

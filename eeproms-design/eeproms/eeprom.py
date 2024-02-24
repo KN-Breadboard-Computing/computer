@@ -20,6 +20,12 @@ class Eeprom:
 
         return result
 
+    def _bake(self):
+        data = [0 for _ in range(2**INPUT_BITS_NUMBER)]
+        for desc, val in self._values.items():
+            data[val[0]] = val[1]
+        return data
+
     def write(self, description, address, word):
         self._values[description] = (address, word)
 
@@ -28,9 +34,7 @@ class Eeprom:
             print('Initializing...')
         time.sleep(5)
 
-        data = [0 for _ in range(2**INPUT_BITS_NUMBER)]
-        for desc, val in self._values.items():
-            data[val[0]] = val[1]
+        data = self._bake()
 
         if PRINT:
             print('Writing to EEPROM...')

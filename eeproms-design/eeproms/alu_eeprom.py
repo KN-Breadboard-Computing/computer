@@ -1,12 +1,13 @@
-from eeproms_design.eeproms.eeprom import Eeprom
+from eeproms.eeprom import Eeprom
+from eeproms.config import Config
+
 import json
 
-ALU_LOGIC_DESCRIPTION_FILENAME = "alu-logic.json"
-
 class AluLogicEeprom(Eeprom):
-    def __init__(self):
+    def __init__(self, config=Config()):
         super().__init__()
         self._write_all()
+        self._config = Config()
 
     def _write_single(self, description, code, inverse_reg_a, inverse_reg_b, zero_reg_a, zero_reg_b,
                       inverse_or_result, multiplexer_output, config):
@@ -32,7 +33,7 @@ class AluLogicEeprom(Eeprom):
         self.write(description, int(code, 2), word)
 
     def _write_all(self):
-        with open(ALU_LOGIC_DESCRIPTION_FILENAME) as input_file:
+        with open(self._config.alu()) as input_file:
             alu_desc = json.load(input_file)
             alu_config = alu_desc['config']
             alu_codes = alu_desc['codes']

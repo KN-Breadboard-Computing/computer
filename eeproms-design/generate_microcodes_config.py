@@ -169,17 +169,19 @@ class Microcode:
         self._signals['REG_MBR_WORD_DIR'] = 1
         return self
 
-    def mem_to_bus(self, zero_page=False):
+    def mem_to_bus(self, zero_page=False, stack=False):
         self._signals['REG_MBR_WORD_DIR'] = 0
         self._signals['~MEM_OUT'] = 0
         self._signals['~REG_MBR_USE_BUS'] = 0
         self._signals['~ZERO_PAGE'] = 0 if zero_page else 1
+        self._signals['MEM_PART'] = 1 if stack else 0
         return self
 
-    def mem_to_mbr(self, zero_page=False):
+    def mem_to_mbr(self, zero_page=False, stack=False):
         self._signals['REG_MBR_LOAD'] = 1
         self._signals['~MEM_OUT'] = 0
         self._signals['~ZERO_PAGE'] = 0 if zero_page else 1
+        self._signals['MEM_PART'] = 1 if stack else 0
         return self
 
     def mbr_to_mem(self, zero_page=False, stack=False):
@@ -338,10 +340,10 @@ for reg in DATA_REGS:
 microcodes.add('LOAD_MBR_TO_STC_MEM[MAR]_STC--').mbr_to_mem(stack=True).stc_dec()
 microcodes.add('MOV_ADD_TO_MBR_SAVE_FLAGS').alu_operation('a+b', REG_MBR, True)
 microcodes.add('MOV_ADD_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a+b', REG_MBR, True).stc_out().mar_in()
-microcodes.add(f'MOV_SUBAB_TO_MBR_SAVE_FLAGS').alu_operation('a-b', REG_MBR, True)
-microcodes.add(f'MOV_SUBBA_TO_MBR_SAVE_FLAGS').alu_operation('b-a', REG_MBR, True)
-microcodes.add(f'MOV_SUBAB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a-b', REG_MBR, True).stc_out().mar_in()
-microcodes.add(f'MOV_SUBBA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('b-a', REG_MBR, True).stc_out().mar_in()
+microcodes.add('MOV_SUBAB_TO_MBR_SAVE_FLAGS').alu_operation('a-b', REG_MBR, True)
+microcodes.add('MOV_SUBBA_TO_MBR_SAVE_FLAGS').alu_operation('b-a', REG_MBR, True)
+microcodes.add('MOV_SUBAB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a-b', REG_MBR, True).stc_out().mar_in()
+microcodes.add('MOV_SUBBA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('b-a', REG_MBR, True).stc_out().mar_in()
 microcodes.add('MOV_OR_TO_MBR_SAVE_FLAGS').alu_operation('a|b', REG_MBR, True)
 microcodes.add('MOV_OR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a|b', REG_MBR, True).stc_out().mar_in()
 microcodes.add('MOV_AND_TO_MBR_SAVE_FLAGS').alu_operation('a&b', REG_MBR, True)
@@ -350,7 +352,7 @@ microcodes.add('MOV_XOR_TO_MBR_SAVE_FLAGS').alu_operation('a^b', REG_MBR, True)
 microcodes.add('MOV_XOR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR').alu_operation('a^b', REG_MBR, True).stc_out().mar_in()
 microcodes.add('CALCULATE_A-B_SAVE_FLAGS_TO_REG_F').alu_operation('a-b', None, True)
 microcodes.add('CALCULATE_B-A_SAVE_FLAGS_TO_REG_F').alu_operation('b-a', None, True)
-microcodes.add(f'MOV_0_TO_TMPH_AND_TMPL').alu_operation('0', None, False).reg_from_bus(REG_TL).reg_from_bus(REG_TH)
+microcodes.add('MOV_0_TO_TMPH_AND_TMPL').alu_operation('0', None, False).reg_from_bus(REG_TL).reg_from_bus(REG_TH)
 # TODO: Fix increment microcodes, for now make them noops
 microcodes.add('MOV_A+1_TOA_SAVE_FLAGS_TO_REG_F')
 microcodes.add('MOV_B+1_TOB_SAVE_FLAGS_TO_REG_F')
@@ -364,14 +366,14 @@ microcodes.add('LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP').mem_to_bus().reg_from_bus(RE
 microcodes.add('MOV_A+B_TO_TMPL').alu_operation('a+b', None, False).reg_from_bus(REG_TL)
 microcodes.add('LOAD_PC_TO_TMP').tmp_in().pc_out()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
-microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem()
+microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem(stack=True)
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
 microcodes.add('LOAD_STC_TO_MAR').stc_out().mar_in()
-microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus().reg_from_bus(REG_TH).stc_inc()
-microcodes.add('LOAD_MEM[MAR]_TO_TMPL_STC++').mem_to_bus().reg_from_bus(REG_TL).stc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TH).stc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_TMPL_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TL).stc_inc()
 microcodes.add('PC++').pc_inc()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
-microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr().stc_inc()
+microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr(stack=True).stc_inc()
 microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
 microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()

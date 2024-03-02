@@ -60,7 +60,7 @@ def build_list_of_strings(strings: List[str]) -> str:
 def build_instruction(name: str, category: str, mnemonic: str,
                       arguments: List[str], microcodes: List[str], description: str,
                       microcodes_description: str, total_microcodes_number: str = '', flag: str = '',
-                      last_instruction: bool = False) -> str:
+                      branch = None, last_instruction: bool = False) -> str:
     comma = "," if not last_instruction else ""
     min_cycles = ""
     max_cycles = ""
@@ -69,6 +69,12 @@ def build_instruction(name: str, category: str, mnemonic: str,
     microcodes_number = str(len(microcodes) - 1) if total_microcodes_number == '' else total_microcodes_number
     if max_cycles == '':
         max_cycles = min_cycles = microcodes_number
+
+    branch_object = 'null' if branch is None else f"""{{
+            "taken": "{branch['taken']}",
+            "not-taken": "{branch['not_taken']}"
+        }}"""
+
     return f"""
     "{name}": {{
         "id": {instructions_counter},
@@ -78,6 +84,7 @@ def build_instruction(name: str, category: str, mnemonic: str,
         "mnemonic": "{mnemonic}",
         "arguments": {build_list_of_strings(arguments)},
         "microcodes": {build_list_of_strings(microcodes)},
+        "branch": {branch_object},
         "description": "{description}",
         "microcodes-description": "{microcodes_description}",
         "depend-on-flag": "{flag}",
@@ -626,10 +633,12 @@ for flag_index, flag in enumerate(FLAGS):
             type_name = "given address"
             target_instruction = "JMPIMM"
             arguments = ["MEM16"]
+            branch = { "taken": "JMPIMM", "not_taken": "SKIP2" }
         else:
             type_name = f"address from {MMB} {build_text('REG_TMP')} {MME}"
             target_instruction = "JMPIMMT"
             arguments = ["T"]
+            branch = { "taken": "JMPIMMT", "not_taken": "SKIP" }
 
         for condition in ["", "N"]:
             name = f"{mnemonic}{type}{condition}{flag}"
@@ -651,7 +660,7 @@ for flag_index, flag in enumerate(FLAGS):
             print(
                 build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
                                   flag=condition + flag,
-                                  total_microcodes_number='7 or 4'))
+                                  total_microcodes_number='7 or 4', branch=branch))
             instructions_counter += 1
 
 mnemonic = "JMPREL"
@@ -679,10 +688,12 @@ for flag_index, flag in enumerate(FLAGS):
             type_name = "address with given offset"
             target_instruction = "JMPREL"
             arguments = ["MEM8"]
+            branch = { "taken": "JMPREL", "not_taken": "SKIP1" }
         else:
             type_name = f"address with given offset from {MMB} {build_text('REG_TMPL')} {MME}"
             target_instruction = "JMPRELTL"
             arguments = ["T"]
+            branch = { "taken": "JMPRELTL", "not_taken": "SKIP" }
 
         for condition in ["", "N"]:
             name = f"{mnemonic}{type}{condition}{flag}"
@@ -704,7 +715,7 @@ for flag_index, flag in enumerate(FLAGS):
             print(
                 build_instruction(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
                                   flag=condition + flag,
-                                  total_microcodes_number='6 or 3'))
+                                  total_microcodes_number='6 or 3', branch=branch))
             instructions_counter += 1
 
 name = f"{mnemonic}FUN"

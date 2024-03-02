@@ -15,6 +15,7 @@
       "LOAD_B_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_B} \\)",
     "depend-on-flag": "",
@@ -38,6 +39,7 @@
       "LOAD_TH_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\)",
     "depend-on-flag": "",
@@ -61,6 +63,7 @@
       "LOAD_TL_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\)",
     "depend-on-flag": "",
@@ -84,6 +87,7 @@
       "LOAD_F_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_F} \\)",
     "depend-on-flag": "",
@@ -107,6 +111,7 @@
       "LOAD_A_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_A} \\)",
     "depend-on-flag": "",
@@ -130,6 +135,7 @@
       "LOAD_TH_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\)",
     "depend-on-flag": "",
@@ -153,6 +159,7 @@
       "LOAD_TL_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\)",
     "depend-on-flag": "",
@@ -176,6 +183,7 @@
       "LOAD_F_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_F} \\)",
     "depend-on-flag": "",
@@ -199,6 +207,7 @@
       "LOAD_A_TO_TH",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_A} \\)",
     "depend-on-flag": "",
@@ -222,6 +231,7 @@
       "LOAD_B_TO_TH",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_B} \\)",
     "depend-on-flag": "",
@@ -245,6 +255,7 @@
       "LOAD_TL_TO_TH",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_TMPL} \\)",
     "depend-on-flag": "",
@@ -268,6 +279,7 @@
       "LOAD_F_TO_TH",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{REG_F} \\)",
     "depend-on-flag": "",
@@ -291,6 +303,7 @@
       "LOAD_A_TO_TL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\)",
     "depend-on-flag": "",
@@ -314,6 +327,7 @@
       "LOAD_B_TO_TL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\)",
     "depend-on-flag": "",
@@ -337,6 +351,7 @@
       "LOAD_TH_TO_TL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\)",
     "depend-on-flag": "",
@@ -360,6 +375,7 @@
       "LOAD_F_TO_TL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_F} \\) to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_F} \\)",
     "depend-on-flag": "",
@@ -384,6 +400,7 @@
       "LOAD_MEM[MAR]_TO_A_PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -408,6 +425,7 @@
       "LOAD_MEM[MAR]_TO_B_PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -432,6 +450,7 @@
       "LOAD_MEM[MAR]_TO_TH_PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -456,6 +475,7 @@
       "LOAD_MEM[MAR]_TO_TL_PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -484,6 +504,7 @@
       "LOAD_MEM[MAR]_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move constant from memory at given address to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
     "depend-on-flag": "",
@@ -510,6 +531,7 @@
       "LOAD_ZP_MEM[MAR]_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move constant from zero page memory at given address to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
     "depend-on-flag": "",
@@ -538,6 +560,7 @@
       "LOAD_MEM[MAR]_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move constant from memory at given address to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
     "depend-on-flag": "",
@@ -564,6 +587,7 @@
       "LOAD_ZP_MEM[MAR]_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move constant from zero page memory at given address to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\)",
     "depend-on-flag": "",
@@ -592,6 +616,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -618,6 +643,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -646,6 +672,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -672,6 +699,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -702,6 +730,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -730,6 +759,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -754,6 +784,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -778,6 +809,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -803,6 +835,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -828,6 +861,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -853,6 +887,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -878,6 +913,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -903,6 +939,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -928,6 +965,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -953,6 +991,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -978,6 +1017,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1003,6 +1043,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPL} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1027,6 +1068,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_A} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1051,6 +1093,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_B} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1075,6 +1118,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move value from \\( \\texttt{REG_TMPH} \\) to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1101,6 +1145,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to memory at address given by value of \\( \\texttt{REG_TMP} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1127,6 +1172,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1153,6 +1199,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1179,6 +1226,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1205,6 +1253,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move given constant to zero page memory at address given by value of \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1228,6 +1277,7 @@
       "MOV_NEGA_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1251,6 +1301,7 @@
       "MOV_NEGB_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1274,6 +1325,7 @@
       "MOV_NEGA_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1297,6 +1349,7 @@
       "MOV_NEGB_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1326,6 +1379,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1355,6 +1409,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1382,6 +1437,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1409,6 +1465,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1433,6 +1490,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -1457,6 +1515,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate negation of \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (-\\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -1479,6 +1538,7 @@
       "MOV_ADD_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1501,6 +1561,7 @@
       "MOV_ADD_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1529,6 +1590,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1555,6 +1617,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1578,6 +1641,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate sum of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A + REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -1602,6 +1666,7 @@
       "MOV_SUBAB_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1626,6 +1691,7 @@
       "MOV_SUBBA_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1650,6 +1716,7 @@
       "MOV_SUBAB_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1674,6 +1741,7 @@
       "MOV_SUBBA_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1704,6 +1772,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1734,6 +1803,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1762,6 +1832,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1790,6 +1861,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1815,6 +1887,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A - REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -1840,6 +1913,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate difference of \\( \\texttt{REG_B} \\) and \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B - REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -1863,6 +1937,7 @@
       "MOV_DIV2A_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1886,6 +1961,7 @@
       "MOV_DIV2B_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1909,6 +1985,7 @@
       "MOV_DIV2A_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1932,6 +2009,7 @@
       "MOV_DIV2B_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -1961,6 +2039,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -1990,6 +2069,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2017,6 +2097,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2044,6 +2125,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2068,6 +2150,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2092,6 +2175,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate quotient of \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}/2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2115,6 +2199,7 @@
       "MOV_INVA_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2138,6 +2223,7 @@
       "MOV_INVB_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2161,6 +2247,7 @@
       "MOV_INVA_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2184,6 +2271,7 @@
       "MOV_INVB_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2213,6 +2301,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2242,6 +2331,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2269,6 +2359,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2296,6 +2387,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2320,6 +2412,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_A}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2344,6 +2437,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate bit inversion of \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (not \\  \\texttt{REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2366,6 +2460,7 @@
       "MOV_OR_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2388,6 +2483,7 @@
       "MOV_OR_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2416,6 +2512,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2442,6 +2539,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2465,6 +2563,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate alternative of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A or REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2487,6 +2586,7 @@
       "MOV_AND_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2509,6 +2609,7 @@
       "MOV_AND_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2537,6 +2638,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2563,6 +2665,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2586,6 +2689,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate conjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A and REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2608,6 +2712,7 @@
       "MOV_XOR_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2630,6 +2735,7 @@
       "MOV_XOR_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2658,6 +2764,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2684,6 +2791,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2707,6 +2815,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate exclusive disjunction of \\( \\texttt{REG_A} \\) and \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A xor REG_B}) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2730,6 +2839,7 @@
       "MOV_SHRA_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2753,6 +2863,7 @@
       "MOV_SHRB_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2776,6 +2887,7 @@
       "MOV_SHRA_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2799,6 +2911,7 @@
       "MOV_SHRB_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -2828,6 +2941,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2857,6 +2971,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2884,6 +2999,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2911,6 +3027,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -2935,6 +3052,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2959,6 +3077,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate right shift of \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}>>2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -2982,6 +3101,7 @@
       "MOV_SHLA_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3005,6 +3125,7 @@
       "MOV_SHLB_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3028,6 +3149,7 @@
       "MOV_SHLA_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3051,6 +3173,7 @@
       "MOV_SHLB_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3080,6 +3203,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -3109,6 +3233,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -3136,6 +3261,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -3163,6 +3289,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -3187,6 +3314,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_A} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_A}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -3211,6 +3339,7 @@
       "LOAD_MBR_TO_STC_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Calculate left shift of \\( \\texttt{REG_B} \\) and save it to stack",
     "microcodes-description": "\\( \\texttt{REG_MBR} \\leftarrow (\\texttt{REG_B}<<2) \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\ \\& \\ \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -3234,6 +3363,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3257,6 +3387,7 @@
       "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3282,6 +3413,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\), \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3307,6 +3439,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\), \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3331,6 +3464,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3355,6 +3489,7 @@
       "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3379,6 +3514,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3403,6 +3539,7 @@
       "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3427,6 +3564,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3451,6 +3589,7 @@
       "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_B} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3475,6 +3614,7 @@
       "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_A} - \\texttt{REG_B} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_A - REG_B} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3499,6 +3639,7 @@
       "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Move \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{REG_A} \\) and save flags of operation \\( \\texttt{REG_B} - \\texttt{REG_A} \\) to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{calculate REG_B - REG_A} \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3521,6 +3662,7 @@
       "MOV_0_TO_A",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Set value of \\( \\texttt{REG_A} \\) to \\( \\texttt{0} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{0} \\)",
     "depend-on-flag": "",
@@ -3543,6 +3685,7 @@
       "MOV_0_TO_B",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Set value of \\( \\texttt{REG_B} \\) to \\( \\texttt{0} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{0} \\)",
     "depend-on-flag": "",
@@ -3565,6 +3708,7 @@
       "MOV_0_TO_TH",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Set value of \\( \\texttt{REG_TMPH} \\) to \\( \\texttt{0} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{0} \\)",
     "depend-on-flag": "",
@@ -3587,6 +3731,7 @@
       "MOV_0_TO_TL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Set value of \\( \\texttt{REG_TMPL} \\) to \\( \\texttt{0} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPL} \\leftarrow \\texttt{0} \\)",
     "depend-on-flag": "",
@@ -3609,6 +3754,7 @@
       "MOV_0_TO_TMPH_AND_TMPL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Set value of \\( \\texttt{REG_TMP} \\) to \\( \\texttt{0} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMPH} \\leftarrow \\texttt{0} \\ \\& \\ \\texttt{REG_TMPL} \\leftarrow \\texttt{0} \\)",
     "depend-on-flag": "",
@@ -3631,6 +3777,7 @@
       "MOV_A+1_TOA_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Increment value of \\( \\texttt{REG_A} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3653,6 +3800,7 @@
       "MOV_B+1_TOB_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Increment value of \\( \\texttt{REG_B} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3675,6 +3823,7 @@
       "MOV_TL+1_TOTL_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Increment value of \\( \\texttt{REG_TMP} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP} + 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3697,6 +3846,7 @@
       "MOV_A-1_TOA_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Decrement value of \\( \\texttt{REG_A} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_A} \\leftarrow \\texttt{REG_A} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3719,6 +3869,7 @@
       "MOV_B-1_TOB_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Decrement value of \\( \\texttt{REG_B} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_B} \\leftarrow \\texttt{REG_B} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3741,6 +3892,7 @@
       "MOV_TL+1_TOTL_SAVE_FLAGS_TO_REG_F",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Decrement value of \\( \\texttt{REG_TMP} \\) and save flags to \\( \\texttt{REG_F} \\)",
     "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{REG_TMP} - 1 \\) <br> \\( \\ \\& \\ \\texttt{save flags to REG_F} \\)",
     "depend-on-flag": "",
@@ -3767,6 +3919,7 @@
       "LOAD_TMP_TO_PC",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Jump to given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\)",
     "depend-on-flag": "",
@@ -3787,6 +3940,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if sign flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "S",
@@ -3807,6 +3964,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if sign flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NS",
@@ -3827,6 +3988,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if sign flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "S",
@@ -3847,6 +4012,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if sign flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NS",
@@ -3867,6 +4036,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if parity flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "P",
@@ -3887,6 +4060,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if parity flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NP",
@@ -3907,6 +4084,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if parity flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "P",
@@ -3927,6 +4108,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if parity flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NP",
@@ -3947,6 +4132,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if zero flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "Z",
@@ -3967,6 +4156,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if zero flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NZ",
@@ -3987,6 +4180,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if zero flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "Z",
@@ -4007,6 +4204,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if zero flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NZ",
@@ -4027,6 +4228,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if carry flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "C",
@@ -4047,6 +4252,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if carry flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NC",
@@ -4067,6 +4276,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if carry flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "C",
@@ -4087,6 +4300,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if carry flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NC",
@@ -4107,6 +4324,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if overflow flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "O",
@@ -4127,6 +4348,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMM",
+      "not-taken": "SKIP2"
+    },
     "description": "Jump to given address if overflow flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMM} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NO",
@@ -4147,6 +4372,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if overflow flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "O",
@@ -4167,6 +4396,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPIMMT",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address from \\( \\texttt{REG_TMP} \\) if overflow flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPIMMT} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP2} \\)",
     "depend-on-flag": "NO",
@@ -4192,6 +4425,7 @@
       "MOV_A+B_TO_TMPL",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Jump to address with given offset from current address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{REG_TMP} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{REG_A} + \\texttt{REG_B} \\)",
     "depend-on-flag": "",
@@ -4212,6 +4446,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if sign flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "S",
@@ -4232,6 +4470,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if sign flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NS",
@@ -4252,6 +4494,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if sign flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "S",
@@ -4272,6 +4518,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if sign flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[0]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NS",
@@ -4292,6 +4542,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if parity flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "P",
@@ -4312,6 +4566,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if parity flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NP",
@@ -4332,6 +4590,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if parity flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "P",
@@ -4352,6 +4614,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if parity flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[1]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NP",
@@ -4372,6 +4638,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if zero flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "Z",
@@ -4392,6 +4662,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if zero flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NZ",
@@ -4412,6 +4686,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if zero flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "Z",
@@ -4432,6 +4710,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if zero flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[2]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NZ",
@@ -4452,6 +4734,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if carry flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "C",
@@ -4472,6 +4758,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if carry flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NC",
@@ -4492,6 +4782,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if carry flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "C",
@@ -4512,6 +4806,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if carry flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[3]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NC",
@@ -4532,6 +4830,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if overflow flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "O",
@@ -4552,6 +4854,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPREL",
+      "not-taken": "SKIP1"
+    },
     "description": "Jump to address with given offset if overflow flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPREL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NO",
@@ -4572,6 +4878,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if overflow flag is set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "O",
@@ -4592,6 +4902,10 @@
       "LOAD_PC_TO_MAR",
       "LOAD_MEM[MAR]_TO_IR_PC++"
     ],
+    "branch": {
+      "taken": "JMPRELTL",
+      "not-taken": "SKIP"
+    },
     "description": "Jump to address with given offset from \\( \\texttt{REG_TMPL} \\) if overflow flag is not set",
     "microcodes-description": "\\( \\texttt{if} \\  \\texttt{REG_F[4]} \\  \\texttt{is not set:} \\) <br> \\( \\  \\  \\texttt{JMPRELTL} \\) <br> \\( \\texttt{else:} \\) <br> \\( \\  \\  \\texttt{SKIP1} \\)",
     "depend-on-flag": "NO",
@@ -4623,6 +4937,7 @@
       "LOAD_TMP_TO_PC",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push \\( \\texttt{PC} \\) to stack and jump to given address",
     "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\)",
     "depend-on-flag": "",
@@ -4648,6 +4963,7 @@
       "PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop address from stack and jump to it",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -4671,6 +4987,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value of \\( \\texttt{REG_A} \\) to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_A} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4694,6 +5011,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value of \\( \\texttt{REG_B} \\) to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_B} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4717,6 +5035,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value of \\( \\texttt{REG_TMPH} \\) to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4740,6 +5059,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value of \\( \\texttt{REG_TMPL} \\) to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4765,6 +5085,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value of \\( \\texttt{REG_TMP} \\) to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4790,6 +5111,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push given constant to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4819,6 +5141,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value from given address to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4846,6 +5169,7 @@
       "LOAD_MBR_TO_MEM[MAR]_STC--",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Push value from given zero page address to stack",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\)",
     "depend-on-flag": "",
@@ -4869,6 +5193,7 @@
       "LOAD_MEM[MAR]_TO_A_STC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to \\( \\texttt{REG_A} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_A} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
     "depend-on-flag": "",
@@ -4892,6 +5217,7 @@
       "LOAD_MEM[MAR]_TO_B_STC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to \\( \\texttt{REG_B} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_B} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
     "depend-on-flag": "",
@@ -4915,6 +5241,7 @@
       "LOAD_MEM[MAR]_TO_TH_STC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to \\( \\texttt{REG_TMPH} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
     "depend-on-flag": "",
@@ -4938,6 +5265,7 @@
       "LOAD_MEM[MAR]_TO_TL_STC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to \\( \\texttt{REG_TMPL} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
     "depend-on-flag": "",
@@ -4963,6 +5291,7 @@
       "LOAD_MEM[MAR]_TO_TH_STC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to \\( \\texttt{REG_TMP} \\)",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\)",
     "depend-on-flag": "",
@@ -4992,6 +5321,7 @@
       "LOAD_MBR_TO_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -5019,6 +5349,7 @@
       "LOAD_MBR_TO_ZP_MEM[MAR]",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Pop value from stack to zero page memory at given address",
     "microcodes-description": "\\( \\texttt{REG_MAR} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_TMPL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\) <br> \\( \\texttt{REG_MBR} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} + 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{REG_TMP} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\)",
     "depend-on-flag": "",
@@ -5039,6 +5370,7 @@
       "DO_NOTHING",
       "RST_MC"
     ],
+    "branch": null,
     "description": "No nothing for one cycle",
     "microcodes-description": "\\( \\texttt{do nothing} \\)",
     "depend-on-flag": "",
@@ -5058,6 +5390,7 @@
       "LOAD_MEM[MAR]_TO_IR_PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Skip instruction",
     "microcodes-description": "",
     "depend-on-flag": "",
@@ -5078,6 +5411,7 @@
       "PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Skip next program line",
     "microcodes-description": "\\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -5099,6 +5433,7 @@
       "PC++",
       "RST_MC"
     ],
+    "branch": null,
     "description": "Skip next two program lines",
     "microcodes-description": "\\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\)",
     "depend-on-flag": "",
@@ -5118,6 +5453,7 @@
       "LOAD_MEM[MAR]_TO_IR_PC++",
       "HALT"
     ],
+    "branch": null,
     "description": "Stop executing program",
     "microcodes-description": "\\( \\texttt{HALT} \\)",
     "depend-on-flag": "",

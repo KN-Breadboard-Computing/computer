@@ -7,7 +7,7 @@ from eeproms.control_unit_eeproms import ControlUnitEeproms
 from eeproms.alu_eeprom import AluLogicEeprom
 from eeproms.config import Config
 
-EEPROMS = ['A', 'B', 'C', 'D', 'E', 'F']
+EEPROMS = ['A', 'B', 'C', 'D', 'E', 'F', 'BRANCH']
 
 parser = ArgumentParser(description='Dump the contents of EEPROMs to files') 
 parser.add_argument('--config-dir', default=os.getcwd(), help='Path to the directory containing the config JSON files')

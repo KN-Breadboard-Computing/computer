@@ -5474,7 +5474,7 @@
     "id": 216,
     "name": "HALT",
     "category": "Other Instructions",
-    "opcode": "0b11011000",
+    "opcode": "0b11011001",
     "mnemonic": "HALT",
     "arguments": [],
     "microcodes": [

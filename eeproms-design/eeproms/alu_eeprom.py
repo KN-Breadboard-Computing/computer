@@ -3,11 +3,29 @@ from eeproms.config import Config
 
 import json
 
+
 class AluLogicEeprom(Eeprom):
     def __init__(self, config=Config()):
         super().__init__()
+        self._config = config
         self._write_all()
-        self._config = Config()
+
+    def _write_all(self):
+        with open(self._config.get_alu()) as input_file:
+            alu_desc = json.load(input_file)
+            alu_config = alu_desc['config']
+            alu_codes = alu_desc['codes']
+
+        for key, value in alu_codes.items():
+            self._write_single(key,
+                               value['CODE'],
+                               value['INVERSE_REG_A'],
+                               value['INVERSE_REG_B'],
+                               value['ZERO_REG_A'],
+                               value['ZERO_REG_B'],
+                               value['INVERSE_OR_RESULT'],
+                               value['MULTIPLEXER_OUTPUT'],
+                               alu_config)
 
     def _write_single(self, description, code, inverse_reg_a, inverse_reg_b, zero_reg_a, zero_reg_b,
                       inverse_or_result, multiplexer_output, config):
@@ -31,20 +49,3 @@ class AluLogicEeprom(Eeprom):
         word |= int(config['multiplexer-output'][multiplexer_output], 2)
 
         self.write(description, int(code, 2), word)
-
-    def _write_all(self):
-        with open(self._config.alu()) as input_file:
-            alu_desc = json.load(input_file)
-            alu_config = alu_desc['config']
-            alu_codes = alu_desc['codes']
-
-        for key, value in alu_codes.items():
-            self._write_single(key, 
-                                value['CODE'],
-                                value['INVERSE_REG_A'],
-                                value['INVERSE_REG_B'],
-                                value['ZERO_REG_A'],
-                                value['ZERO_REG_B'],
-                                value['INVERSE_OR_RESULT'],
-                                value['MULTIPLEXER_OUTPUT'],
-                                alu_config)

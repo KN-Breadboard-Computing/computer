@@ -9,9 +9,10 @@ from eeproms.config import Config
 
 EEPROMS = ['A', 'B', 'C', 'D', 'E', 'F', 'BRANCH']
 
-parser = ArgumentParser(description='Dump the contents of EEPROMs to files') 
+parser = ArgumentParser(description='Dump the contents of EEPROMs to files')
 parser.add_argument('--config-dir', default=os.getcwd(), help='Path to the directory containing the config JSON files')
-parser.add_argument('--microcodes-config', default='microcodes.json', help='Path to the microcodes JSON file. It will be resolved against the config directory unless the provided path is absolute')
+parser.add_argument('--microcodes-config', default='microcodes.json',
+                    help='Path to the microcodes JSON file. It will be resolved against the config directory unless the provided path is absolute')
 parser.add_argument('--output-dir', default=os.getcwd(), help='Path to the destination directory')
 parser.add_argument('--eeproms', nargs='*', default=EEPROMS, help='EEPROM labels to dump. Dumps all by default')
 

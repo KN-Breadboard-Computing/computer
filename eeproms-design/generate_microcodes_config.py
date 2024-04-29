@@ -2,7 +2,7 @@ import json
 
 from argparse import ArgumentParser
 from pathlib import Path
-from itertools import permutations
+
 
 class Reg:
     def __init__(self, name, altname = None):
@@ -24,6 +24,7 @@ class Reg:
     def asmname(self):
         return self._name.tolower()
 
+
 REG_A = Reg('A')
 REG_B = Reg('B')
 REG_TH = Reg('TMPH', 'TH')
@@ -34,6 +35,7 @@ TMP_REGS = [REG_TH, REG_TL]
 
 REG_MBR = Reg('MBR')
 REG_F = Reg('F')
+
 
 class Microcode:
     _alu_lut = {
@@ -103,7 +105,6 @@ class Microcode:
                 'MCC_TICK': 1,
                 '~MCC_RST': 1
         }
-
 
     def _alu_operation(self, code):
         self._signals['~ALU_OUT'] = 0
@@ -241,6 +242,7 @@ class Microcode:
             codes = alu_config['codes']
             cls.alu_opcodes = dict(map(extract_code, codes.items()))
 
+
 class Microcodes:
     def __init__(self):
         self._microcodes = {}
@@ -256,6 +258,7 @@ class Microcodes:
 
         indent = 4 if pretty_print else None
         json.dump(self._microcodes, file, indent=indent, default=encode)
+
 
 parser = ArgumentParser(description='Script to generate the microcodes config file') 
 parser.add_argument('--alu-config', help='Path to the ALU config JSON')

@@ -5441,8 +5441,37 @@
     "max-cycles-number": 4,
     "total-mircocodes-number": "4"
   },
-  "HALT": {
+  "ISR": {
     "id": 215,
+    "name": "ISR",
+    "category": "Other Instructions",
+    "opcode": "0b11011000",
+    "mnemonic": "ISR",
+    "arguments": [],
+    "microcodes": [
+      "LOAD_PC_TO_MAR",
+      "LOAD_MEM[MAR]_TO_IR_PC++",
+      "LOAD_PC_TO_TMP",
+      "LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR",
+      "LOAD_MBR_TO_MEM[MAR]_STC--",
+      "LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR",
+      "LOAD_MBR_TO_MEM[MAR]_STC--",
+      "LOAD_ISR_ADDRESS_TO_PC",
+      "LOAD_MEM[MAR]_TO_TH_PC++",
+      "LOAD_MEM[MAR]_TO_TL_PC++",
+      "LOAD_TMP_TO_PC_SET_ISR_FLAG",
+      "RST_MC"
+    ],
+    "branch": null,
+    "description": "Interrupt service routine",
+    "microcodes-description": "\\( \\texttt{REG_TMP} \\leftarrow \\texttt{PC} \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPL} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{REG_MAR} \\leftarrow \\texttt{STC} \\ \\& \\ \\texttt{REG_MBR} \\leftarrow \\texttt{REG_TMPH} \\) <br> \\( \\texttt{MEM[REG_MAR]} \\leftarrow \\texttt{REG_MBR} \\ \\& \\ \\texttt{STC} \\leftarrow \\texttt{STC} - 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{ISR} \\) <br> \\( \\texttt{REG_TH} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{REG_TL} \\leftarrow \\texttt{MEM[REG_MAR]} \\ \\& \\ \\texttt{PC} \\leftarrow \\texttt{PC} + 1 \\) <br> \\( \\texttt{PC} \\leftarrow \\texttt{REG_TMP} \\ \\& \\ \\texttt{ISR} \\leftarrow 1 \\)",
+    "depend-on-flag": "",
+    "min-cycles-number": 0,
+    "max-cycles-number": 0,
+    "total-mircocodes-number": "0"
+  },
+  "HALT": {
+    "id": 216,
     "name": "HALT",
     "category": "Other Instructions",
     "opcode": "0b11011000",

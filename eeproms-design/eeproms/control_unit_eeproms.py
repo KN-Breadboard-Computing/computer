@@ -14,8 +14,8 @@ PRINT = False
 
 # FIXME: the new config does not contain these instructions
 FETCH_MICROCODES = ["LOAD_PC_TO_MAR", "LOAD_MEM[MAR]_TO_IR_PC++"]
-ENTER_PROGRAM_MICROCODES = ["DO_NOTHING", "LOAD_DATA_FROM_BUTTONS_TO_MAR_AND_MBR", "LOAD_MBR_TO_MEM[MAR]", "RST_MC"]
-# ENTER_PROGRAM_MICROCODES = ["DO_NOTHING", "LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR", "LOAD_MBR_TO_MEM[MAR]", "RST_MC"]
+#ENTER_PROGRAM_MICROCODES = ["DO_NOTHING", "LOAD_DATA_FROM_BUTTONS_TO_MAR_AND_MBR", "LOAD_MBR_TO_MEM[MAR]", "RST_MC"]
+ENTER_PROGRAM_MICROCODES = ["DO_NOTHING", "LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR", "LOAD_MBR_TO_MEM[MAR]", "RST_MC"]
 
 FLAGS_COUNT = 5
 FLAG_NAMES_LUT = {
@@ -49,6 +49,7 @@ class ControlUnitEeproms:
             "D": Eeprom(),
             "E": Eeprom(),
             "F": Eeprom(),
+            "G": Eeprom(),
         }
         self._eeproms = {name: eeprom for name, eeprom in self._exec_eeproms.items()}
         self._eeproms["BRANCH"] = Eeprom()
@@ -104,7 +105,8 @@ class ControlUnitEeproms:
                     "C": f'0b00000000',
                     "D": f'0b00000000',
                     "E": f'0b00000000',
-                    "F": f'0b00000000'
+                    "F": f'0b00000000',
+                    "G": f'0b00000000'
                 }
 
                 if PRINT:
@@ -156,7 +158,7 @@ class ControlUnitEeproms:
         return res
 
     def _get_flag_bitmask_and_values(self, flags):
-        print(flags)
+        #print(flags)
         if len(flags) == 0:
             return (None, None)
         values = 0
@@ -165,7 +167,7 @@ class ControlUnitEeproms:
             value = 1 if state else 0
             bitmask = bitmask | (1 << FLAG_OFFSETS[flag])
             values = values | (value << FLAG_OFFSETS[flag])
-        print(flags, values, bitmask)
+        #print(flags, values, bitmask)
         return bitmask, values
 
     def _map_depend_on_flag(self, depend_on_flag):

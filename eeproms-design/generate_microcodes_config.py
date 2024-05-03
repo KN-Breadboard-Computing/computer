@@ -103,7 +103,21 @@ class Microcode:
                 '~REG_MBR_USE_BUS': 1,
                 'REG_IR_LOAD': 0,
                 'MCC_TICK': 1,
-                '~MCC_RST': 1
+                '~MCC_RST': 1,
+                'MEMORY_SELECTOR': 1,
+                'INT_OUT_0': 0,
+                'INT_OUT_1': 0,
+                'INT_OUT_2': 0,
+                'INT_OUT_3': 0,
+                'INT_OUT_4': 0,
+                'SET_INT_ENABLE': 0,
+                'RST_INT_ENABLE': 0,
+                'INT_ADDRESS_OUT': 0,
+                'RST_INT_0': 0,
+                'RST_INT_1': 0,
+                'RST_INT_2': 0,
+                'RST_INT_3': 0,
+                'RST_INT_4': 0
         }
 
     def _alu_operation(self, code):
@@ -214,6 +228,13 @@ class Microcode:
     def tmp_in(self):
         return self.reg_from_bus(REG_TL).reg_from_bus(REG_TH)
 
+    def tmp_addr_in(self):
+        self._signals['REG_TMPH_LOAD'] = 1
+        self._signals['REG_TMPL_LOAD'] = 1
+        self._signals['REG_TMP_ADDRESS_DIR'] = 1
+        self._signals['~REG_TMP_PASS_ADDRESS'] = 0
+        return self
+
     def stc_out(self):
         self._signals['~STC_OUT'] = 0
         return self
@@ -225,6 +246,18 @@ class Microcode:
     def stc_inc(self):
         self._signals['STC_TICK'] = 1
         self._signals['STC_MODE'] = 1
+        return self
+
+    def set_int_enable(self):
+        self._singals['SET_INT_ENABLE'] = 1
+        return self
+
+    def rst_int_enable(self):
+        self._signals['RST_INT_ENABLE'] = 1
+        return self
+
+    def int_addr_out(self):
+        self._signals['INT_ADDRESS_OUT'] = 1
         return self
 
     def to_json(self):
@@ -367,7 +400,7 @@ microcodes.add('MOV_TL-1_TOTL_SAVE_FLAGS_TO_REG_F')
 microcodes.add('LOAD_TMP_TO_PC').tmp_out().pc_in()
 microcodes.add('LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP').mem_to_bus().reg_from_bus(REG_A).tmp_out().pc_in()
 microcodes.add('MOV_A+B_TO_TMPL').alu_operation('a+b', None, False).reg_from_bus(REG_TL)
-microcodes.add('LOAD_PC_TO_TMP').tmp_in().pc_out()
+microcodes.add('LOAD_PC_TO_TMP').tmp_addr_in().pc_out()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
 microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem(stack=True)
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
@@ -380,6 +413,8 @@ microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr(stack=True).stc_inc()
 microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
 microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
+microcodes.add('LOAD_ISR_ADDRESS_TO_PC_AND_MAR').pc_in().mar_in().int_addr_out()
+microcodes.add('LOAD_TMP_TO_PC_SET_ISR_FLAG').pc_in().tmp_out().rst_int_enable()
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

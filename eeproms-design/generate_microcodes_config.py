@@ -101,10 +101,10 @@ class Microcode:
                 '~REG_MAR_USE_BTTNS': 1,
                 '~REG_MBR_USE_BTTNS': 1,
                 '~REG_MBR_USE_BUS': 1,
+                'MEMORY_SELECTOR': 1,
                 'REG_IR_LOAD': 0,
                 'MCC_TICK': 1,
                 '~MCC_RST': 1,
-                'MEMORY_SELECTOR': 1,
                 'INT_OUT_0': 0,
                 'INT_OUT_1': 0,
                 'INT_OUT_2': 0,
@@ -112,12 +112,7 @@ class Microcode:
                 'INT_OUT_4': 0,
                 'SET_INT_ENABLE': 0,
                 'RST_INT_ENABLE': 0,
-                'INT_ADDRESS_OUT': 0,
-                'RST_INT_0': 0,
-                'RST_INT_1': 0,
-                'RST_INT_2': 0,
-                'RST_INT_3': 0,
-                'RST_INT_4': 0
+                '~INT_ADDRESS_OUT': 0
         }
 
     def _alu_operation(self, code):
@@ -249,7 +244,7 @@ class Microcode:
         return self
 
     def set_int_enable(self):
-        self._singals['SET_INT_ENABLE'] = 1
+        self._signals['SET_INT_ENABLE'] = 1
         return self
 
     def rst_int_enable(self):
@@ -257,7 +252,7 @@ class Microcode:
         return self
 
     def int_addr_out(self):
-        self._signals['INT_ADDRESS_OUT'] = 1
+        self._signals['~INT_ADDRESS_OUT'] = 1
         return self
 
     def to_json(self):
@@ -294,7 +289,7 @@ class Microcodes:
 
 
 parser = ArgumentParser(description='Script to generate the microcodes config file') 
-parser.add_argument('--alu-config', help='Path to the ALU config JSON')
+parser.add_argument('--alu-config', help='Path to the ALU config JSON. Default is ../config/alu.json', default='../config/alu.json')
 parser.add_argument('--output', help='Path to the output file. Default is ./microcodes.json', default='./microcodes.json')
 parser.add_argument('--force', help='Generate even if destination exists', action='store_true')
 
@@ -401,6 +396,7 @@ microcodes.add('LOAD_TMP_TO_PC').tmp_out().pc_in()
 microcodes.add('LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP').mem_to_bus().reg_from_bus(REG_A).tmp_out().pc_in()
 microcodes.add('MOV_A+B_TO_TMPL').alu_operation('a+b', None, False).reg_from_bus(REG_TL)
 microcodes.add('LOAD_PC_TO_TMP').tmp_addr_in().pc_out()
+microcodes.add('LOAD_PC_TO_TMP_SET_ISR_FLAG').tmp_addr_in().pc_out().set_int_enable()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
 microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem(stack=True)
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
@@ -408,6 +404,7 @@ microcodes.add('LOAD_STC_TO_MAR').stc_out().mar_in()
 microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TH).stc_inc()
 microcodes.add('LOAD_MEM[MAR]_TO_TMPL_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TL).stc_inc()
 microcodes.add('PC++').pc_inc()
+microcodes.add('PC++_RESET_ISR_FLAG').pc_inc().rst_int_enable()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr(stack=True).stc_inc()
 microcodes.add('DO_NOTHING')

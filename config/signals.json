@@ -199,28 +199,8 @@
         "G1",
         ""
     ],
-    "INT_ADDRESS_OUT": [
+    "~INT_ADDRESS_OUT": [
         "G2",
-        ""
-    ],
-    "RST_INT_0": [
-        "G3",
-        ""
-    ],
-    "RST_INT_1": [
-        "G4",
-        ""
-    ],
-    "RST_INT_2": [
-        "G5",
-        ""
-    ],
-    "RST_INT_3": [
-        "G6",
-        ""
-    ],
-    "RST_INT_4": [
-        "G7",
         ""
     ]
 }

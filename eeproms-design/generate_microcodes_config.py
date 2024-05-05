@@ -411,7 +411,6 @@ microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
 microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
 microcodes.add('LOAD_ISR_ADDRESS_TO_PC_AND_MAR').pc_in().mar_in().int_addr_out()
-microcodes.add('LOAD_TMP_TO_PC_SET_ISR_FLAG').pc_in().tmp_out().rst_int_enable()
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

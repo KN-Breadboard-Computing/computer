@@ -10,11 +10,11 @@ LEFTARROW = "\\\\leftarrow"  # left arrow symbol
 AND = "\\\\ \\\\& \\\\"  # and symbol
 SPACE = "\\\\ "  # space symbol
 
-REGS8 = ["REG_A", "REG_B", "REG_TMPH", "REG_TMPL", "REG_F"]  # names of 8bit registers
+REGS8 = ["REG_A", "REG_B", "REG_TMPH", "REG_TMPL", "REG_F", "REG_INT"]  # names of 8bit registers
 REGS16 = ["REG_TMP"]  # names of 16bit registers
 
 REGS8ABR = {"REG_A": "A", "REG_B": "B", "REG_TMPH": "TH", "REG_TMPL": "TL",
-            "REG_F": "F"}  # abbreviated names of 8bit registers
+            "REG_F": "F", "REG_INT": "INT"}  # abbreviated names of 8bit registers
 REGS16ABR = {"REG_TMP": "T"}  # abbreviated names of 16bit registers
 
 FLAGS = ["S", "P", "Z", "C", "O"]  # abbreviated names of flags
@@ -94,7 +94,7 @@ def build_text(text: str) -> str:
 
 
 parser = ArgumentParser(description='Script to generate the instructions config file') 
-parser.add_argument('--output', help='Path to the output file. Default is ./microcodes.json', default='./microcodes.json')
+parser.add_argument('--output', help='Path to the output file. Default is ./instructions.json', default='./instructions.json')
 parser.add_argument('--force', help='Generate even if destination exists', action='store_true')
 
 args = parser.parse_args()
@@ -118,7 +118,7 @@ for reg1_index in range(len(REGS8)):
     for reg2_index in range(len(REGS8)):
         reg1 = REGS8[reg1_index]
         reg2 = REGS8[reg2_index]
-        if reg1 == reg2 or reg1 == "REG_F":
+        if reg1 == reg2 or reg1 == "REG_F" or reg1 == "REG_INT":
             continue
 
         name = f"{mnemonic}{REGS8ABR[reg1]}{REGS8ABR[reg2]}"
@@ -135,7 +135,7 @@ for reg1_index in range(len(REGS8)):
 
 # Moves of constants to register
 for reg in REGS8:
-    if reg == "REG_F":
+    if reg == "REG_F" or reg == "REG_INT":
         continue
 
     name = f"{mnemonic}{REGS8ABR[reg]}IMM"
@@ -187,7 +187,7 @@ for reg in ["REG_A", "REG_B"]:
 
 # Moves from register to memory at address given by constant
 mnemonic = "MOVAT"
-for reg in ["REG_A", "REG_B"]:
+for reg in ["REG_A", "REG_B", "REG_INT"]:
     name = f"{mnemonic}ABS{REGS8ABR[reg]}"
     microcodes = [
         "LOAD_PC_TO_MAR",
@@ -259,7 +259,7 @@ microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text
 instructions.add(name, category, mnemonic, ['MEM8', 'CONST'], microcodes, description, microcodes_description)
 
 # Moves from registers to memory at address given by REG_TMP
-for reg in ["REG_A", "REG_B"]:
+for reg in ["REG_A", "REG_B", "REG_INT"]:
     name = f"{mnemonic}T{REGS8ABR[reg]}"
     microcodes = [
         "LOAD_PC_TO_MAR",
@@ -278,7 +278,7 @@ for reg1_index in range(len(REGS8)):
     for reg2_index in range(len(REGS8)):
         reg1 = REGS8[reg1_index]
         reg2 = REGS8[reg2_index]
-        if reg1 == reg2 or reg1 == "REG_F" or reg2 == "REG_F":
+        if reg1 == reg2 or reg1 == "REG_F" or reg2 == "REG_F" or reg1 == "REG_INT" or reg2 == "REG_INT":
             continue
 
         name = f"{mnemonic}{REGS8ABR[reg1]}{REGS8ABR[reg2]}"
@@ -325,7 +325,7 @@ instructions.add(name, category, mnemonic, [REGS16ABR['REG_TMP'], 'CONST'], micr
 
 # Moves constants to zero page memory at address given by register
 for reg in REGS8:
-    if reg == "REG_F":
+    if reg == "REG_F" or reg == "REG_INT":
         continue
 
     name = f"{mnemonic}{REGS8ABR[reg]}IMM"
@@ -455,8 +455,9 @@ for reg1, reg2 in [("REG_TMPH", "REG_TMPL"), ("REG_TMPL", "REG_TMPH")]:
 
     instructions.add(name, category, mnemonic, arguments, microcodes, description, microcodes_description)
 
-for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "REG_A"), ("REG_TMPL", "REG_A", "REG_B"),
-                         ("REG_TMPL", "REG_B", "REG_A")]:
+for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "REG_A"), 
+                         ("REG_TMPL", "REG_A", "REG_B"), ("REG_TMPL", "REG_B", "REG_A"), 
+                         ("REG_INT", "REG_A", "REG_B"), ("REG_INT", "REG_B", "REG_A")]:
     name = f"{mnemonic}{REGS8ABR[reg1]}{REGS8ABR[reg2]}"
     arguments = [REGS8ABR[reg1], REGS8ABR[reg2]]
     microcodes = [
@@ -488,7 +489,7 @@ for reg1, reg2, reg3 in [("REG_TMPH", "REG_A", "REG_B"), ("REG_TMPH", "REG_B", "
 # Generating clear operations
 mnemonic = "CLR"
 for reg in REGS8:
-    if reg == "REG_F":
+    if reg == "REG_F" or reg == "REG_INT":
         continue
 
     name = f"{mnemonic}{REGS8ABR[reg]}"
@@ -552,7 +553,7 @@ instructions.add(name, category, mnemonic, arguments, microcodes, description, m
 # Generate decrement operations
 mnemonic = "DEC"
 for reg in ["REG_A", "REG_B"]:
-    if reg == "REG_F":
+    if reg == "REG_F" or reg == "REG_INT":
         continue
 
     name = f"{mnemonic}{REGS8ABR[reg]}"
@@ -734,9 +735,6 @@ category = "Stack Instructions"
 mnemonic = "PUSH"
 
 for reg in REGS8:
-    if reg == "REG_F":
-        continue
-
     name = f"{mnemonic}{REGS8ABR[reg]}"
     arguments = [REGS8ABR[reg]]
     microcodes = [
@@ -826,7 +824,7 @@ instructions.add(name, category, mnemonic, arguments, microcodes, description, m
 mnemonic = "POP"
 
 for reg in REGS8:
-    if reg == "REG_F":
+    if reg == "REG_F" or reg == "REG_INT":
         continue
 
     name = f"{mnemonic}{REGS8ABR[reg]}"

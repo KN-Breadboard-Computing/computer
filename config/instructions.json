@@ -95,11 +95,35 @@
         "max-cycles-number": "3",
         "total-microcodes-number": "3"
     },
-    "MOVBA": {
+    "MOVAINT": {
         "id": 4,
-        "name": "MOVBA",
+        "name": "MOVAINT",
         "category": "Move Instructions",
         "opcode": "0b00000101",
+        "mnemonic": "MOV",
+        "arguments": [
+            "A",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_A",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_A} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_A} \\\\leftarrow \\\\texttt{REG_INT} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "MOVBA": {
+        "id": 5,
+        "name": "MOVBA",
+        "category": "Move Instructions",
+        "opcode": "0b00000110",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -120,10 +144,10 @@
         "total-microcodes-number": "3"
     },
     "MOVBTH": {
-        "id": 5,
+        "id": 6,
         "name": "MOVBTH",
         "category": "Move Instructions",
-        "opcode": "0b00000110",
+        "opcode": "0b00000111",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -144,10 +168,10 @@
         "total-microcodes-number": "3"
     },
     "MOVBTL": {
-        "id": 6,
+        "id": 7,
         "name": "MOVBTL",
         "category": "Move Instructions",
-        "opcode": "0b00000111",
+        "opcode": "0b00001000",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -168,10 +192,10 @@
         "total-microcodes-number": "3"
     },
     "MOVBF": {
-        "id": 7,
+        "id": 8,
         "name": "MOVBF",
         "category": "Move Instructions",
-        "opcode": "0b00001000",
+        "opcode": "0b00001001",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -191,11 +215,35 @@
         "max-cycles-number": "3",
         "total-microcodes-number": "3"
     },
+    "MOVBINT": {
+        "id": 9,
+        "name": "MOVBINT",
+        "category": "Move Instructions",
+        "opcode": "0b00001010",
+        "mnemonic": "MOV",
+        "arguments": [
+            "B",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_B",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_B} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_B} \\\\leftarrow \\\\texttt{REG_INT} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
     "MOVTHA": {
-        "id": 8,
+        "id": 10,
         "name": "MOVTHA",
         "category": "Move Instructions",
-        "opcode": "0b00001001",
+        "opcode": "0b00001011",
         "mnemonic": "MOV",
         "arguments": [
             "TH",
@@ -216,10 +264,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTHB": {
-        "id": 9,
+        "id": 11,
         "name": "MOVTHB",
         "category": "Move Instructions",
-        "opcode": "0b00001010",
+        "opcode": "0b00001100",
         "mnemonic": "MOV",
         "arguments": [
             "TH",
@@ -240,10 +288,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTHTL": {
-        "id": 10,
+        "id": 12,
         "name": "MOVTHTL",
         "category": "Move Instructions",
-        "opcode": "0b00001011",
+        "opcode": "0b00001101",
         "mnemonic": "MOV",
         "arguments": [
             "TH",
@@ -264,10 +312,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTHF": {
-        "id": 11,
+        "id": 13,
         "name": "MOVTHF",
         "category": "Move Instructions",
-        "opcode": "0b00001100",
+        "opcode": "0b00001110",
         "mnemonic": "MOV",
         "arguments": [
             "TH",
@@ -287,11 +335,35 @@
         "max-cycles-number": "3",
         "total-microcodes-number": "3"
     },
+    "MOVTHINT": {
+        "id": 14,
+        "name": "MOVTHINT",
+        "category": "Move Instructions",
+        "opcode": "0b00001111",
+        "mnemonic": "MOV",
+        "arguments": [
+            "TH",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_TH",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_TMPH} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_TMPH} \\\\leftarrow \\\\texttt{REG_INT} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
     "MOVTLA": {
-        "id": 12,
+        "id": 15,
         "name": "MOVTLA",
         "category": "Move Instructions",
-        "opcode": "0b00001101",
+        "opcode": "0b00010000",
         "mnemonic": "MOV",
         "arguments": [
             "TL",
@@ -312,10 +384,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTLB": {
-        "id": 13,
+        "id": 16,
         "name": "MOVTLB",
         "category": "Move Instructions",
-        "opcode": "0b00001110",
+        "opcode": "0b00010001",
         "mnemonic": "MOV",
         "arguments": [
             "TL",
@@ -336,10 +408,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTLTH": {
-        "id": 14,
+        "id": 17,
         "name": "MOVTLTH",
         "category": "Move Instructions",
-        "opcode": "0b00001111",
+        "opcode": "0b00010010",
         "mnemonic": "MOV",
         "arguments": [
             "TL",
@@ -360,10 +432,10 @@
         "total-microcodes-number": "3"
     },
     "MOVTLF": {
-        "id": 15,
+        "id": 18,
         "name": "MOVTLF",
         "category": "Move Instructions",
-        "opcode": "0b00010000",
+        "opcode": "0b00010011",
         "mnemonic": "MOV",
         "arguments": [
             "TL",
@@ -383,11 +455,35 @@
         "max-cycles-number": "3",
         "total-microcodes-number": "3"
     },
+    "MOVTLINT": {
+        "id": 19,
+        "name": "MOVTLINT",
+        "category": "Move Instructions",
+        "opcode": "0b00010100",
+        "mnemonic": "MOV",
+        "arguments": [
+            "TL",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_TL",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_TMPL} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_TMPL} \\\\leftarrow \\\\texttt{REG_INT} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
     "MOVAIMM": {
-        "id": 16,
+        "id": 20,
         "name": "MOVAIMM",
         "category": "Move Instructions",
-        "opcode": "0b00010001",
+        "opcode": "0b00010101",
         "mnemonic": "MOV",
         "arguments": [
             "A",
@@ -409,10 +505,10 @@
         "total-microcodes-number": "4"
     },
     "MOVBIMM": {
-        "id": 17,
+        "id": 21,
         "name": "MOVBIMM",
         "category": "Move Instructions",
-        "opcode": "0b00010010",
+        "opcode": "0b00010110",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -434,10 +530,10 @@
         "total-microcodes-number": "4"
     },
     "MOVTHIMM": {
-        "id": 18,
+        "id": 22,
         "name": "MOVTHIMM",
         "category": "Move Instructions",
-        "opcode": "0b00010011",
+        "opcode": "0b00010111",
         "mnemonic": "MOV",
         "arguments": [
             "TH",
@@ -459,10 +555,10 @@
         "total-microcodes-number": "4"
     },
     "MOVTLIMM": {
-        "id": 19,
+        "id": 23,
         "name": "MOVTLIMM",
         "category": "Move Instructions",
-        "opcode": "0b00010100",
+        "opcode": "0b00011000",
         "mnemonic": "MOV",
         "arguments": [
             "TL",
@@ -484,10 +580,10 @@
         "total-microcodes-number": "4"
     },
     "MOVAABS": {
-        "id": 20,
+        "id": 24,
         "name": "MOVAABS",
         "category": "Move Instructions",
-        "opcode": "0b00010101",
+        "opcode": "0b00011001",
         "mnemonic": "MOV",
         "arguments": [
             "A",
@@ -513,10 +609,10 @@
         "total-microcodes-number": "8"
     },
     "MOVAABSZP": {
-        "id": 21,
+        "id": 25,
         "name": "MOVAABSZP",
         "category": "Move Instructions",
-        "opcode": "0b00010110",
+        "opcode": "0b00011010",
         "mnemonic": "MOV",
         "arguments": [
             "A",
@@ -540,10 +636,10 @@
         "total-microcodes-number": "6"
     },
     "MOVBABS": {
-        "id": 22,
+        "id": 26,
         "name": "MOVBABS",
         "category": "Move Instructions",
-        "opcode": "0b00010111",
+        "opcode": "0b00011011",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -569,10 +665,10 @@
         "total-microcodes-number": "8"
     },
     "MOVBABSZP": {
-        "id": 23,
+        "id": 27,
         "name": "MOVBABSZP",
         "category": "Move Instructions",
-        "opcode": "0b00011000",
+        "opcode": "0b00011100",
         "mnemonic": "MOV",
         "arguments": [
             "B",
@@ -596,10 +692,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATABSA": {
-        "id": 24,
+        "id": 28,
         "name": "MOVATABSA",
         "category": "Move Instructions",
-        "opcode": "0b00011001",
+        "opcode": "0b00011101",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM16",
@@ -625,10 +721,10 @@
         "total-microcodes-number": "8"
     },
     "MOVATABSAZP": {
-        "id": 25,
+        "id": 29,
         "name": "MOVATABSAZP",
         "category": "Move Instructions",
-        "opcode": "0b00011010",
+        "opcode": "0b00011110",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM8",
@@ -652,10 +748,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATABSB": {
-        "id": 26,
+        "id": 30,
         "name": "MOVATABSB",
         "category": "Move Instructions",
-        "opcode": "0b00011011",
+        "opcode": "0b00011111",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM16",
@@ -681,10 +777,10 @@
         "total-microcodes-number": "8"
     },
     "MOVATABSBZP": {
-        "id": 27,
+        "id": 31,
         "name": "MOVATABSBZP",
         "category": "Move Instructions",
-        "opcode": "0b00011100",
+        "opcode": "0b00100000",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM8",
@@ -707,11 +803,67 @@
         "max-cycles-number": "6",
         "total-microcodes-number": "6"
     },
+    "MOVATABSINT": {
+        "id": 32,
+        "name": "MOVATABSINT",
+        "category": "Move Instructions",
+        "opcode": "0b00100001",
+        "mnemonic": "MOVAT",
+        "arguments": [
+            "MEM16",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_TMPH_PC++",
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_TMPL_PC++",
+            "LOAD_TMP_TO_MAR_INT_TO_MBR",
+            "LOAD_MBR_TO_MEM[MAR]",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to memory at given address",
+        "microcodes-description": "\\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{PC} \\\\) <br> \\\\( \\\\texttt{REG_TMPH} \\\\leftarrow \\\\texttt{MEM[REG_MAR]} \\\\ \\\\& \\\\ \\\\texttt{PC} \\\\leftarrow \\\\texttt{PC} + 1 \\\\) <br> \\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{PC} \\\\) <br> \\\\( \\\\texttt{REG_TMPL} \\\\leftarrow \\\\texttt{MEM[REG_MAR]} \\\\ \\\\& \\\\ \\\\texttt{PC} \\\\leftarrow \\\\texttt{PC} + 1 \\\\) <br> \\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{REG_TMP} \\\\ \\\\& \\\\ \\\\texttt{REG_MBR} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{MEM[REG_MAR]} \\\\leftarrow \\\\texttt{REG_MBR} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "8",
+        "max-cycles-number": "8",
+        "total-microcodes-number": "8"
+    },
+    "MOVATABSINTZP": {
+        "id": 33,
+        "name": "MOVATABSINTZP",
+        "category": "Move Instructions",
+        "opcode": "0b00100010",
+        "mnemonic": "MOVAT",
+        "arguments": [
+            "MEM8",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_TMPH_PC++",
+            "LOAD_TMP_TO_MAR_INT_TO_MBR",
+            "LOAD_MBR_TO_ZP_MEM[MAR]",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to zero page memory at given address",
+        "microcodes-description": "\\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{PC} \\\\) <br> \\\\( \\\\texttt{REG_TMPH} \\\\leftarrow \\\\texttt{MEM[REG_MAR]} \\\\ \\\\& \\\\ \\\\texttt{PC} \\\\leftarrow \\\\texttt{PC} + 1 \\\\) <br> \\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{REG_TMP} \\\\ \\\\& \\\\ \\\\texttt{REG_MBR} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{MEM[REG_MAR]} \\\\leftarrow \\\\texttt{REG_MBR} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "6",
+        "max-cycles-number": "6",
+        "total-microcodes-number": "6"
+    },
     "MOVATABSIMM": {
-        "id": 28,
+        "id": 34,
         "name": "MOVATABSIMM",
         "category": "Move Instructions",
-        "opcode": "0b00011101",
+        "opcode": "0b00100011",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM16",
@@ -739,10 +891,10 @@
         "total-microcodes-number": "10"
     },
     "MOVATABSIMMZP": {
-        "id": 29,
+        "id": 35,
         "name": "MOVATABSIMMZP",
         "category": "Move Instructions",
-        "opcode": "0b00011110",
+        "opcode": "0b00100100",
         "mnemonic": "MOVAT",
         "arguments": [
             "MEM8",
@@ -768,10 +920,10 @@
         "total-microcodes-number": "8"
     },
     "MOVATTA": {
-        "id": 30,
+        "id": 36,
         "name": "MOVATTA",
         "category": "Move Instructions",
-        "opcode": "0b00011111",
+        "opcode": "0b00100101",
         "mnemonic": "MOVAT",
         "arguments": [
             "T",
@@ -793,10 +945,10 @@
         "total-microcodes-number": "4"
     },
     "MOVATTB": {
-        "id": 31,
+        "id": 37,
         "name": "MOVATTB",
         "category": "Move Instructions",
-        "opcode": "0b00100000",
+        "opcode": "0b00100110",
         "mnemonic": "MOVAT",
         "arguments": [
             "T",
@@ -817,11 +969,36 @@
         "max-cycles-number": "4",
         "total-microcodes-number": "4"
     },
+    "MOVATTINT": {
+        "id": 38,
+        "name": "MOVATTINT",
+        "category": "Move Instructions",
+        "opcode": "0b00100111",
+        "mnemonic": "MOVAT",
+        "arguments": [
+            "T",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_TMP_TO_MAR_INT_TO_MBR",
+            "LOAD_MBR_TO_MEM[MAR]",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move value from \\\\( \\\\texttt{REG_INT} \\\\) to memory at address given by value of \\\\( \\\\texttt{REG_TMP} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{REG_TMP} \\\\ \\\\& \\\\ \\\\texttt{REG_MBR} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{MEM[REG_MAR]} \\\\leftarrow \\\\texttt{REG_MBR} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
     "MOVATAB": {
-        "id": 32,
+        "id": 39,
         "name": "MOVATAB",
         "category": "Move Instructions",
-        "opcode": "0b00100001",
+        "opcode": "0b00101000",
         "mnemonic": "MOVAT",
         "arguments": [
             "A",
@@ -844,10 +1021,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATATH": {
-        "id": 33,
+        "id": 40,
         "name": "MOVATATH",
         "category": "Move Instructions",
-        "opcode": "0b00100010",
+        "opcode": "0b00101001",
         "mnemonic": "MOVAT",
         "arguments": [
             "A",
@@ -870,10 +1047,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATATL": {
-        "id": 34,
+        "id": 41,
         "name": "MOVATATL",
         "category": "Move Instructions",
-        "opcode": "0b00100011",
+        "opcode": "0b00101010",
         "mnemonic": "MOVAT",
         "arguments": [
             "A",
@@ -896,10 +1073,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATBA": {
-        "id": 35,
+        "id": 42,
         "name": "MOVATBA",
         "category": "Move Instructions",
-        "opcode": "0b00100100",
+        "opcode": "0b00101011",
         "mnemonic": "MOVAT",
         "arguments": [
             "B",
@@ -922,10 +1099,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATBTH": {
-        "id": 36,
+        "id": 43,
         "name": "MOVATBTH",
         "category": "Move Instructions",
-        "opcode": "0b00100101",
+        "opcode": "0b00101100",
         "mnemonic": "MOVAT",
         "arguments": [
             "B",
@@ -948,10 +1125,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATBTL": {
-        "id": 37,
+        "id": 44,
         "name": "MOVATBTL",
         "category": "Move Instructions",
-        "opcode": "0b00100110",
+        "opcode": "0b00101101",
         "mnemonic": "MOVAT",
         "arguments": [
             "B",
@@ -974,10 +1151,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATTHA": {
-        "id": 38,
+        "id": 45,
         "name": "MOVATTHA",
         "category": "Move Instructions",
-        "opcode": "0b00100111",
+        "opcode": "0b00101110",
         "mnemonic": "MOVAT",
         "arguments": [
             "TH",
@@ -1000,10 +1177,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATTHB": {
-        "id": 39,
+        "id": 46,
         "name": "MOVATTHB",
         "category": "Move Instructions",
-        "opcode": "0b00101000",
+        "opcode": "0b00101111",
         "mnemonic": "MOVAT",
         "arguments": [
             "TH",
@@ -1026,10 +1203,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATTHTL": {
-        "id": 40,
+        "id": 47,
         "name": "MOVATTHTL",
         "category": "Move Instructions",
-        "opcode": "0b00101001",
+        "opcode": "0b00110000",
         "mnemonic": "MOVAT",
         "arguments": [
             "TH",
@@ -1052,10 +1229,10 @@
         "total-microcodes-number": "5"
     },
     "MOVATTLA": {
-        "id": 41,
+        "id": 48,
         "name": "MOVATTLA",
         "category": "Move Instructions",
-        "opcode": "0b00101010",
+        "opcode": "0b00110001",
         "mnemonic": "MOVAT",
         "arguments": [
             "TL",
@@ -1077,10 +1254,10 @@
         "total-microcodes-number": "4"
     },
     "MOVATTLB": {
-        "id": 42,
+        "id": 49,
         "name": "MOVATTLB",
         "category": "Move Instructions",
-        "opcode": "0b00101011",
+        "opcode": "0b00110010",
         "mnemonic": "MOVAT",
         "arguments": [
             "TL",
@@ -1102,10 +1279,10 @@
         "total-microcodes-number": "4"
     },
     "MOVATTLTH": {
-        "id": 43,
+        "id": 50,
         "name": "MOVATTLTH",
         "category": "Move Instructions",
-        "opcode": "0b00101100",
+        "opcode": "0b00110011",
         "mnemonic": "MOVAT",
         "arguments": [
             "TL",
@@ -1127,10 +1304,10 @@
         "total-microcodes-number": "4"
     },
     "MOVATTIMM": {
-        "id": 44,
+        "id": 51,
         "name": "MOVATTIMM",
         "category": "Move Instructions",
-        "opcode": "0b00101101",
+        "opcode": "0b00110100",
         "mnemonic": "MOVAT",
         "arguments": [
             "T",
@@ -1154,10 +1331,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATAIMM": {
-        "id": 45,
+        "id": 52,
         "name": "MOVATAIMM",
         "category": "Move Instructions",
-        "opcode": "0b00101110",
+        "opcode": "0b00110101",
         "mnemonic": "MOVAT",
         "arguments": [
             "A",
@@ -1181,10 +1358,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATBIMM": {
-        "id": 46,
+        "id": 53,
         "name": "MOVATBIMM",
         "category": "Move Instructions",
-        "opcode": "0b00101111",
+        "opcode": "0b00110110",
         "mnemonic": "MOVAT",
         "arguments": [
             "B",
@@ -1208,10 +1385,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATTHIMM": {
-        "id": 47,
+        "id": 54,
         "name": "MOVATTHIMM",
         "category": "Move Instructions",
-        "opcode": "0b00110000",
+        "opcode": "0b00110111",
         "mnemonic": "MOVAT",
         "arguments": [
             "TH",
@@ -1235,10 +1412,10 @@
         "total-microcodes-number": "6"
     },
     "MOVATTLIMM": {
-        "id": 48,
+        "id": 55,
         "name": "MOVATTLIMM",
         "category": "Move Instructions",
-        "opcode": "0b00110001",
+        "opcode": "0b00111000",
         "mnemonic": "MOVAT",
         "arguments": [
             "TL",
@@ -1262,10 +1439,10 @@
         "total-microcodes-number": "6"
     },
     "NEGAA": {
-        "id": 49,
+        "id": 56,
         "name": "NEGAA",
         "category": "ALU Instructions",
-        "opcode": "0b00110010",
+        "opcode": "0b00111001",
         "mnemonic": "NEG",
         "arguments": [
             "A",
@@ -1286,10 +1463,10 @@
         "total-microcodes-number": "3"
     },
     "NEGAB": {
-        "id": 50,
+        "id": 57,
         "name": "NEGAB",
         "category": "ALU Instructions",
-        "opcode": "0b00110011",
+        "opcode": "0b00111010",
         "mnemonic": "NEG",
         "arguments": [
             "A",
@@ -1310,10 +1487,10 @@
         "total-microcodes-number": "3"
     },
     "NEGBA": {
-        "id": 51,
+        "id": 58,
         "name": "NEGBA",
         "category": "ALU Instructions",
-        "opcode": "0b00110100",
+        "opcode": "0b00111011",
         "mnemonic": "NEG",
         "arguments": [
             "B",
@@ -1334,10 +1511,10 @@
         "total-microcodes-number": "3"
     },
     "NEGBB": {
-        "id": 52,
+        "id": 59,
         "name": "NEGBB",
         "category": "ALU Instructions",
-        "opcode": "0b00110101",
+        "opcode": "0b00111100",
         "mnemonic": "NEG",
         "arguments": [
             "B",
@@ -1358,10 +1535,10 @@
         "total-microcodes-number": "3"
     },
     "NEGMEMA": {
-        "id": 53,
+        "id": 60,
         "name": "NEGMEMA",
         "category": "ALU Instructions",
-        "opcode": "0b00110110",
+        "opcode": "0b00111101",
         "mnemonic": "NEG",
         "arguments": [
             "MEM",
@@ -1388,10 +1565,10 @@
         "total-microcodes-number": "9"
     },
     "NEGMEMB": {
-        "id": 54,
+        "id": 61,
         "name": "NEGMEMB",
         "category": "ALU Instructions",
-        "opcode": "0b00110111",
+        "opcode": "0b00111110",
         "mnemonic": "NEG",
         "arguments": [
             "MEM",
@@ -1418,10 +1595,10 @@
         "total-microcodes-number": "9"
     },
     "NEGMEMZPA": {
-        "id": 55,
+        "id": 62,
         "name": "NEGMEMZPA",
         "category": "ALU Instructions",
-        "opcode": "0b00111000",
+        "opcode": "0b00111111",
         "mnemonic": "NEG",
         "arguments": [
             "MEMZP",
@@ -1446,10 +1623,10 @@
         "total-microcodes-number": "7"
     },
     "NEGMEMZPB": {
-        "id": 56,
+        "id": 63,
         "name": "NEGMEMZPB",
         "category": "ALU Instructions",
-        "opcode": "0b00111001",
+        "opcode": "0b01000000",
         "mnemonic": "NEG",
         "arguments": [
             "MEMZP",
@@ -1474,10 +1651,10 @@
         "total-microcodes-number": "7"
     },
     "NEGSTCA": {
-        "id": 57,
+        "id": 64,
         "name": "NEGSTCA",
         "category": "ALU Instructions",
-        "opcode": "0b00111010",
+        "opcode": "0b01000001",
         "mnemonic": "NEG",
         "arguments": [
             "STC",
@@ -1499,10 +1676,10 @@
         "total-microcodes-number": "4"
     },
     "NEGSTCB": {
-        "id": 58,
+        "id": 65,
         "name": "NEGSTCB",
         "category": "ALU Instructions",
-        "opcode": "0b00111011",
+        "opcode": "0b01000010",
         "mnemonic": "NEG",
         "arguments": [
             "STC",
@@ -1524,10 +1701,10 @@
         "total-microcodes-number": "4"
     },
     "ADDA": {
-        "id": 59,
+        "id": 66,
         "name": "ADDA",
         "category": "ALU Instructions",
-        "opcode": "0b00111100",
+        "opcode": "0b01000011",
         "mnemonic": "ADD",
         "arguments": [
             "A"
@@ -1547,10 +1724,10 @@
         "total-microcodes-number": "3"
     },
     "ADDB": {
-        "id": 60,
+        "id": 67,
         "name": "ADDB",
         "category": "ALU Instructions",
-        "opcode": "0b00111101",
+        "opcode": "0b01000100",
         "mnemonic": "ADD",
         "arguments": [
             "B"
@@ -1570,10 +1747,10 @@
         "total-microcodes-number": "3"
     },
     "ADDMEM": {
-        "id": 61,
+        "id": 68,
         "name": "ADDMEM",
         "category": "ALU Instructions",
-        "opcode": "0b00111110",
+        "opcode": "0b01000101",
         "mnemonic": "ADD",
         "arguments": [
             "MEM"
@@ -1599,10 +1776,10 @@
         "total-microcodes-number": "9"
     },
     "ADDMEMZP": {
-        "id": 62,
+        "id": 69,
         "name": "ADDMEMZP",
         "category": "ALU Instructions",
-        "opcode": "0b00111111",
+        "opcode": "0b01000110",
         "mnemonic": "ADD",
         "arguments": [
             "MEMZP"
@@ -1626,10 +1803,10 @@
         "total-microcodes-number": "7"
     },
     "ADDSTC": {
-        "id": 63,
+        "id": 70,
         "name": "ADDSTC",
         "category": "ALU Instructions",
-        "opcode": "0b01000000",
+        "opcode": "0b01000111",
         "mnemonic": "ADD",
         "arguments": [
             "STC"
@@ -1650,10 +1827,10 @@
         "total-microcodes-number": "4"
     },
     "SUBAAB": {
-        "id": 64,
+        "id": 71,
         "name": "SUBAAB",
         "category": "ALU Instructions",
-        "opcode": "0b01000001",
+        "opcode": "0b01001000",
         "mnemonic": "SUB",
         "arguments": [
             "A",
@@ -1675,10 +1852,10 @@
         "total-microcodes-number": "3"
     },
     "SUBABA": {
-        "id": 65,
+        "id": 72,
         "name": "SUBABA",
         "category": "ALU Instructions",
-        "opcode": "0b01000010",
+        "opcode": "0b01001001",
         "mnemonic": "SUB",
         "arguments": [
             "A",
@@ -1700,10 +1877,10 @@
         "total-microcodes-number": "3"
     },
     "SUBBAB": {
-        "id": 66,
+        "id": 73,
         "name": "SUBBAB",
         "category": "ALU Instructions",
-        "opcode": "0b01000011",
+        "opcode": "0b01001010",
         "mnemonic": "SUB",
         "arguments": [
             "B",
@@ -1725,10 +1902,10 @@
         "total-microcodes-number": "3"
     },
     "SUBBBA": {
-        "id": 67,
+        "id": 74,
         "name": "SUBBBA",
         "category": "ALU Instructions",
-        "opcode": "0b01000100",
+        "opcode": "0b01001011",
         "mnemonic": "SUB",
         "arguments": [
             "B",
@@ -1750,10 +1927,10 @@
         "total-microcodes-number": "3"
     },
     "SUBMEMAB": {
-        "id": 68,
+        "id": 75,
         "name": "SUBMEMAB",
         "category": "ALU Instructions",
-        "opcode": "0b01000101",
+        "opcode": "0b01001100",
         "mnemonic": "SUB",
         "arguments": [
             "MEM",
@@ -1781,10 +1958,10 @@
         "total-microcodes-number": "9"
     },
     "SUBMEMBA": {
-        "id": 69,
+        "id": 76,
         "name": "SUBMEMBA",
         "category": "ALU Instructions",
-        "opcode": "0b01000110",
+        "opcode": "0b01001101",
         "mnemonic": "SUB",
         "arguments": [
             "MEM",
@@ -1812,10 +1989,10 @@
         "total-microcodes-number": "9"
     },
     "SUBMEMZPAB": {
-        "id": 70,
+        "id": 77,
         "name": "SUBMEMZPAB",
         "category": "ALU Instructions",
-        "opcode": "0b01000111",
+        "opcode": "0b01001110",
         "mnemonic": "SUB",
         "arguments": [
             "MEMZP",
@@ -1841,10 +2018,10 @@
         "total-microcodes-number": "7"
     },
     "SUBMEMZPBA": {
-        "id": 71,
+        "id": 78,
         "name": "SUBMEMZPBA",
         "category": "ALU Instructions",
-        "opcode": "0b01001000",
+        "opcode": "0b01001111",
         "mnemonic": "SUB",
         "arguments": [
             "MEMZP",
@@ -1870,10 +2047,10 @@
         "total-microcodes-number": "7"
     },
     "SUBSTCAB": {
-        "id": 72,
+        "id": 79,
         "name": "SUBSTCAB",
         "category": "ALU Instructions",
-        "opcode": "0b01001001",
+        "opcode": "0b01010000",
         "mnemonic": "SUB",
         "arguments": [
             "STC",
@@ -1896,10 +2073,10 @@
         "total-microcodes-number": "4"
     },
     "SUBSTCBA": {
-        "id": 73,
+        "id": 80,
         "name": "SUBSTCBA",
         "category": "ALU Instructions",
-        "opcode": "0b01001010",
+        "opcode": "0b01010001",
         "mnemonic": "SUB",
         "arguments": [
             "STC",
@@ -1922,10 +2099,10 @@
         "total-microcodes-number": "4"
     },
     "DIV2AA": {
-        "id": 74,
+        "id": 81,
         "name": "DIV2AA",
         "category": "ALU Instructions",
-        "opcode": "0b01001011",
+        "opcode": "0b01010010",
         "mnemonic": "DIV2",
         "arguments": [
             "A",
@@ -1946,10 +2123,10 @@
         "total-microcodes-number": "3"
     },
     "DIV2AB": {
-        "id": 75,
+        "id": 82,
         "name": "DIV2AB",
         "category": "ALU Instructions",
-        "opcode": "0b01001100",
+        "opcode": "0b01010011",
         "mnemonic": "DIV2",
         "arguments": [
             "A",
@@ -1970,10 +2147,10 @@
         "total-microcodes-number": "3"
     },
     "DIV2BA": {
-        "id": 76,
+        "id": 83,
         "name": "DIV2BA",
         "category": "ALU Instructions",
-        "opcode": "0b01001101",
+        "opcode": "0b01010100",
         "mnemonic": "DIV2",
         "arguments": [
             "B",
@@ -1994,10 +2171,10 @@
         "total-microcodes-number": "3"
     },
     "DIV2BB": {
-        "id": 77,
+        "id": 84,
         "name": "DIV2BB",
         "category": "ALU Instructions",
-        "opcode": "0b01001110",
+        "opcode": "0b01010101",
         "mnemonic": "DIV2",
         "arguments": [
             "B",
@@ -2018,10 +2195,10 @@
         "total-microcodes-number": "3"
     },
     "DIV2MEMA": {
-        "id": 78,
+        "id": 85,
         "name": "DIV2MEMA",
         "category": "ALU Instructions",
-        "opcode": "0b01001111",
+        "opcode": "0b01010110",
         "mnemonic": "DIV2",
         "arguments": [
             "MEM",
@@ -2048,10 +2225,10 @@
         "total-microcodes-number": "9"
     },
     "DIV2MEMB": {
-        "id": 79,
+        "id": 86,
         "name": "DIV2MEMB",
         "category": "ALU Instructions",
-        "opcode": "0b01010000",
+        "opcode": "0b01010111",
         "mnemonic": "DIV2",
         "arguments": [
             "MEM",
@@ -2078,10 +2255,10 @@
         "total-microcodes-number": "9"
     },
     "DIV2MEMZPA": {
-        "id": 80,
+        "id": 87,
         "name": "DIV2MEMZPA",
         "category": "ALU Instructions",
-        "opcode": "0b01010001",
+        "opcode": "0b01011000",
         "mnemonic": "DIV2",
         "arguments": [
             "MEMZP",
@@ -2106,10 +2283,10 @@
         "total-microcodes-number": "7"
     },
     "DIV2MEMZPB": {
-        "id": 81,
+        "id": 88,
         "name": "DIV2MEMZPB",
         "category": "ALU Instructions",
-        "opcode": "0b01010010",
+        "opcode": "0b01011001",
         "mnemonic": "DIV2",
         "arguments": [
             "MEMZP",
@@ -2134,10 +2311,10 @@
         "total-microcodes-number": "7"
     },
     "DIV2STCA": {
-        "id": 82,
+        "id": 89,
         "name": "DIV2STCA",
         "category": "ALU Instructions",
-        "opcode": "0b01010011",
+        "opcode": "0b01011010",
         "mnemonic": "DIV2",
         "arguments": [
             "STC",
@@ -2159,10 +2336,10 @@
         "total-microcodes-number": "4"
     },
     "DIV2STCB": {
-        "id": 83,
+        "id": 90,
         "name": "DIV2STCB",
         "category": "ALU Instructions",
-        "opcode": "0b01010100",
+        "opcode": "0b01011011",
         "mnemonic": "DIV2",
         "arguments": [
             "STC",
@@ -2184,10 +2361,10 @@
         "total-microcodes-number": "4"
     },
     "INVAA": {
-        "id": 84,
+        "id": 91,
         "name": "INVAA",
         "category": "ALU Instructions",
-        "opcode": "0b01010101",
+        "opcode": "0b01011100",
         "mnemonic": "INV",
         "arguments": [
             "A",
@@ -2208,10 +2385,10 @@
         "total-microcodes-number": "3"
     },
     "INVAB": {
-        "id": 85,
+        "id": 92,
         "name": "INVAB",
         "category": "ALU Instructions",
-        "opcode": "0b01010110",
+        "opcode": "0b01011101",
         "mnemonic": "INV",
         "arguments": [
             "A",
@@ -2232,10 +2409,10 @@
         "total-microcodes-number": "3"
     },
     "INVBA": {
-        "id": 86,
+        "id": 93,
         "name": "INVBA",
         "category": "ALU Instructions",
-        "opcode": "0b01010111",
+        "opcode": "0b01011110",
         "mnemonic": "INV",
         "arguments": [
             "B",
@@ -2256,10 +2433,10 @@
         "total-microcodes-number": "3"
     },
     "INVBB": {
-        "id": 87,
+        "id": 94,
         "name": "INVBB",
         "category": "ALU Instructions",
-        "opcode": "0b01011000",
+        "opcode": "0b01011111",
         "mnemonic": "INV",
         "arguments": [
             "B",
@@ -2280,10 +2457,10 @@
         "total-microcodes-number": "3"
     },
     "INVMEMA": {
-        "id": 88,
+        "id": 95,
         "name": "INVMEMA",
         "category": "ALU Instructions",
-        "opcode": "0b01011001",
+        "opcode": "0b01100000",
         "mnemonic": "INV",
         "arguments": [
             "MEM",
@@ -2310,10 +2487,10 @@
         "total-microcodes-number": "9"
     },
     "INVMEMB": {
-        "id": 89,
+        "id": 96,
         "name": "INVMEMB",
         "category": "ALU Instructions",
-        "opcode": "0b01011010",
+        "opcode": "0b01100001",
         "mnemonic": "INV",
         "arguments": [
             "MEM",
@@ -2340,10 +2517,10 @@
         "total-microcodes-number": "9"
     },
     "INVMEMZPA": {
-        "id": 90,
+        "id": 97,
         "name": "INVMEMZPA",
         "category": "ALU Instructions",
-        "opcode": "0b01011011",
+        "opcode": "0b01100010",
         "mnemonic": "INV",
         "arguments": [
             "MEMZP",
@@ -2368,10 +2545,10 @@
         "total-microcodes-number": "7"
     },
     "INVMEMZPB": {
-        "id": 91,
+        "id": 98,
         "name": "INVMEMZPB",
         "category": "ALU Instructions",
-        "opcode": "0b01011100",
+        "opcode": "0b01100011",
         "mnemonic": "INV",
         "arguments": [
             "MEMZP",
@@ -2396,10 +2573,10 @@
         "total-microcodes-number": "7"
     },
     "INVSTCA": {
-        "id": 92,
+        "id": 99,
         "name": "INVSTCA",
         "category": "ALU Instructions",
-        "opcode": "0b01011101",
+        "opcode": "0b01100100",
         "mnemonic": "INV",
         "arguments": [
             "STC",
@@ -2421,10 +2598,10 @@
         "total-microcodes-number": "4"
     },
     "INVSTCB": {
-        "id": 93,
+        "id": 100,
         "name": "INVSTCB",
         "category": "ALU Instructions",
-        "opcode": "0b01011110",
+        "opcode": "0b01100101",
         "mnemonic": "INV",
         "arguments": [
             "STC",
@@ -2446,10 +2623,10 @@
         "total-microcodes-number": "4"
     },
     "ORA": {
-        "id": 94,
+        "id": 101,
         "name": "ORA",
         "category": "ALU Instructions",
-        "opcode": "0b01011111",
+        "opcode": "0b01100110",
         "mnemonic": "OR",
         "arguments": [
             "A"
@@ -2469,10 +2646,10 @@
         "total-microcodes-number": "3"
     },
     "ORB": {
-        "id": 95,
+        "id": 102,
         "name": "ORB",
         "category": "ALU Instructions",
-        "opcode": "0b01100000",
+        "opcode": "0b01100111",
         "mnemonic": "OR",
         "arguments": [
             "B"
@@ -2492,10 +2669,10 @@
         "total-microcodes-number": "3"
     },
     "ORMEM": {
-        "id": 96,
+        "id": 103,
         "name": "ORMEM",
         "category": "ALU Instructions",
-        "opcode": "0b01100001",
+        "opcode": "0b01101000",
         "mnemonic": "OR",
         "arguments": [
             "MEM"
@@ -2521,10 +2698,10 @@
         "total-microcodes-number": "9"
     },
     "ORMEMZP": {
-        "id": 97,
+        "id": 104,
         "name": "ORMEMZP",
         "category": "ALU Instructions",
-        "opcode": "0b01100010",
+        "opcode": "0b01101001",
         "mnemonic": "OR",
         "arguments": [
             "MEMZP"
@@ -2548,10 +2725,10 @@
         "total-microcodes-number": "7"
     },
     "ORSTC": {
-        "id": 98,
+        "id": 105,
         "name": "ORSTC",
         "category": "ALU Instructions",
-        "opcode": "0b01100011",
+        "opcode": "0b01101010",
         "mnemonic": "OR",
         "arguments": [
             "STC"
@@ -2572,10 +2749,10 @@
         "total-microcodes-number": "4"
     },
     "ANDA": {
-        "id": 99,
+        "id": 106,
         "name": "ANDA",
         "category": "ALU Instructions",
-        "opcode": "0b01100100",
+        "opcode": "0b01101011",
         "mnemonic": "AND",
         "arguments": [
             "A"
@@ -2595,10 +2772,10 @@
         "total-microcodes-number": "3"
     },
     "ANDB": {
-        "id": 100,
+        "id": 107,
         "name": "ANDB",
         "category": "ALU Instructions",
-        "opcode": "0b01100101",
+        "opcode": "0b01101100",
         "mnemonic": "AND",
         "arguments": [
             "B"
@@ -2618,10 +2795,10 @@
         "total-microcodes-number": "3"
     },
     "ANDMEM": {
-        "id": 101,
+        "id": 108,
         "name": "ANDMEM",
         "category": "ALU Instructions",
-        "opcode": "0b01100110",
+        "opcode": "0b01101101",
         "mnemonic": "AND",
         "arguments": [
             "MEM"
@@ -2647,10 +2824,10 @@
         "total-microcodes-number": "9"
     },
     "ANDMEMZP": {
-        "id": 102,
+        "id": 109,
         "name": "ANDMEMZP",
         "category": "ALU Instructions",
-        "opcode": "0b01100111",
+        "opcode": "0b01101110",
         "mnemonic": "AND",
         "arguments": [
             "MEMZP"
@@ -2674,10 +2851,10 @@
         "total-microcodes-number": "7"
     },
     "ANDSTC": {
-        "id": 103,
+        "id": 110,
         "name": "ANDSTC",
         "category": "ALU Instructions",
-        "opcode": "0b01101000",
+        "opcode": "0b01101111",
         "mnemonic": "AND",
         "arguments": [
             "STC"
@@ -2698,10 +2875,10 @@
         "total-microcodes-number": "4"
     },
     "XORA": {
-        "id": 104,
+        "id": 111,
         "name": "XORA",
         "category": "ALU Instructions",
-        "opcode": "0b01101001",
+        "opcode": "0b01110000",
         "mnemonic": "XOR",
         "arguments": [
             "A"
@@ -2721,10 +2898,10 @@
         "total-microcodes-number": "3"
     },
     "XORB": {
-        "id": 105,
+        "id": 112,
         "name": "XORB",
         "category": "ALU Instructions",
-        "opcode": "0b01101010",
+        "opcode": "0b01110001",
         "mnemonic": "XOR",
         "arguments": [
             "B"
@@ -2744,10 +2921,10 @@
         "total-microcodes-number": "3"
     },
     "XORMEM": {
-        "id": 106,
+        "id": 113,
         "name": "XORMEM",
         "category": "ALU Instructions",
-        "opcode": "0b01101011",
+        "opcode": "0b01110010",
         "mnemonic": "XOR",
         "arguments": [
             "MEM"
@@ -2773,10 +2950,10 @@
         "total-microcodes-number": "9"
     },
     "XORMEMZP": {
-        "id": 107,
+        "id": 114,
         "name": "XORMEMZP",
         "category": "ALU Instructions",
-        "opcode": "0b01101100",
+        "opcode": "0b01110011",
         "mnemonic": "XOR",
         "arguments": [
             "MEMZP"
@@ -2800,10 +2977,10 @@
         "total-microcodes-number": "7"
     },
     "XORSTC": {
-        "id": 108,
+        "id": 115,
         "name": "XORSTC",
         "category": "ALU Instructions",
-        "opcode": "0b01101101",
+        "opcode": "0b01110100",
         "mnemonic": "XOR",
         "arguments": [
             "STC"
@@ -2824,10 +3001,10 @@
         "total-microcodes-number": "4"
     },
     "SHRAA": {
-        "id": 109,
+        "id": 116,
         "name": "SHRAA",
         "category": "ALU Instructions",
-        "opcode": "0b01101110",
+        "opcode": "0b01110101",
         "mnemonic": "SHR",
         "arguments": [
             "A",
@@ -2848,10 +3025,10 @@
         "total-microcodes-number": "3"
     },
     "SHRAB": {
-        "id": 110,
+        "id": 117,
         "name": "SHRAB",
         "category": "ALU Instructions",
-        "opcode": "0b01101111",
+        "opcode": "0b01110110",
         "mnemonic": "SHR",
         "arguments": [
             "A",
@@ -2872,10 +3049,10 @@
         "total-microcodes-number": "3"
     },
     "SHRBA": {
-        "id": 111,
+        "id": 118,
         "name": "SHRBA",
         "category": "ALU Instructions",
-        "opcode": "0b01110000",
+        "opcode": "0b01110111",
         "mnemonic": "SHR",
         "arguments": [
             "B",
@@ -2896,10 +3073,10 @@
         "total-microcodes-number": "3"
     },
     "SHRBB": {
-        "id": 112,
+        "id": 119,
         "name": "SHRBB",
         "category": "ALU Instructions",
-        "opcode": "0b01110001",
+        "opcode": "0b01111000",
         "mnemonic": "SHR",
         "arguments": [
             "B",
@@ -2920,10 +3097,10 @@
         "total-microcodes-number": "3"
     },
     "SHRMEMA": {
-        "id": 113,
+        "id": 120,
         "name": "SHRMEMA",
         "category": "ALU Instructions",
-        "opcode": "0b01110010",
+        "opcode": "0b01111001",
         "mnemonic": "SHR",
         "arguments": [
             "MEM",
@@ -2950,10 +3127,10 @@
         "total-microcodes-number": "9"
     },
     "SHRMEMB": {
-        "id": 114,
+        "id": 121,
         "name": "SHRMEMB",
         "category": "ALU Instructions",
-        "opcode": "0b01110011",
+        "opcode": "0b01111010",
         "mnemonic": "SHR",
         "arguments": [
             "MEM",
@@ -2980,10 +3157,10 @@
         "total-microcodes-number": "9"
     },
     "SHRMEMZPA": {
-        "id": 115,
+        "id": 122,
         "name": "SHRMEMZPA",
         "category": "ALU Instructions",
-        "opcode": "0b01110100",
+        "opcode": "0b01111011",
         "mnemonic": "SHR",
         "arguments": [
             "MEMZP",
@@ -3008,10 +3185,10 @@
         "total-microcodes-number": "7"
     },
     "SHRMEMZPB": {
-        "id": 116,
+        "id": 123,
         "name": "SHRMEMZPB",
         "category": "ALU Instructions",
-        "opcode": "0b01110101",
+        "opcode": "0b01111100",
         "mnemonic": "SHR",
         "arguments": [
             "MEMZP",
@@ -3036,10 +3213,10 @@
         "total-microcodes-number": "7"
     },
     "SHRSTCA": {
-        "id": 117,
+        "id": 124,
         "name": "SHRSTCA",
         "category": "ALU Instructions",
-        "opcode": "0b01110110",
+        "opcode": "0b01111101",
         "mnemonic": "SHR",
         "arguments": [
             "STC",
@@ -3061,10 +3238,10 @@
         "total-microcodes-number": "4"
     },
     "SHRSTCB": {
-        "id": 118,
+        "id": 125,
         "name": "SHRSTCB",
         "category": "ALU Instructions",
-        "opcode": "0b01110111",
+        "opcode": "0b01111110",
         "mnemonic": "SHR",
         "arguments": [
             "STC",
@@ -3086,10 +3263,10 @@
         "total-microcodes-number": "4"
     },
     "SHLAA": {
-        "id": 119,
+        "id": 126,
         "name": "SHLAA",
         "category": "ALU Instructions",
-        "opcode": "0b01111000",
+        "opcode": "0b01111111",
         "mnemonic": "SHL",
         "arguments": [
             "A",
@@ -3110,10 +3287,10 @@
         "total-microcodes-number": "3"
     },
     "SHLAB": {
-        "id": 120,
+        "id": 127,
         "name": "SHLAB",
         "category": "ALU Instructions",
-        "opcode": "0b01111001",
+        "opcode": "0b10000000",
         "mnemonic": "SHL",
         "arguments": [
             "A",
@@ -3134,10 +3311,10 @@
         "total-microcodes-number": "3"
     },
     "SHLBA": {
-        "id": 121,
+        "id": 128,
         "name": "SHLBA",
         "category": "ALU Instructions",
-        "opcode": "0b01111010",
+        "opcode": "0b10000001",
         "mnemonic": "SHL",
         "arguments": [
             "B",
@@ -3158,10 +3335,10 @@
         "total-microcodes-number": "3"
     },
     "SHLBB": {
-        "id": 122,
+        "id": 129,
         "name": "SHLBB",
         "category": "ALU Instructions",
-        "opcode": "0b01111011",
+        "opcode": "0b10000010",
         "mnemonic": "SHL",
         "arguments": [
             "B",
@@ -3182,10 +3359,10 @@
         "total-microcodes-number": "3"
     },
     "SHLMEMA": {
-        "id": 123,
+        "id": 130,
         "name": "SHLMEMA",
         "category": "ALU Instructions",
-        "opcode": "0b01111100",
+        "opcode": "0b10000011",
         "mnemonic": "SHL",
         "arguments": [
             "MEM",
@@ -3212,10 +3389,10 @@
         "total-microcodes-number": "9"
     },
     "SHLMEMB": {
-        "id": 124,
+        "id": 131,
         "name": "SHLMEMB",
         "category": "ALU Instructions",
-        "opcode": "0b01111101",
+        "opcode": "0b10000100",
         "mnemonic": "SHL",
         "arguments": [
             "MEM",
@@ -3242,10 +3419,10 @@
         "total-microcodes-number": "9"
     },
     "SHLMEMZPA": {
-        "id": 125,
+        "id": 132,
         "name": "SHLMEMZPA",
         "category": "ALU Instructions",
-        "opcode": "0b01111110",
+        "opcode": "0b10000101",
         "mnemonic": "SHL",
         "arguments": [
             "MEMZP",
@@ -3270,10 +3447,10 @@
         "total-microcodes-number": "7"
     },
     "SHLMEMZPB": {
-        "id": 126,
+        "id": 133,
         "name": "SHLMEMZPB",
         "category": "ALU Instructions",
-        "opcode": "0b01111111",
+        "opcode": "0b10000110",
         "mnemonic": "SHL",
         "arguments": [
             "MEMZP",
@@ -3298,10 +3475,10 @@
         "total-microcodes-number": "7"
     },
     "SHLSTCA": {
-        "id": 127,
+        "id": 134,
         "name": "SHLSTCA",
         "category": "ALU Instructions",
-        "opcode": "0b10000000",
+        "opcode": "0b10000111",
         "mnemonic": "SHL",
         "arguments": [
             "STC",
@@ -3323,10 +3500,10 @@
         "total-microcodes-number": "4"
     },
     "SHLSTCB": {
-        "id": 128,
+        "id": 135,
         "name": "SHLSTCB",
         "category": "ALU Instructions",
-        "opcode": "0b10000001",
+        "opcode": "0b10001000",
         "mnemonic": "SHL",
         "arguments": [
             "STC",
@@ -3348,10 +3525,10 @@
         "total-microcodes-number": "4"
     },
     "CMPAB": {
-        "id": 129,
+        "id": 136,
         "name": "CMPAB",
         "category": "ALU Instructions",
-        "opcode": "0b10000010",
+        "opcode": "0b10001001",
         "mnemonic": "CMP",
         "arguments": [
             "A",
@@ -3372,10 +3549,10 @@
         "total-microcodes-number": "3"
     },
     "CMPBA": {
-        "id": 130,
+        "id": 137,
         "name": "CMPBA",
         "category": "ALU Instructions",
-        "opcode": "0b10000011",
+        "opcode": "0b10001010",
         "mnemonic": "CMP",
         "arguments": [
             "B",
@@ -3396,10 +3573,10 @@
         "total-microcodes-number": "3"
     },
     "CMPTHTL": {
-        "id": 131,
+        "id": 138,
         "name": "CMPTHTL",
         "category": "ALU Instructions",
-        "opcode": "0b10000100",
+        "opcode": "0b10001011",
         "mnemonic": "CMP",
         "arguments": [
             "TH",
@@ -3422,10 +3599,10 @@
         "total-microcodes-number": "5"
     },
     "CMPTLTH": {
-        "id": 132,
+        "id": 139,
         "name": "CMPTLTH",
         "category": "ALU Instructions",
-        "opcode": "0b10000101",
+        "opcode": "0b10001100",
         "mnemonic": "CMP",
         "arguments": [
             "TL",
@@ -3448,10 +3625,10 @@
         "total-microcodes-number": "5"
     },
     "CMPTHA": {
-        "id": 133,
+        "id": 140,
         "name": "CMPTHA",
         "category": "ALU Instructions",
-        "opcode": "0b10000110",
+        "opcode": "0b10001101",
         "mnemonic": "CMP",
         "arguments": [
             "TH",
@@ -3473,10 +3650,10 @@
         "total-microcodes-number": "4"
     },
     "CMPATH": {
-        "id": 134,
+        "id": 141,
         "name": "CMPATH",
         "category": "ALU Instructions",
-        "opcode": "0b10000111",
+        "opcode": "0b10001110",
         "mnemonic": "CMP",
         "arguments": [
             "A",
@@ -3498,10 +3675,10 @@
         "total-microcodes-number": "4"
     },
     "CMPTHB": {
-        "id": 135,
+        "id": 142,
         "name": "CMPTHB",
         "category": "ALU Instructions",
-        "opcode": "0b10001000",
+        "opcode": "0b10001111",
         "mnemonic": "CMP",
         "arguments": [
             "TH",
@@ -3523,10 +3700,10 @@
         "total-microcodes-number": "4"
     },
     "CMPBTH": {
-        "id": 136,
+        "id": 143,
         "name": "CMPBTH",
         "category": "ALU Instructions",
-        "opcode": "0b10001001",
+        "opcode": "0b10010000",
         "mnemonic": "CMP",
         "arguments": [
             "B",
@@ -3548,10 +3725,10 @@
         "total-microcodes-number": "4"
     },
     "CMPTLA": {
-        "id": 137,
+        "id": 144,
         "name": "CMPTLA",
         "category": "ALU Instructions",
-        "opcode": "0b10001010",
+        "opcode": "0b10010001",
         "mnemonic": "CMP",
         "arguments": [
             "TL",
@@ -3573,10 +3750,10 @@
         "total-microcodes-number": "4"
     },
     "CMPATL": {
-        "id": 138,
+        "id": 145,
         "name": "CMPATL",
         "category": "ALU Instructions",
-        "opcode": "0b10001011",
+        "opcode": "0b10010010",
         "mnemonic": "CMP",
         "arguments": [
             "A",
@@ -3598,10 +3775,10 @@
         "total-microcodes-number": "4"
     },
     "CMPTLB": {
-        "id": 139,
+        "id": 146,
         "name": "CMPTLB",
         "category": "ALU Instructions",
-        "opcode": "0b10001100",
+        "opcode": "0b10010011",
         "mnemonic": "CMP",
         "arguments": [
             "TL",
@@ -3623,10 +3800,10 @@
         "total-microcodes-number": "4"
     },
     "CMPBTL": {
-        "id": 140,
+        "id": 147,
         "name": "CMPBTL",
         "category": "ALU Instructions",
-        "opcode": "0b10001101",
+        "opcode": "0b10010100",
         "mnemonic": "CMP",
         "arguments": [
             "B",
@@ -3647,11 +3824,111 @@
         "max-cycles-number": "4",
         "total-microcodes-number": "4"
     },
+    "CMPINTA": {
+        "id": 148,
+        "name": "CMPINTA",
+        "category": "ALU Instructions",
+        "opcode": "0b10010101",
+        "mnemonic": "CMP",
+        "arguments": [
+            "INT",
+            "A"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_B",
+            "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_B} \\\\) and save flags of operation \\\\( \\\\texttt{REG_A} - \\\\texttt{REG_B} \\\\) to \\\\( \\\\texttt{REG_F} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_B} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{calculate REG_A - REG_B} \\\\) <br> \\\\( \\\\ \\\\& \\\\ \\\\texttt{save flags to REG_F} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
+    "CMPAINT": {
+        "id": 149,
+        "name": "CMPAINT",
+        "category": "ALU Instructions",
+        "opcode": "0b10010110",
+        "mnemonic": "CMP",
+        "arguments": [
+            "A",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_B",
+            "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_B} \\\\) and save flags of operation \\\\( \\\\texttt{REG_B} - \\\\texttt{REG_A} \\\\) to \\\\( \\\\texttt{REG_F} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_B} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{calculate REG_B - REG_A} \\\\) <br> \\\\( \\\\ \\\\& \\\\ \\\\texttt{save flags to REG_F} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
+    "CMPINTB": {
+        "id": 150,
+        "name": "CMPINTB",
+        "category": "ALU Instructions",
+        "opcode": "0b10010111",
+        "mnemonic": "CMP",
+        "arguments": [
+            "INT",
+            "B"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_A",
+            "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_A} \\\\) and save flags of operation \\\\( \\\\texttt{REG_A} - \\\\texttt{REG_B} \\\\) to \\\\( \\\\texttt{REG_F} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_A} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{calculate REG_A - REG_B} \\\\) <br> \\\\( \\\\ \\\\& \\\\ \\\\texttt{save flags to REG_F} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
+    "CMPBINT": {
+        "id": 151,
+        "name": "CMPBINT",
+        "category": "ALU Instructions",
+        "opcode": "0b10011000",
+        "mnemonic": "CMP",
+        "arguments": [
+            "B",
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_INT_TO_A",
+            "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Move \\\\( \\\\texttt{REG_INT} \\\\) to \\\\( \\\\texttt{REG_A} \\\\) and save flags of operation \\\\( \\\\texttt{REG_B} - \\\\texttt{REG_A} \\\\) to \\\\( \\\\texttt{REG_F} \\\\)",
+        "microcodes-description": "\\\\( \\\\texttt{REG_A} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{calculate REG_B - REG_A} \\\\) <br> \\\\( \\\\ \\\\& \\\\ \\\\texttt{save flags to REG_F} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
     "CLRA": {
-        "id": 141,
+        "id": 152,
         "name": "CLRA",
         "category": "ALU Instructions",
-        "opcode": "0b10001110",
+        "opcode": "0b10011001",
         "mnemonic": "CLR",
         "arguments": [
             "A"
@@ -3671,10 +3948,10 @@
         "total-microcodes-number": "3"
     },
     "CLRB": {
-        "id": 142,
+        "id": 153,
         "name": "CLRB",
         "category": "ALU Instructions",
-        "opcode": "0b10001111",
+        "opcode": "0b10011010",
         "mnemonic": "CLR",
         "arguments": [
             "B"
@@ -3694,10 +3971,10 @@
         "total-microcodes-number": "3"
     },
     "CLRTH": {
-        "id": 143,
+        "id": 154,
         "name": "CLRTH",
         "category": "ALU Instructions",
-        "opcode": "0b10010000",
+        "opcode": "0b10011011",
         "mnemonic": "CLR",
         "arguments": [
             "TH"
@@ -3717,10 +3994,10 @@
         "total-microcodes-number": "3"
     },
     "CLRTL": {
-        "id": 144,
+        "id": 155,
         "name": "CLRTL",
         "category": "ALU Instructions",
-        "opcode": "0b10010001",
+        "opcode": "0b10011100",
         "mnemonic": "CLR",
         "arguments": [
             "TL"
@@ -3740,10 +4017,10 @@
         "total-microcodes-number": "3"
     },
     "CLRT": {
-        "id": 145,
+        "id": 156,
         "name": "CLRT",
         "category": "ALU Instructions",
-        "opcode": "0b10010010",
+        "opcode": "0b10011101",
         "mnemonic": "CLR",
         "arguments": [
             "T"
@@ -3763,10 +4040,10 @@
         "total-microcodes-number": "3"
     },
     "INCA": {
-        "id": 146,
+        "id": 157,
         "name": "INCA",
         "category": "ALU Instructions",
-        "opcode": "0b10010011",
+        "opcode": "0b10011110",
         "mnemonic": "INC",
         "arguments": [
             "A"
@@ -3786,10 +4063,10 @@
         "total-microcodes-number": "3"
     },
     "INCB": {
-        "id": 147,
+        "id": 158,
         "name": "INCB",
         "category": "ALU Instructions",
-        "opcode": "0b10010100",
+        "opcode": "0b10011111",
         "mnemonic": "INC",
         "arguments": [
             "B"
@@ -3809,10 +4086,10 @@
         "total-microcodes-number": "3"
     },
     "INCT": {
-        "id": 148,
+        "id": 159,
         "name": "INCT",
         "category": "ALU Instructions",
-        "opcode": "0b10010101",
+        "opcode": "0b10100000",
         "mnemonic": "INC",
         "arguments": [
             "T"
@@ -3832,10 +4109,10 @@
         "total-microcodes-number": "3"
     },
     "DECA": {
-        "id": 149,
+        "id": 160,
         "name": "DECA",
         "category": "ALU Instructions",
-        "opcode": "0b10010110",
+        "opcode": "0b10100001",
         "mnemonic": "DEC",
         "arguments": [
             "A"
@@ -3855,10 +4132,10 @@
         "total-microcodes-number": "3"
     },
     "DECB": {
-        "id": 150,
+        "id": 161,
         "name": "DECB",
         "category": "ALU Instructions",
-        "opcode": "0b10010111",
+        "opcode": "0b10100010",
         "mnemonic": "DEC",
         "arguments": [
             "B"
@@ -3878,10 +4155,10 @@
         "total-microcodes-number": "3"
     },
     "DECT": {
-        "id": 151,
+        "id": 162,
         "name": "DECT",
         "category": "ALU Instructions",
-        "opcode": "0b10011000",
+        "opcode": "0b10100011",
         "mnemonic": "DEC",
         "arguments": [
             "T"
@@ -3901,10 +4178,10 @@
         "total-microcodes-number": "3"
     },
     "JMPIMM": {
-        "id": 152,
+        "id": 163,
         "name": "JMPIMM",
         "category": "Jump instructions",
-        "opcode": "0b10011001",
+        "opcode": "0b10100100",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -3928,10 +4205,10 @@
         "total-microcodes-number": "7"
     },
     "JMPIMMS": {
-        "id": 153,
+        "id": 164,
         "name": "JMPIMMS",
         "category": "Jump instructions",
-        "opcode": "0b10011010",
+        "opcode": "0b10100101",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -3949,10 +4226,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMNS": {
-        "id": 154,
+        "id": 165,
         "name": "JMPIMMNS",
         "category": "Jump instructions",
-        "opcode": "0b10011011",
+        "opcode": "0b10100110",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -3970,10 +4247,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTS": {
-        "id": 155,
+        "id": 166,
         "name": "JMPIMMTS",
         "category": "Jump instructions",
-        "opcode": "0b10011100",
+        "opcode": "0b10100111",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -3991,10 +4268,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTNS": {
-        "id": 156,
+        "id": 167,
         "name": "JMPIMMTNS",
         "category": "Jump instructions",
-        "opcode": "0b10011101",
+        "opcode": "0b10101000",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4012,10 +4289,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMP": {
-        "id": 157,
+        "id": 168,
         "name": "JMPIMMP",
         "category": "Jump instructions",
-        "opcode": "0b10011110",
+        "opcode": "0b10101001",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4033,10 +4310,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMNP": {
-        "id": 158,
+        "id": 169,
         "name": "JMPIMMNP",
         "category": "Jump instructions",
-        "opcode": "0b10011111",
+        "opcode": "0b10101010",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4054,10 +4331,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTP": {
-        "id": 159,
+        "id": 170,
         "name": "JMPIMMTP",
         "category": "Jump instructions",
-        "opcode": "0b10100000",
+        "opcode": "0b10101011",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4075,10 +4352,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTNP": {
-        "id": 160,
+        "id": 171,
         "name": "JMPIMMTNP",
         "category": "Jump instructions",
-        "opcode": "0b10100001",
+        "opcode": "0b10101100",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4096,10 +4373,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMZ": {
-        "id": 161,
+        "id": 172,
         "name": "JMPIMMZ",
         "category": "Jump instructions",
-        "opcode": "0b10100010",
+        "opcode": "0b10101101",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4117,10 +4394,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMNZ": {
-        "id": 162,
+        "id": 173,
         "name": "JMPIMMNZ",
         "category": "Jump instructions",
-        "opcode": "0b10100011",
+        "opcode": "0b10101110",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4138,10 +4415,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTZ": {
-        "id": 163,
+        "id": 174,
         "name": "JMPIMMTZ",
         "category": "Jump instructions",
-        "opcode": "0b10100100",
+        "opcode": "0b10101111",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4159,10 +4436,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTNZ": {
-        "id": 164,
+        "id": 175,
         "name": "JMPIMMTNZ",
         "category": "Jump instructions",
-        "opcode": "0b10100101",
+        "opcode": "0b10110000",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4180,10 +4457,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMC": {
-        "id": 165,
+        "id": 176,
         "name": "JMPIMMC",
         "category": "Jump instructions",
-        "opcode": "0b10100110",
+        "opcode": "0b10110001",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4201,10 +4478,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMNC": {
-        "id": 166,
+        "id": 177,
         "name": "JMPIMMNC",
         "category": "Jump instructions",
-        "opcode": "0b10100111",
+        "opcode": "0b10110010",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4222,10 +4499,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTC": {
-        "id": 167,
+        "id": 178,
         "name": "JMPIMMTC",
         "category": "Jump instructions",
-        "opcode": "0b10101000",
+        "opcode": "0b10110011",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4243,10 +4520,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTNC": {
-        "id": 168,
+        "id": 179,
         "name": "JMPIMMTNC",
         "category": "Jump instructions",
-        "opcode": "0b10101001",
+        "opcode": "0b10110100",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4264,10 +4541,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMO": {
-        "id": 169,
+        "id": 180,
         "name": "JMPIMMO",
         "category": "Jump instructions",
-        "opcode": "0b10101010",
+        "opcode": "0b10110101",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4285,10 +4562,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMNO": {
-        "id": 170,
+        "id": 181,
         "name": "JMPIMMNO",
         "category": "Jump instructions",
-        "opcode": "0b10101011",
+        "opcode": "0b10110110",
         "mnemonic": "JMPIMM",
         "arguments": [
             "MEM16"
@@ -4306,10 +4583,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTO": {
-        "id": 171,
+        "id": 182,
         "name": "JMPIMMTO",
         "category": "Jump instructions",
-        "opcode": "0b10101100",
+        "opcode": "0b10110111",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4327,10 +4604,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPIMMTNO": {
-        "id": 172,
+        "id": 183,
         "name": "JMPIMMTNO",
         "category": "Jump instructions",
-        "opcode": "0b10101101",
+        "opcode": "0b10111000",
         "mnemonic": "JMPIMM",
         "arguments": [
             "T"
@@ -4348,10 +4625,10 @@
         "total-microcodes-number": "7 or 4"
     },
     "JMPREL": {
-        "id": 173,
+        "id": 184,
         "name": "JMPREL",
         "category": "Jump instructions",
-        "opcode": "0b10101110",
+        "opcode": "0b10111001",
         "mnemonic": "JMPREL",
         "arguments": [
             "CONST"
@@ -4374,10 +4651,10 @@
         "total-microcodes-number": "6"
     },
     "JMPRELS": {
-        "id": 174,
+        "id": 185,
         "name": "JMPRELS",
         "category": "Jump instructions",
-        "opcode": "0b10101111",
+        "opcode": "0b10111010",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4395,10 +4672,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELNS": {
-        "id": 175,
+        "id": 186,
         "name": "JMPRELNS",
         "category": "Jump instructions",
-        "opcode": "0b10110000",
+        "opcode": "0b10111011",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4416,10 +4693,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLS": {
-        "id": 176,
+        "id": 187,
         "name": "JMPRELTLS",
         "category": "Jump instructions",
-        "opcode": "0b10110001",
+        "opcode": "0b10111100",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4437,10 +4714,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLNS": {
-        "id": 177,
+        "id": 188,
         "name": "JMPRELTLNS",
         "category": "Jump instructions",
-        "opcode": "0b10110010",
+        "opcode": "0b10111101",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4458,10 +4735,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELP": {
-        "id": 178,
+        "id": 189,
         "name": "JMPRELP",
         "category": "Jump instructions",
-        "opcode": "0b10110011",
+        "opcode": "0b10111110",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4479,10 +4756,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELNP": {
-        "id": 179,
+        "id": 190,
         "name": "JMPRELNP",
         "category": "Jump instructions",
-        "opcode": "0b10110100",
+        "opcode": "0b10111111",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4500,10 +4777,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLP": {
-        "id": 180,
+        "id": 191,
         "name": "JMPRELTLP",
         "category": "Jump instructions",
-        "opcode": "0b10110101",
+        "opcode": "0b11000000",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4521,10 +4798,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLNP": {
-        "id": 181,
+        "id": 192,
         "name": "JMPRELTLNP",
         "category": "Jump instructions",
-        "opcode": "0b10110110",
+        "opcode": "0b11000001",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4542,10 +4819,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELZ": {
-        "id": 182,
+        "id": 193,
         "name": "JMPRELZ",
         "category": "Jump instructions",
-        "opcode": "0b10110111",
+        "opcode": "0b11000010",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4563,10 +4840,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELNZ": {
-        "id": 183,
+        "id": 194,
         "name": "JMPRELNZ",
         "category": "Jump instructions",
-        "opcode": "0b10111000",
+        "opcode": "0b11000011",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4584,10 +4861,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLZ": {
-        "id": 184,
+        "id": 195,
         "name": "JMPRELTLZ",
         "category": "Jump instructions",
-        "opcode": "0b10111001",
+        "opcode": "0b11000100",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4605,10 +4882,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLNZ": {
-        "id": 185,
+        "id": 196,
         "name": "JMPRELTLNZ",
         "category": "Jump instructions",
-        "opcode": "0b10111010",
+        "opcode": "0b11000101",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4626,10 +4903,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELC": {
-        "id": 186,
+        "id": 197,
         "name": "JMPRELC",
         "category": "Jump instructions",
-        "opcode": "0b10111011",
+        "opcode": "0b11000110",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4647,10 +4924,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELNC": {
-        "id": 187,
+        "id": 198,
         "name": "JMPRELNC",
         "category": "Jump instructions",
-        "opcode": "0b10111100",
+        "opcode": "0b11000111",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4668,10 +4945,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLC": {
-        "id": 188,
+        "id": 199,
         "name": "JMPRELTLC",
         "category": "Jump instructions",
-        "opcode": "0b10111101",
+        "opcode": "0b11001000",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4689,10 +4966,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLNC": {
-        "id": 189,
+        "id": 200,
         "name": "JMPRELTLNC",
         "category": "Jump instructions",
-        "opcode": "0b10111110",
+        "opcode": "0b11001001",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4710,10 +4987,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELO": {
-        "id": 190,
+        "id": 201,
         "name": "JMPRELO",
         "category": "Jump instructions",
-        "opcode": "0b10111111",
+        "opcode": "0b11001010",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4731,10 +5008,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELNO": {
-        "id": 191,
+        "id": 202,
         "name": "JMPRELNO",
         "category": "Jump instructions",
-        "opcode": "0b11000000",
+        "opcode": "0b11001011",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM8"
@@ -4752,10 +5029,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLO": {
-        "id": 192,
+        "id": 203,
         "name": "JMPRELTLO",
         "category": "Jump instructions",
-        "opcode": "0b11000001",
+        "opcode": "0b11001100",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4773,10 +5050,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELTLNO": {
-        "id": 193,
+        "id": 204,
         "name": "JMPRELTLNO",
         "category": "Jump instructions",
-        "opcode": "0b11000010",
+        "opcode": "0b11001101",
         "mnemonic": "JMPREL",
         "arguments": [
             "T"
@@ -4794,10 +5071,10 @@
         "total-microcodes-number": "6 or 3"
     },
     "JMPRELFUN": {
-        "id": 194,
+        "id": 205,
         "name": "JMPRELFUN",
         "category": "Jump instructions",
-        "opcode": "0b11000011",
+        "opcode": "0b11001110",
         "mnemonic": "JMPREL",
         "arguments": [
             "MEM16"
@@ -4826,10 +5103,10 @@
         "total-microcodes-number": "12"
     },
     "JMPRELRET": {
-        "id": 195,
+        "id": 206,
         "name": "JMPRELRET",
         "category": "Jump instructions",
-        "opcode": "0b11000100",
+        "opcode": "0b11001111",
         "mnemonic": "JMPREL",
         "arguments": [],
         "microcodes": [
@@ -4852,10 +5129,10 @@
         "total-microcodes-number": "8"
     },
     "PUSHA": {
-        "id": 196,
+        "id": 207,
         "name": "PUSHA",
         "category": "Stack Instructions",
-        "opcode": "0b11000101",
+        "opcode": "0b11010000",
         "mnemonic": "PUSH",
         "arguments": [
             "A"
@@ -4876,10 +5153,10 @@
         "total-microcodes-number": "4"
     },
     "PUSHB": {
-        "id": 197,
+        "id": 208,
         "name": "PUSHB",
         "category": "Stack Instructions",
-        "opcode": "0b11000110",
+        "opcode": "0b11010001",
         "mnemonic": "PUSH",
         "arguments": [
             "B"
@@ -4900,10 +5177,10 @@
         "total-microcodes-number": "4"
     },
     "PUSHTH": {
-        "id": 198,
+        "id": 209,
         "name": "PUSHTH",
         "category": "Stack Instructions",
-        "opcode": "0b11000111",
+        "opcode": "0b11010010",
         "mnemonic": "PUSH",
         "arguments": [
             "TH"
@@ -4924,10 +5201,10 @@
         "total-microcodes-number": "4"
     },
     "PUSHTL": {
-        "id": 199,
+        "id": 210,
         "name": "PUSHTL",
         "category": "Stack Instructions",
-        "opcode": "0b11001000",
+        "opcode": "0b11010011",
         "mnemonic": "PUSH",
         "arguments": [
             "TL"
@@ -4947,11 +5224,59 @@
         "max-cycles-number": "4",
         "total-microcodes-number": "4"
     },
+    "PUSHF": {
+        "id": 211,
+        "name": "PUSHF",
+        "category": "Stack Instructions",
+        "opcode": "0b11010100",
+        "mnemonic": "PUSH",
+        "arguments": [
+            "F"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_STC_TO_MAR_F_TO_MBR",
+            "LOAD_MBR_TO_MEM[MAR]_STC--",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Push value of \\\\( \\\\texttt{REG_F} \\\\) to stack",
+        "microcodes-description": "\\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{STC} \\\\ \\\\& \\\\ \\\\texttt{REG_MBR} \\\\leftarrow \\\\texttt{REG_F} \\\\) <br> \\\\( \\\\texttt{MEM[REG_MAR]} \\\\leftarrow \\\\texttt{REG_MBR} \\\\ \\\\& \\\\ \\\\texttt{STC} \\\\leftarrow \\\\texttt{STC} - 1 \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
+    "PUSHINT": {
+        "id": 212,
+        "name": "PUSHINT",
+        "category": "Stack Instructions",
+        "opcode": "0b11010101",
+        "mnemonic": "PUSH",
+        "arguments": [
+            "INT"
+        ],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "LOAD_STC_TO_MAR_INT_TO_MBR",
+            "LOAD_MBR_TO_MEM[MAR]_STC--",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Push value of \\\\( \\\\texttt{REG_INT} \\\\) to stack",
+        "microcodes-description": "\\\\( \\\\texttt{REG_MAR} \\\\leftarrow \\\\texttt{STC} \\\\ \\\\& \\\\ \\\\texttt{REG_MBR} \\\\leftarrow \\\\texttt{REG_INT} \\\\) <br> \\\\( \\\\texttt{MEM[REG_MAR]} \\\\leftarrow \\\\texttt{REG_MBR} \\\\ \\\\& \\\\ \\\\texttt{STC} \\\\leftarrow \\\\texttt{STC} - 1 \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "4",
+        "max-cycles-number": "4",
+        "total-microcodes-number": "4"
+    },
     "PUSHT": {
-        "id": 200,
+        "id": 213,
         "name": "PUSHT",
         "category": "Stack Instructions",
-        "opcode": "0b11001001",
+        "opcode": "0b11010110",
         "mnemonic": "PUSH",
         "arguments": [
             "T"
@@ -4974,10 +5299,10 @@
         "total-microcodes-number": "6"
     },
     "PUSHIMM": {
-        "id": 201,
+        "id": 214,
         "name": "PUSHIMM",
         "category": "Stack Instructions",
-        "opcode": "0b11001010",
+        "opcode": "0b11010111",
         "mnemonic": "PUSH",
         "arguments": [
             "CONST"
@@ -5000,10 +5325,10 @@
         "total-microcodes-number": "6"
     },
     "PUSHABS": {
-        "id": 202,
+        "id": 215,
         "name": "PUSHABS",
         "category": "Stack Instructions",
-        "opcode": "0b11001011",
+        "opcode": "0b11011000",
         "mnemonic": "PUSH",
         "arguments": [
             "MEM16"
@@ -5030,10 +5355,10 @@
         "total-microcodes-number": "10"
     },
     "PUSHABSZP": {
-        "id": 203,
+        "id": 216,
         "name": "PUSHABSZP",
         "category": "Stack Instructions",
-        "opcode": "0b11001100",
+        "opcode": "0b11011001",
         "mnemonic": "PUSH",
         "arguments": [
             "MEM8"
@@ -5058,10 +5383,10 @@
         "total-microcodes-number": "8"
     },
     "POPA": {
-        "id": 204,
+        "id": 217,
         "name": "POPA",
         "category": "Stack Instructions",
-        "opcode": "0b11001101",
+        "opcode": "0b11011010",
         "mnemonic": "POP",
         "arguments": [
             "A"
@@ -5082,10 +5407,10 @@
         "total-microcodes-number": "4"
     },
     "POPB": {
-        "id": 205,
+        "id": 218,
         "name": "POPB",
         "category": "Stack Instructions",
-        "opcode": "0b11001110",
+        "opcode": "0b11011011",
         "mnemonic": "POP",
         "arguments": [
             "B"
@@ -5106,10 +5431,10 @@
         "total-microcodes-number": "4"
     },
     "POPTH": {
-        "id": 206,
+        "id": 219,
         "name": "POPTH",
         "category": "Stack Instructions",
-        "opcode": "0b11001111",
+        "opcode": "0b11011100",
         "mnemonic": "POP",
         "arguments": [
             "TH"
@@ -5130,10 +5455,10 @@
         "total-microcodes-number": "4"
     },
     "POPTL": {
-        "id": 207,
+        "id": 220,
         "name": "POPTL",
         "category": "Stack Instructions",
-        "opcode": "0b11010000",
+        "opcode": "0b11011101",
         "mnemonic": "POP",
         "arguments": [
             "TL"
@@ -5154,10 +5479,10 @@
         "total-microcodes-number": "4"
     },
     "POPT": {
-        "id": 208,
+        "id": 221,
         "name": "POPT",
         "category": "Stack Instructions",
-        "opcode": "0b11010001",
+        "opcode": "0b11011110",
         "mnemonic": "POP",
         "arguments": [
             "T"
@@ -5180,10 +5505,10 @@
         "total-microcodes-number": "6"
     },
     "POPMEM": {
-        "id": 209,
+        "id": 222,
         "name": "POPMEM",
         "category": "Stack Instructions",
-        "opcode": "0b11010010",
+        "opcode": "0b11011111",
         "mnemonic": "POP",
         "arguments": [
             "MEM16"
@@ -5210,10 +5535,10 @@
         "total-microcodes-number": "10"
     },
     "POPMEMZP": {
-        "id": 210,
+        "id": 223,
         "name": "POPMEMZP",
         "category": "Stack Instructions",
-        "opcode": "0b11010011",
+        "opcode": "0b11100000",
         "mnemonic": "POP",
         "arguments": [
             "MEM8"
@@ -5238,10 +5563,10 @@
         "total-microcodes-number": "8"
     },
     "NOP": {
-        "id": 211,
+        "id": 224,
         "name": "NOP",
         "category": "Other Instructions",
-        "opcode": "0b11010100",
+        "opcode": "0b11100001",
         "mnemonic": "NOP",
         "arguments": [],
         "microcodes": [
@@ -5259,10 +5584,10 @@
         "total-microcodes-number": "3"
     },
     "SKIP": {
-        "id": 212,
+        "id": 225,
         "name": "SKIP",
         "category": "Other Instructions",
-        "opcode": "0b11010101",
+        "opcode": "0b11100010",
         "mnemonic": "SKIP",
         "arguments": [],
         "microcodes": [
@@ -5279,10 +5604,10 @@
         "total-microcodes-number": "2"
     },
     "SKIP1": {
-        "id": 213,
+        "id": 226,
         "name": "SKIP1",
         "category": "Other Instructions",
-        "opcode": "0b11010110",
+        "opcode": "0b11100011",
         "mnemonic": "SKIP1",
         "arguments": [],
         "microcodes": [
@@ -5300,10 +5625,10 @@
         "total-microcodes-number": "3"
     },
     "SKIP2": {
-        "id": 214,
+        "id": 227,
         "name": "SKIP2",
         "category": "Other Instructions",
-        "opcode": "0b11010111",
+        "opcode": "0b11100100",
         "mnemonic": "SKIP2",
         "arguments": [],
         "microcodes": [
@@ -5322,10 +5647,10 @@
         "total-microcodes-number": "4"
     },
     "ISR": {
-        "id": 215,
+        "id": 228,
         "name": "ISR",
         "category": "Other Instructions",
-        "opcode": "0b11011000",
+        "opcode": "0b11100101",
         "mnemonic": "ISR",
         "arguments": [],
         "microcodes": [
@@ -5352,10 +5677,10 @@
         "total-microcodes-number": "12"
     },
     "IRET": {
-        "id": 216,
+        "id": 229,
         "name": "IRET",
         "category": "Other Instructions",
-        "opcode": "0b11011001",
+        "opcode": "0b11100110",
         "mnemonic": "IRET",
         "arguments": [],
         "microcodes": [
@@ -5378,10 +5703,10 @@
         "total-microcodes-number": "8"
     },
     "HALT": {
-        "id": 217,
+        "id": 230,
         "name": "HALT",
         "category": "Other Instructions",
-        "opcode": "0b11011010",
+        "opcode": "0b11100111",
         "mnemonic": "HALT",
         "arguments": [],
         "microcodes": [

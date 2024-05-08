@@ -50,7 +50,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_IR_PC++": {
         "REG_A_LOAD": 0,
@@ -103,7 +104,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "RST_MC": {
         "REG_A_LOAD": 0,
@@ -156,7 +158,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMP_TO_MAR_A_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -209,7 +212,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_A_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -262,7 +266,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_A_STC++": {
         "REG_A_LOAD": 1,
@@ -315,7 +320,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_0_TO_A": {
         "REG_A_LOAD": 1,
@@ -368,7 +374,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_B_TO_A": {
         "REG_A_LOAD": 1,
@@ -421,7 +428,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TH_TO_A": {
         "REG_A_LOAD": 1,
@@ -474,7 +482,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPH_TO_A": {
         "REG_A_LOAD": 1,
@@ -527,7 +536,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TL_TO_A": {
         "REG_A_LOAD": 1,
@@ -580,7 +590,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPL_TO_A": {
         "REG_A_LOAD": 1,
@@ -633,7 +644,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_A": {
         "REG_A_LOAD": 1,
@@ -686,7 +698,62 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_INT_TO_A": {
+        "REG_A_LOAD": 1,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
     },
     "LOAD_TMP_TO_MAR_B_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -739,7 +806,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_B_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -792,7 +860,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_B_STC++": {
         "REG_A_LOAD": 0,
@@ -845,7 +914,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_0_TO_B": {
         "REG_A_LOAD": 0,
@@ -898,7 +968,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_A_TO_B": {
         "REG_A_LOAD": 0,
@@ -951,7 +1022,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TH_TO_B": {
         "REG_A_LOAD": 0,
@@ -1004,7 +1076,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPH_TO_B": {
         "REG_A_LOAD": 0,
@@ -1057,7 +1130,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TL_TO_B": {
         "REG_A_LOAD": 0,
@@ -1110,7 +1184,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPL_TO_B": {
         "REG_A_LOAD": 0,
@@ -1163,7 +1238,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_B": {
         "REG_A_LOAD": 0,
@@ -1216,7 +1292,62 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_INT_TO_B": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 1,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
     },
     "LOAD_TMP_TO_MAR_TH_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -1269,7 +1400,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_TH_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -1322,7 +1454,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TH_STC++": {
         "REG_A_LOAD": 0,
@@ -1375,7 +1508,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_0_TO_TH": {
         "REG_A_LOAD": 0,
@@ -1428,7 +1562,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_A_TO_TH": {
         "REG_A_LOAD": 0,
@@ -1481,7 +1616,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_A_TO_TMPH": {
         "REG_A_LOAD": 0,
@@ -1534,7 +1670,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_B_TO_TH": {
         "REG_A_LOAD": 0,
@@ -1587,7 +1724,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_B_TO_TMPH": {
         "REG_A_LOAD": 0,
@@ -1640,7 +1778,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TL_TO_TH": {
         "REG_A_LOAD": 0,
@@ -1693,7 +1832,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TL_TO_TMPH": {
         "REG_A_LOAD": 0,
@@ -1746,7 +1886,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPL_TO_TMPH": {
         "REG_A_LOAD": 0,
@@ -1799,7 +1940,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_TH": {
         "REG_A_LOAD": 0,
@@ -1852,7 +1994,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_TMPH": {
         "REG_A_LOAD": 0,
@@ -1905,7 +2048,116 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_INT_TO_TH": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 1,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 0,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
+    },
+    "LOAD_INT_TO_TMPH": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 1,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 0,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
     },
     "LOAD_TMP_TO_MAR_TL_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -1958,7 +2210,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_TL_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -2011,7 +2264,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TL_STC++": {
         "REG_A_LOAD": 0,
@@ -2064,7 +2318,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_0_TO_TL": {
         "REG_A_LOAD": 0,
@@ -2117,7 +2372,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_A_TO_TL": {
         "REG_A_LOAD": 0,
@@ -2170,7 +2426,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_A_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -2223,7 +2480,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_B_TO_TL": {
         "REG_A_LOAD": 0,
@@ -2276,7 +2534,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_B_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -2329,7 +2588,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TH_TO_TL": {
         "REG_A_LOAD": 0,
@@ -2382,7 +2642,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TH_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -2435,7 +2696,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMPH_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -2488,7 +2750,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_TL": {
         "REG_A_LOAD": 0,
@@ -2541,7 +2804,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_F_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -2594,7 +2858,332 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_INT_TO_TL": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 1,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 0,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
+    },
+    "LOAD_INT_TO_TMPL": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 1,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 0,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 0,
+        "REG_MBR_LOAD": 0,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 1,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
+    },
+    "LOAD_TMP_TO_MAR_F_TO_MBR": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 0,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 0,
+        "~REG_TMPL_OUT": 0,
+        "~REG_TMP_PASS_ADDRESS": 0,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 0,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 1,
+        "REG_MBR_LOAD": 1,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 0,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_STC_TO_MAR_F_TO_MBR": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 0,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 0,
+        "REG_MAR_LOAD": 1,
+        "REG_MBR_LOAD": 1,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 0,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
+    },
+    "LOAD_TMP_TO_MAR_INT_TO_MBR": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 0,
+        "~REG_TMPL_OUT": 0,
+        "~REG_TMP_PASS_ADDRESS": 0,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 0,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 1,
+        "REG_MAR_LOAD": 1,
+        "REG_MBR_LOAD": 1,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 0,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
+    },
+    "LOAD_STC_TO_MAR_INT_TO_MBR": {
+        "REG_A_LOAD": 0,
+        "REG_B_LOAD": 0,
+        "ALU_OPC_0": 0,
+        "ALU_OPC_1": 0,
+        "ALU_OPC_2": 0,
+        "ALU_OPC_3": 0,
+        "ALU_OPC_4": 0,
+        "REG_F_LOAD": 0,
+        "~REG_F_OUT": 1,
+        "~ALU_OUT": 1,
+        "REG_TMPH_LOAD": 0,
+        "REG_TMPL_LOAD": 0,
+        "~REG_TMPH_OUT": 1,
+        "~REG_TMPL_OUT": 1,
+        "~REG_TMP_PASS_ADDRESS": 1,
+        "~REG_TMPH_PASS_DATA": 1,
+        "~REG_TMPL_PASS_DATA": 1,
+        "REG_TMP_ADDRESS_DIR": 1,
+        "REG_TMPH_DATA_DIR": 1,
+        "REG_TMPL_DATA_DIR": 1,
+        "~PC_LOAD": 1,
+        "~PC_RST": 1,
+        "PC_TICK": 0,
+        "~PC_OUT": 1,
+        "~STC_LOAD": 1,
+        "STC_RST": 0,
+        "STC_TICK": 0,
+        "STC_MODE": 0,
+        "~STC_OUT": 0,
+        "REG_MAR_LOAD": 1,
+        "REG_MBR_LOAD": 1,
+        "~MEM_OUT": 1,
+        "~MEM_IN": 1,
+        "MEM_PART": 0,
+        "~ZERO_PAGE": 1,
+        "REG_MBR_WORD_DIR": 1,
+        "~REG_MAR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BTTNS": 1,
+        "~REG_MBR_USE_BUS": 0,
+        "MEMORY_SELECTOR": 1,
+        "REG_IR_LOAD": 0,
+        "MCC_TICK": 1,
+        "~MCC_RST": 1,
+        "INT_OUT_0": 0,
+        "INT_OUT_1": 0,
+        "INT_OUT_2": 0,
+        "INT_OUT_3": 0,
+        "INT_OUT_4": 0,
+        "SET_INT_ENABLE": 0,
+        "RST_INT_ENABLE": 0,
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 0
     },
     "LOAD_MEM[MAR]_TO_A": {
         "REG_A_LOAD": 1,
@@ -2647,7 +3236,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_A_PC++": {
         "REG_A_LOAD": 1,
@@ -2700,7 +3290,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_B": {
         "REG_A_LOAD": 0,
@@ -2753,7 +3344,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_B_PC++": {
         "REG_A_LOAD": 0,
@@ -2806,7 +3398,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TMPH_PC++": {
         "REG_A_LOAD": 0,
@@ -2859,7 +3452,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TH_PC++": {
         "REG_A_LOAD": 0,
@@ -2912,7 +3506,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TMPL_PC++": {
         "REG_A_LOAD": 0,
@@ -2965,7 +3560,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TL_PC++": {
         "REG_A_LOAD": 0,
@@ -3018,7 +3614,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMP_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -3071,7 +3668,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_MBR_PC++": {
         "REG_A_LOAD": 0,
@@ -3124,7 +3722,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MBR_TO_MEM[MAR]": {
         "REG_A_LOAD": 0,
@@ -3177,7 +3776,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_ZP_MEM[MAR]_TO_A": {
         "REG_A_LOAD": 1,
@@ -3230,7 +3830,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_ZP_MEM[MAR]_TO_B": {
         "REG_A_LOAD": 0,
@@ -3283,7 +3884,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MBR_TO_ZP_MEM[MAR]": {
         "REG_A_LOAD": 0,
@@ -3336,7 +3938,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_MAR_A_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -3389,7 +3992,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_MAR_B_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -3442,7 +4046,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_MAR_TH_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -3495,7 +4100,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_MAR_TL_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -3548,7 +4154,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGA_TO_A": {
         "REG_A_LOAD": 1,
@@ -3601,7 +4208,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2A_TO_A": {
         "REG_A_LOAD": 1,
@@ -3654,7 +4262,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVA_TO_A": {
         "REG_A_LOAD": 1,
@@ -3707,7 +4316,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRA_TO_A": {
         "REG_A_LOAD": 1,
@@ -3760,7 +4370,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLA_TO_A": {
         "REG_A_LOAD": 1,
@@ -3813,7 +4424,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGA_TO_B": {
         "REG_A_LOAD": 0,
@@ -3866,7 +4478,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2A_TO_B": {
         "REG_A_LOAD": 0,
@@ -3919,7 +4532,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVA_TO_B": {
         "REG_A_LOAD": 0,
@@ -3972,7 +4586,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRA_TO_B": {
         "REG_A_LOAD": 0,
@@ -4025,7 +4640,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLA_TO_B": {
         "REG_A_LOAD": 0,
@@ -4078,7 +4694,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGA_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -4131,7 +4748,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -4184,7 +4802,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_ADD_TO_A": {
         "REG_A_LOAD": 1,
@@ -4237,7 +4856,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBAB_TO_A": {
         "REG_A_LOAD": 1,
@@ -4290,7 +4910,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBBA_TO_A": {
         "REG_A_LOAD": 1,
@@ -4343,7 +4964,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2A_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 1,
@@ -4396,7 +5018,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2A_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 1,
@@ -4449,7 +5072,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVA_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 1,
@@ -4502,7 +5126,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 1,
@@ -4555,7 +5180,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_OR_TO_A": {
         "REG_A_LOAD": 1,
@@ -4608,7 +5234,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_AND_TO_A": {
         "REG_A_LOAD": 1,
@@ -4661,7 +5288,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_XOR_TO_A": {
         "REG_A_LOAD": 1,
@@ -4714,7 +5342,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRA_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 1,
@@ -4767,7 +5396,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 1,
@@ -4820,7 +5450,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLA_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 1,
@@ -4873,7 +5504,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 1,
@@ -4926,7 +5558,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGB_TO_A": {
         "REG_A_LOAD": 1,
@@ -4979,7 +5612,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2B_TO_A": {
         "REG_A_LOAD": 1,
@@ -5032,7 +5666,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVB_TO_A": {
         "REG_A_LOAD": 1,
@@ -5085,7 +5720,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRB_TO_A": {
         "REG_A_LOAD": 1,
@@ -5138,7 +5774,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLB_TO_A": {
         "REG_A_LOAD": 1,
@@ -5191,7 +5828,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGB_TO_B": {
         "REG_A_LOAD": 0,
@@ -5244,7 +5882,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2B_TO_B": {
         "REG_A_LOAD": 0,
@@ -5297,7 +5936,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVB_TO_B": {
         "REG_A_LOAD": 0,
@@ -5350,7 +5990,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRB_TO_B": {
         "REG_A_LOAD": 0,
@@ -5403,7 +6044,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLB_TO_B": {
         "REG_A_LOAD": 0,
@@ -5456,7 +6098,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGB_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -5509,7 +6152,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_NEGB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -5562,7 +6206,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_ADD_TO_B": {
         "REG_A_LOAD": 0,
@@ -5615,7 +6260,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBAB_TO_B": {
         "REG_A_LOAD": 0,
@@ -5668,7 +6314,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBBA_TO_B": {
         "REG_A_LOAD": 0,
@@ -5721,7 +6368,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2B_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -5774,7 +6422,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_DIV2B_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -5827,7 +6476,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVB_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -5880,7 +6530,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_INVB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -5933,7 +6584,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_OR_TO_B": {
         "REG_A_LOAD": 0,
@@ -5986,7 +6638,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_AND_TO_B": {
         "REG_A_LOAD": 0,
@@ -6039,7 +6692,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_XOR_TO_B": {
         "REG_A_LOAD": 0,
@@ -6092,7 +6746,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRB_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6145,7 +6800,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHRB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6198,7 +6854,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLB_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6251,7 +6908,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SHLB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6304,7 +6962,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MBR_TO_STC_MEM[MAR]_STC--": {
         "REG_A_LOAD": 0,
@@ -6357,7 +7016,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_ADD_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6410,7 +7070,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_ADD_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6463,7 +7124,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBAB_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6516,7 +7178,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBBA_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6569,7 +7232,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBAB_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6622,7 +7286,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_SUBBA_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6675,7 +7340,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_OR_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6728,7 +7394,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_OR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6781,7 +7448,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_AND_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6834,7 +7502,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_AND_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6887,7 +7556,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_XOR_TO_MBR_SAVE_FLAGS": {
         "REG_A_LOAD": 0,
@@ -6940,7 +7610,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_XOR_TO_MBR_SAVE_FLAGS_LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -6993,7 +7664,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "CALCULATE_A-B_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7046,7 +7718,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "CALCULATE_B-A_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7099,7 +7772,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_0_TO_TMPH_AND_TMPL": {
         "REG_A_LOAD": 0,
@@ -7152,7 +7826,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_A+1_TOA_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7205,7 +7880,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_B+1_TOB_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7258,7 +7934,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_TL+1_TOTL_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7311,7 +7988,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_A-1_TOA_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7364,7 +8042,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_B-1_TOB_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7417,7 +8096,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_TL-1_TOTL_SAVE_FLAGS_TO_REG_F": {
         "REG_A_LOAD": 0,
@@ -7470,7 +8150,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_TMP_TO_PC": {
         "REG_A_LOAD": 0,
@@ -7523,7 +8204,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP": {
         "REG_A_LOAD": 1,
@@ -7576,7 +8258,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "MOV_A+B_TO_TMPL": {
         "REG_A_LOAD": 0,
@@ -7629,7 +8312,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_TMP": {
         "REG_A_LOAD": 0,
@@ -7682,7 +8366,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_PC_TO_TMP_SET_ISR_FLAG": {
         "REG_A_LOAD": 0,
@@ -7735,7 +8420,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 1,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -7788,7 +8474,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MBR_TO_MEM[MAR]_STC--": {
         "REG_A_LOAD": 0,
@@ -7841,7 +8528,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -7894,7 +8582,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_STC_TO_MAR": {
         "REG_A_LOAD": 0,
@@ -7947,7 +8636,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TMPH_STC++": {
         "REG_A_LOAD": 0,
@@ -8000,7 +8690,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_TMPL_STC++": {
         "REG_A_LOAD": 0,
@@ -8053,7 +8744,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "PC++": {
         "REG_A_LOAD": 0,
@@ -8106,7 +8798,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "PC++_RESET_ISR_FLAG": {
         "REG_A_LOAD": 0,
@@ -8159,7 +8852,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 1,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_MBR": {
         "REG_A_LOAD": 0,
@@ -8212,7 +8906,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_MEM[MAR]_TO_MBR_STC++": {
         "REG_A_LOAD": 0,
@@ -8265,7 +8960,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "DO_NOTHING": {
         "REG_A_LOAD": 0,
@@ -8318,7 +9014,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "HALT": {
         "REG_A_LOAD": 0,
@@ -8371,7 +9068,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR": {
         "REG_A_LOAD": 0,
@@ -8424,7 +9122,8 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 0
+        "~INT_ADDRESS_OUT": 0,
+        "~INT_DATA_OUT": 1
     },
     "LOAD_ISR_ADDRESS_TO_PC_AND_MAR": {
         "REG_A_LOAD": 0,
@@ -8477,6 +9176,7 @@
         "INT_OUT_4": 0,
         "SET_INT_ENABLE": 0,
         "RST_INT_ENABLE": 0,
-        "~INT_ADDRESS_OUT": 1
+        "~INT_ADDRESS_OUT": 1,
+        "~INT_DATA_OUT": 1
     }
 }

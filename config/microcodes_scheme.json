@@ -353,9 +353,16 @@
                 0,
                 1
             ]
+        },
+        "~INT_DATA_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
         }
     },
-    "minProperties": 51,
-    "maxProperties": 51,
+    "minProperties": 52,
+    "maxProperties": 52,
     "additionalItems": false
 }

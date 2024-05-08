@@ -202,5 +202,9 @@
     "~INT_ADDRESS_OUT": [
         "G2",
         ""
+    ],
+    "~INT_DATA_OUT": [
+        "G3",
+        ""
     ]
 }

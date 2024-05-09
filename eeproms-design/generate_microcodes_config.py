@@ -2,7 +2,7 @@ import json
 
 from argparse import ArgumentParser
 from pathlib import Path
-from itertools import permutations
+
 
 class Reg:
     def __init__(self, name, altname = None):
@@ -24,6 +24,7 @@ class Reg:
     def asmname(self):
         return self._name.tolower()
 
+
 REG_A = Reg('A')
 REG_B = Reg('B')
 REG_TH = Reg('TMPH', 'TH')
@@ -34,6 +35,8 @@ TMP_REGS = [REG_TH, REG_TL]
 
 REG_MBR = Reg('MBR')
 REG_F = Reg('F')
+REG_INT  = Reg('INT')
+
 
 class Microcode:
     _alu_lut = {
@@ -99,11 +102,20 @@ class Microcode:
                 '~REG_MAR_USE_BTTNS': 1,
                 '~REG_MBR_USE_BTTNS': 1,
                 '~REG_MBR_USE_BUS': 1,
+                'MEMORY_SELECTOR': 1,
                 'REG_IR_LOAD': 0,
                 'MCC_TICK': 1,
-                '~MCC_RST': 1
+                '~MCC_RST': 1,
+                'INT_OUT_0': 0,
+                'INT_OUT_1': 0,
+                'INT_OUT_2': 0,
+                'INT_OUT_3': 0,
+                'INT_OUT_4': 0,
+                'SET_INT_ENABLE': 0,
+                'RST_INT_ENABLE': 0,
+                '~INT_ADDRESS_OUT': 0,
+                "~INT_DATA_OUT": 1
         }
-
 
     def _alu_operation(self, code):
         self._signals['~ALU_OUT'] = 0
@@ -118,7 +130,7 @@ class Microcode:
         self._signals['~MCC_RST'] = 0
 
     def reg_to_bus(self, reg):
-        assert reg in WORD_REGS or reg == REG_F
+        assert reg in WORD_REGS or reg == REG_F or reg == REG_INT
         if reg in DATA_REGS:
             alu_code = f'REG_{reg}'
             self._alu_operation(self.alu_opcodes[alu_code])
@@ -131,10 +143,13 @@ class Microcode:
         if reg == REG_F:
             self._signals['~REG_F_OUT'] = 0
 
+        if reg == REG_INT:
+            self._signals['~INT_DATA_OUT'] = 0
+
         return self
 
     def reg_from_bus(self, reg):
-        assert reg in WORD_REGS
+        assert reg in WORD_REGS or reg == REG_INT or reg == REG_F
         self._signals[f'REG_{reg}_LOAD'] = 1
 
         if reg in TMP_REGS:
@@ -213,6 +228,13 @@ class Microcode:
     def tmp_in(self):
         return self.reg_from_bus(REG_TL).reg_from_bus(REG_TH)
 
+    def tmp_addr_in(self):
+        self._signals['REG_TMPH_LOAD'] = 1
+        self._signals['REG_TMPL_LOAD'] = 1
+        self._signals['REG_TMP_ADDRESS_DIR'] = 1
+        self._signals['~REG_TMP_PASS_ADDRESS'] = 0
+        return self
+
     def stc_out(self):
         self._signals['~STC_OUT'] = 0
         return self
@@ -224,6 +246,22 @@ class Microcode:
     def stc_inc(self):
         self._signals['STC_TICK'] = 1
         self._signals['STC_MODE'] = 1
+        return self
+
+    def set_int_enable(self):
+        self._signals['SET_INT_ENABLE'] = 1
+        return self
+
+    def rst_int_enable(self):
+        self._signals['RST_INT_ENABLE'] = 1
+        return self
+
+    def int_addr_out(self):
+        self._signals['~INT_ADDRESS_OUT'] = 1
+        return self
+    
+    def int_data_out(self):
+        self._signals['~INT_DATA_OUT'] = 0
         return self
 
     def to_json(self):
@@ -241,6 +279,7 @@ class Microcode:
             codes = alu_config['codes']
             cls.alu_opcodes = dict(map(extract_code, codes.items()))
 
+
 class Microcodes:
     def __init__(self):
         self._microcodes = {}
@@ -257,8 +296,9 @@ class Microcodes:
         indent = 4 if pretty_print else None
         json.dump(self._microcodes, file, indent=indent, default=encode)
 
+
 parser = ArgumentParser(description='Script to generate the microcodes config file') 
-parser.add_argument('--alu-config', help='Path to the ALU config JSON')
+parser.add_argument('--alu-config', help='Path to the ALU config JSON. Default is ../config/alu.json', default='../config/alu.json')
 parser.add_argument('--output', help='Path to the output file. Default is ./microcodes.json', default='./microcodes.json')
 parser.add_argument('--force', help='Generate even if destination exists', action='store_true')
 
@@ -280,11 +320,12 @@ microcodes.add('LOAD_PC_TO_MAR').pc_out().mar_in()
 microcodes.add('LOAD_MEM[MAR]_TO_IR_PC++').mem_to_bus().ir_in().pc_inc()
 microcodes.add('RST_MC').no_mcc_tick().mcc_rst()
 
-mov_srcs = WORD_REGS + [ REG_F ]
-mov_dsts = WORD_REGS
+mov_srcs = WORD_REGS + [ REG_F, REG_INT ]
+mov_dsts = WORD_REGS + [ REG_F, REG_INT ]
 for dst in mov_dsts:
     microcodes.add(f'LOAD_TMP_TO_MAR_{dst.altname()}_TO_MBR').tmp_out().mar_in().reg_to_bus(dst).mbr_in()
     microcodes.add(f'LOAD_STC_TO_MAR_{dst.altname()}_TO_MBR').stc_out().mar_in().reg_to_bus(dst).mbr_in()
+    if dst == REG_F or dst == REG_INT: continue
     microcodes.add(f'LOAD_MEM[MAR]_TO_{dst.altname()}_STC++').stc_inc().mem_to_bus().reg_from_bus(dst)
     microcodes.add(f'MOV_0_TO_{dst.altname()}').alu_operation('0', None, False).reg_from_bus(dst)
     for src in mov_srcs:
@@ -364,7 +405,8 @@ microcodes.add('MOV_TL-1_TOTL_SAVE_FLAGS_TO_REG_F')
 microcodes.add('LOAD_TMP_TO_PC').tmp_out().pc_in()
 microcodes.add('LOAD_MEM[MAR]_TO_A_LOAD_PC_TO_TMP').mem_to_bus().reg_from_bus(REG_A).tmp_out().pc_in()
 microcodes.add('MOV_A+B_TO_TMPL').alu_operation('a+b', None, False).reg_from_bus(REG_TL)
-microcodes.add('LOAD_PC_TO_TMP').tmp_in().pc_out()
+microcodes.add('LOAD_PC_TO_TMP').tmp_addr_in().pc_out()
+microcodes.add('LOAD_PC_TO_TMP_SET_ISR_FLAG').tmp_addr_in().pc_out().rst_int_enable()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
 microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem(stack=True)
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
@@ -372,11 +414,13 @@ microcodes.add('LOAD_STC_TO_MAR').stc_out().mar_in()
 microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TH).stc_inc()
 microcodes.add('LOAD_MEM[MAR]_TO_TMPL_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TL).stc_inc()
 microcodes.add('PC++').pc_inc()
+microcodes.add('PC++_RESET_ISR_FLAG').pc_inc().set_int_enable()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr(stack=True).stc_inc()
 microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
 microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
+microcodes.add('LOAD_ISR_ADDRESS_TO_PC_AND_MAR').pc_in().mar_in().int_addr_out()
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

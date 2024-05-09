@@ -155,6 +155,10 @@
         "E6",
         ""
     ],
+    "MEMORY_SELECTOR": [
+        "E7",
+        ""
+    ],
     "REG_IR_LOAD": [
         "F0",
         "CLK"
@@ -165,6 +169,42 @@
     ],
     "~MCC_RST": [
         "F2",
+        ""
+    ],
+    "INT_OUT_0": [
+        "F3",
+        ""
+    ],
+    "INT_OUT_1": [
+        "F4",
+        ""
+    ],
+    "INT_OUT_2": [
+        "F5",
+        ""
+    ],
+    "INT_OUT_3": [
+        "F6",
+        ""
+    ],
+    "INT_OUT_4": [
+        "F7",
+        ""
+    ],
+    "SET_INT_ENABLE": [
+        "G0",
+        ""
+    ],
+    "RST_INT_ENABLE": [
+        "G1",
+        ""
+    ],
+    "~INT_ADDRESS_OUT": [
+        "G2",
+        ""
+    ],
+    "~INT_DATA_OUT": [
+        "G3",
         ""
     ]
 }

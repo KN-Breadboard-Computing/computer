@@ -32,14 +32,29 @@
                 "type": "string"
             }
         },
+        "branch": {
+            "type": "string"
+        },
         "description": {
             "type": "string"
         },
         "microcodes-description": {
             "type": "string"
+        },
+        "depend-on-flag": {
+            "type": "string"
+        },
+        "min-cycles-number": {
+            "type": "string"
+        },
+        "max-cycles-number": {
+            "type": "string"
+        },
+        "total-microcodes-number": {
+            "type": "string"
         }
     },
-    "minProperties": 9,
-    "maxProperties": 9,
+    "minProperties": 14,
+    "maxProperties": 14,
     "additionalItems": false
 }

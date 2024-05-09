@@ -270,6 +270,13 @@
                 1
             ]
         },
+        "MEMORY_SELECTOR": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
         "~REG_IR_LOAD": {
             "type": "integer",
             "enum": [
@@ -290,9 +297,72 @@
                 0,
                 1
             ]
+        },
+        "INT_OUT_0": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "INT_OUT_1": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "INT_OUT_2": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "INT_OUT_3": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "INT_OUT_4": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "SET_INT_ENABLE": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "RST_INT_ENABLE": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~INT_ADDRESS_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "~INT_DATA_OUT": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
         }
     },
-    "minProperties": 42,
-    "maxProperties": 42,
+    "minProperties": 52,
+    "maxProperties": 52,
     "additionalItems": false
 }

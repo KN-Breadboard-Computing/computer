@@ -20,6 +20,8 @@ REGS16ABR = {"REG_TMP": "T"}  # abbreviated names of 16bit registers
 FLAGS = ["S", "P", "Z", "C", "O"]  # abbreviated names of flags
 FLAGS_DESCRIPTION = ["sign", "parity", "zero", "carry", "overflow"]  # names of flags
 
+OUT_INTERRUPTS_NUMBER = 5  # number of output interrupt
+
 # available operations with descriptions
 # [mnemonic, possible arguments, operation name, math operator]
 OPERATIONS = [
@@ -995,6 +997,21 @@ description = f"Return from interrupt service routine"
 microcodes_description = f"{MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('STC')} {MME} <br> {MMB} {build_text('REG_TMPH')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('STC')} {LEFTARROW} {build_text('STC')} + 1 {MME} <br> {MMB} {build_text('REG_MAR')} {LEFTARROW} {build_text('STC')} {MME} <br> {MMB} {build_text('REG_TMPL')} {LEFTARROW} {build_text('MEM[REG_MAR]')} {AND} {build_text('STC')} {LEFTARROW} {build_text('STC')} + 1 {MME} <br> {MMB} {build_text('PC')} {LEFTARROW} {build_text('REG_TMP')} {MME} <br> {MMB} {build_text('PC')} {LEFTARROW} {build_text('PC')} + 1 {AND} {build_text('reset ISR flag')} {MME}"
 
 instructions.add(name, category, mnemonic, arguments, microcodes, description, microcodes_description)
+
+for i in range(OUT_INTERRUPTS_NUMBER):
+    name = f"INT{i}"
+    mnemonic = f"INT{i}"
+    arguments = []
+    microcodes = [
+        "LOAD_PC_TO_MAR",
+        "LOAD_MEM[MAR]_TO_IR_PC++",
+        f"INTERRUPT{i}",
+        "RST_MC"
+    ]
+    description = f"Trigger interrupt {i}"
+    microcodes_description = f"{MMB} {build_text(f'INTERRUPT{i}')} {MME}"
+
+    instructions.add(name, category, mnemonic, arguments, microcodes, description, microcodes_description)    
 
 name = "HALT"
 mnemonic = "HALT"

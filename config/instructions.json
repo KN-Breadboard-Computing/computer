@@ -5702,11 +5702,116 @@
         "max-cycles-number": "8",
         "total-microcodes-number": "8"
     },
-    "HALT": {
+    "INT0": {
         "id": 230,
-        "name": "HALT",
+        "name": "INT0",
         "category": "Other Instructions",
         "opcode": "0b11100111",
+        "mnemonic": "INT0",
+        "arguments": [],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "INTERRUPT0",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Trigger interrupt 0",
+        "microcodes-description": "\\\\( \\\\texttt{INTERRUPT0} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "INT1": {
+        "id": 231,
+        "name": "INT1",
+        "category": "Other Instructions",
+        "opcode": "0b11101000",
+        "mnemonic": "INT1",
+        "arguments": [],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "INTERRUPT1",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Trigger interrupt 1",
+        "microcodes-description": "\\\\( \\\\texttt{INTERRUPT1} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "INT2": {
+        "id": 232,
+        "name": "INT2",
+        "category": "Other Instructions",
+        "opcode": "0b11101001",
+        "mnemonic": "INT2",
+        "arguments": [],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "INTERRUPT2",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Trigger interrupt 2",
+        "microcodes-description": "\\\\( \\\\texttt{INTERRUPT2} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "INT3": {
+        "id": 233,
+        "name": "INT3",
+        "category": "Other Instructions",
+        "opcode": "0b11101010",
+        "mnemonic": "INT3",
+        "arguments": [],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "INTERRUPT3",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Trigger interrupt 3",
+        "microcodes-description": "\\\\( \\\\texttt{INTERRUPT3} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "INT4": {
+        "id": 234,
+        "name": "INT4",
+        "category": "Other Instructions",
+        "opcode": "0b11101011",
+        "mnemonic": "INT4",
+        "arguments": [],
+        "microcodes": [
+            "LOAD_PC_TO_MAR",
+            "LOAD_MEM[MAR]_TO_IR_PC++",
+            "INTERRUPT4",
+            "RST_MC"
+        ],
+        "branch": "null",
+        "description": "Trigger interrupt 4",
+        "microcodes-description": "\\\\( \\\\texttt{INTERRUPT4} \\\\)",
+        "depend-on-flag": "",
+        "min-cycles-number": "3",
+        "max-cycles-number": "3",
+        "total-microcodes-number": "3"
+    },
+    "HALT": {
+        "id": 235,
+        "name": "HALT",
+        "category": "Other Instructions",
+        "opcode": "0b11101100",
         "mnemonic": "HALT",
         "arguments": [],
         "microcodes": [

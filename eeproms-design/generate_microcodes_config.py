@@ -37,6 +37,7 @@ REG_MBR = Reg('MBR')
 REG_F = Reg('F')
 REG_INT  = Reg('INT')
 
+OUT_INTERRUPTS_NUMBER = 5
 
 class Microcode:
     _alu_lut = {
@@ -263,6 +264,10 @@ class Microcode:
     def int_data_out(self):
         self._signals['~INT_DATA_OUT'] = 0
         return self
+    
+    def intterrupt(self, i):
+        self._signals[f'INT_OUT_{i}'] = 1
+        return self
 
     def to_json(self):
         return self._signals
@@ -421,6 +426,9 @@ microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
 microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
 microcodes.add('LOAD_ISR_ADDRESS_TO_PC_AND_MAR').pc_in().mar_in().int_addr_out()
+
+for i in range(OUT_INTERRUPTS_NUMBER):
+    microcodes.add(f'INTERRUPT{i}').intterrupt(i)
 
 with open(out_path, 'w') as out_file:
     microcodes.to_file(out_file, pretty_print=True)

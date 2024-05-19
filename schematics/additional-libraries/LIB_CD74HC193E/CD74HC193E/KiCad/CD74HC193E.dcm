@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CD74HC193E
+D Counter Single 4-Bit Sync Binary UP/Down CD74HC193E, 4-stage Binary Counter Up/Down Counter, Bi-Directional, 2  6 V, 16-Pin PDIP
+K
+F http://www.ti.com/lit/ds/symlink/cd74hc192.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,16 @@
+.SN74AC245N :1 ;Octal Bus Transceivers With 3-State Outputs
+DIP794W53P254L2540H508Q20N
+*STM IC
+*NGS
+*PLB 1="DIR" 2="A1" 3="A2" 4="A3" 5="A4" 6="A5" 7="A6" 8="A7" 9="A8" 10="GND" 11="B8" 12="B7" 13="B6" 14="B5" 15="B4" 16="B3" 17="B2" 18="B1" 19="'OE'" 20="VCC"
+*MXP 20
+*DFN SN74AC245N
+~!Mouser Part Number (595-SN74AC245N)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74AC245N?qs=L5CvrNUdZiqC%2FBoZzkIB7Q%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (SN74AC245N)
+~!Link Datasheet (http://www.ti.com/lit/gpn/sn74ac245)
+~!Height (5.08mm)
+~!3D_Model (SN74AC245N)
+SN74AC245N
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 

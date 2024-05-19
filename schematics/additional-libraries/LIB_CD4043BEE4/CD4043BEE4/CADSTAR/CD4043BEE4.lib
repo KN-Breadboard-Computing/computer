@@ -1,0 +1,16 @@
+.CD4043BEE4 :1 ;Latch Transparent 3-ST 4-CH SR-Type 16-Pin PDIP Tube
+DIP794W53P254L1930H508Q16N
+*STM IC
+*NGS
+*PLB 1="Q4" 2="Q1" 3="R1" 4="S1" 5="ENABLE" 6="S2" 7="R2" 8="VSS" 9="Q2" 10="Q3" 11="R3" 12="S3" 13="NC" 14="S4" 15="R4" 16="VDD"
+*MXP 16
+*DFN CD4043BEE4
+~!Mouser Part Number (595-CD4043BEE4)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4043BEE4?qs=LSR%252BNeaw%2FwCLzQGHF2OlCw%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CD4043BEE4)
+~!Link Datasheet (https://www.arrow.com/en/products/cd4043bee4/texas-instruments)
+~!Height (5.08mm)
+~!3D_Model (CD4043BEE4)
+CD4043BEE4
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 

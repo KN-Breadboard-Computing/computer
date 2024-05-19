@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 1825967-1
+#/191831/1369245/2.50/4/2/Switch
+DEF 1825967-1 S 0 30 Y Y 1 F N
+F0 "S" 1050 300 50 H V L CNN
+F1 "1825967-1" 1050 200 50 H V L CNN
+F2 "18259671" 1050 100 50 H I L CNN
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1308111-1_SWITCHES_CORE_PROGRAM_CATALOG&DocType=Catalog%20Section&DocLang=English&PartCntxt=1825967-1&DocFormat=pdf" 1050 0 50 H I L CNN
+F4 "Body Features: Case Color Black | Actuator Color Blue | Actuator Force 160 G | Actuator Force 5.64 OZ | Case Material Nylon | Actuator Material Nylon | Actuator Profile Extended | Cover Material PET Film | Product Orientation Vertical | Configuration Features: Switch Feedback Type Tactile | Configuration (Pole-Throw) Single Pole - Single Throw | Number of Actuators Single | Ganged With | Operating Function NO | Support Bracket Without | ESD Grounding Terminal Without | Contact Features: Contact Current Rati" 1050 -100 50 H I L CNN "Description"
+F5 "8.1" 1050 -200 50 H I L CNN "Height"
+F6 "506-1825967-1" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-PB/1825967-1?qs=bdENzIhz2rlNjNGb1k9l7A%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "TE Connectivity" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "1825967-1" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X COM_1 1 0 -100 200 R 50 50 0 0 P
+X COM_2 2 0 0 200 R 50 50 0 0 P
+X NO_1 3 1200 -100 200 L 50 50 0 0 P
+X NO_2 4 1200 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,16 @@
+.SN74HC574N :1 ;OCTAL EDGE-TRIGGERED D-TYPE FLIP-FLOPS WITH 3-STATE OUTPUTS
+DIP794W53P254L2540H508Q20N
+*STM IC
+*NGS
+*PLB 1="'OE'" 2="1D" 3="2D" 4="3D" 5="4D" 6="5D" 7="6D" 8="7D" 9="8D" 10="GND" 11="CLK" 12="8Q" 13="7Q" 14="6Q" 15="5Q" 16="4Q" 17="3Q" 18="2Q" 19="1Q" 20="VCC"
+*MXP 20
+*DFN SN74HC574N
+~!Mouser Part Number (595-SN74HC574N)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74HC574N?qs=7KMwW2o1%252BmTGh61cX6rAtQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (SN74HC574N)
+~!Link Datasheet (http://componentsearchengine.com/Datasheets/1/SN74HC574N.pdf)
+~!Height (5.08mm)
+~!3D_Model (SN74HC574N)
+SN74HC574N
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 

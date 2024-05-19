@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SN74HC574N
+D OCTAL EDGE-TRIGGERED D-TYPE FLIP-FLOPS WITH 3-STATE OUTPUTS
+K
+F http://componentsearchengine.com/Datasheets/1/SN74HC574N.pdf
+$ENDCMP
+#
+#End Doc Library

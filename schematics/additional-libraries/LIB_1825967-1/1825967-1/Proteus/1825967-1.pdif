@@ -1,0 +1,151 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "1825967-1"
+   (description "Body Features: Case Color Black | Actuator Color Blue | Actuator Force 160 G | Actuator Force 5.64 OZ | Case Material Nylon | Actuator Material Nylon | Actuator Profile Extended | Cover Material PET Film | Product Orientation Vertical | Configuration Features: Switch Feedback Type Tactile | Configuration (Pole-Throw) Single Pole - Single Throw | Number of Actuators Single | Ganged With | Operating Function NO | Support Bracket Without | ESD Grounding Terminal Without | Contact Features: Contact Current Rati")
+   (family "SWI")
+   (package "18259671")
+   (attribute "Datasheet Link" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1308111-1_SWITCHES_CORE_PROGRAM_CATALOG&DocType=Catalog%20Section&DocLang=English&PartCntxt=1825967-1&DocFormat=pdf")
+   (attribute "Geometry.Height" "8.1mm")
+   (attribute "Mouser Part Number" "506-1825967-1")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-PB/1825967-1?qs=bdENzIhz2rlNjNGb1k9l7A%3D%3D")
+   (attribute "Manufacturer_Name" "TE Connectivity")
+   (attribute "Manufacturer_Part_Number" "1825967-1")
+   (gate
+    (symbol "1825967-1")
+    (pin "COM_1" 1 PS)
+    (pin "COM_2" 2 PS)
+    (pin "NO_1" 3 PS)
+    (pin "NO_2" 4 PS)
+   )
+  )
+  (symbol "1825967-1"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1000 100) (pt 1000 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "18259671"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -0.75 6.25)
+      (pt 5.25 6.25)
+      (pt 5.25 0.25)
+      (pt -0.75 0.25)
+      (pt -0.75 6.25))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 1.5 0.25)
+      (pt 3 0.25)
+      (pt 3 0.25)
+      (pt 1.5 0.25)
+      (pt 1.5 0.25))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 1.5 6.25)
+      (pt 3 6.25)
+      (pt 3 6.25)
+      (pt 1.5 6.25)
+      (pt 1.5 6.25))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.6 -1.75)
+      (pt 6.25 -1.75)
+      (pt 6.25 8.25)
+      (pt -2.6 8.25)
+      (pt -2.6 -1.75))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 5.25 1.25)
+      (pt 5.25 1.25)
+      (pt 5.25 5)
+      (pt 5.25 5)
+      (pt 5.25 1.25))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -0.75 5.25)
+      (pt -0.75 5.25)
+      (pt -0.75 1.25)
+      (pt -0.75 1.25)
+      (pt -0.75 5.25))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.6 0)
+      (arc (pt -1.600 0.000) (pt -1.600 0.050) (pt -1.500 -0.050) (start 180.0) (sweep 180.0))
+      (pt -1.5 0)
+      (arc (pt -1.500 0.000) (pt -1.600 0.050) (pt -1.500 -0.050) (start 180.0) (sweep -.0))
+      (pt -1.6 0)
+      (arc (pt -1.600 0.000) (pt -1.600 0.050) (pt -1.500 -0.050) (start 180.0) (sweep 180.0))
+      (pt -1.5 0))))
+   (leg 1 (pt 0.000 0.000) (padstack 0))
+   (leg 2 (pt 0.000 6.500) (padstack 0))
+   (leg 3 (pt 4.500 0.000) (padstack 0))
+   (leg 4 (pt 4.500 6.500) (padstack 0))
+   (padstack 0
+    (hole 1)
+    (plated true)
+    (pad (layer TCOP) (round 1.500))
+    (pad (layer INNER) (round 1.500))
+    (pad (layer BCOP) (round 1.500))
+   )
+   (model "1825967-1.stp"
+    (euler 0 0 -90)
+    (offset 2.1500000953674316 3.140000104904175 3.6500000953674316)
+   )
+  )
+ )
+)

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'CD74HC193E'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "CD74HC193E" (!) = "", "DIP794W53P254L1930H508Q16N", "Dual-In-Line Packages", "595-CD74HC193E", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD74HC193E/?qs=YxwvVplHM%2FnIFxccYhgPNA%3D%3D", "Counter Single 4-Bit Sync Binary UP/Down CD74HC193E, 4-stage Binary Counter Up/Down Counter, Bi-Directional, 2  6 V, 16-Pin PDIP", "http://www.ti.com/lit/ds/symlink/cd74hc192.pdf", "5.08 mm"
+END_PART
+
+END.

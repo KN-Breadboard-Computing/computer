@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'AT28C64B_15PU'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Microchip", "AT28C64B-15PU" (!) = "", "DIP1556W56P254L3702H483Q28N", "Dual-In-Line Packages", "556-AT28C64B15PU", "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/AT28C64B-15PU?qs=2VKgqYuc3OvipbcAuBcLow%3D%3D", "AT28C64B-15PU, Parallel EEPROM Memory 64kbit, Parallel, 150ns 4.5  5.5 V, 28-Pin PDIP", "http://www.atmel.com/images/doc0270.pdf", "4.826 mm"
+END_PART
+
+END.

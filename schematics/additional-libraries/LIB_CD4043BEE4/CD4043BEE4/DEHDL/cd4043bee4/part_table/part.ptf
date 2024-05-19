@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'CD4043BEE4'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "CD4043BEE4" (!) = "", "DIP794W53P254L1930H508Q16N", "Dual-In-Line Packages", "595-CD4043BEE4", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4043BEE4?qs=LSR%252BNeaw%2FwCLzQGHF2OlCw%3D%3D", "Latch Transparent 3-ST 4-CH SR-Type 16-Pin PDIP Tube", "https://www.arrow.com/en/products/cd4043bee4/texas-instruments", "5.08 mm"
+END_PART
+
+END.

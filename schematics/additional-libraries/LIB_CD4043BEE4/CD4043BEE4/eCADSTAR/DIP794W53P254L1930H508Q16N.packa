@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "CD4043BEE4"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-04-28-05:55:41)
+    (mountForm default
+        (footprintRef "DIP794W53P254L1930H508Q16N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,16 @@
+.CD74HC193E :1 ;Counter Single 4-Bit Sync Binary UP/Down CD74HC193E, 4-stage Binary Counter Up/Down Counter, Bi-Directional, 2  6 V, 16-Pin PDIP
+DIP794W53P254L1930H508Q16N
+*STM IC
+*NGS
+*PLB 1="P1" 2="Q1" 3="Q0" 4="CPD" 5="CPU" 6="Q2" 7="Q3" 8="GND" 9="P3" 10="P2" 11="'PL'" 12="TCU" 13="TCD" 14="MR" 15="P0" 16="VCC"
+*MXP 16
+*DFN CD74HC193E
+~!Mouser Part Number (595-CD74HC193E)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD74HC193E/?qs=YxwvVplHM%2FnIFxccYhgPNA%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CD74HC193E)
+~!Link Datasheet (http://www.ti.com/lit/ds/symlink/cd74hc192.pdf)
+~!Height (5.08mm)
+~!3D_Model (CD74HC193E)
+CD74HC193E
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 

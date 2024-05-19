@@ -1,0 +1,16 @@
+.CD74HC04E :1 ;High Speed CMOS Logic Hex Inverters
+DIP794W53P254L1930H508Q14N
+*STM IC
+*NGS
+*PLB 1="1A" 2="'1Y'" 3="2A" 4="'2Y'" 5="3A" 6="'3Y'" 7="GND" 8="'4Y'" 9="4A" 10="'5Y'" 11="5A" 12="'6Y'" 13="6A" 14="VCC"
+*MXP 14
+*DFN CD74HC04E
+~!Mouser Part Number (595-CD74HC04E)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD74HC04E?qs=st7IWvlL5%2FgJ10Ud3pnBSA%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CD74HC04E)
+~!Link Datasheet (http://www.ti.com/lit/ds/symlink/cd74hc04.pdf)
+~!Height (5.08mm)
+~!3D_Model (CD74HC04E)
+CD74HC04E
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 8.1!U 

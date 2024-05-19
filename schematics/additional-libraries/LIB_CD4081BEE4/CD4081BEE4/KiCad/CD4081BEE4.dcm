@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CD4081BEE4
+D AND Gate Quad 2-IN CMOS 14-Pin PDIP
+K
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-SFU2/DSASFU100028830.pdf
+$ENDCMP
+#
+#End Doc Library

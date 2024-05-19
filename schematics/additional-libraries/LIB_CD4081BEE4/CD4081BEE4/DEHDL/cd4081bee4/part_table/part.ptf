@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'CD4081BEE4'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "CD4081BEE4" (!) = "", "DIP794W53P254L1930H508Q14N", "Dual-In-Line Packages", "595-CD4081BEE4", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4081BEE4?qs=HTr%252BoA4jRiloxIEWd2QErQ%3D%3D", "AND Gate Quad 2-IN CMOS 14-Pin PDIP", "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-SFU2/DSASFU100028830.pdf", "5.08 mm"
+END_PART
+
+END.

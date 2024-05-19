@@ -1,0 +1,9 @@
+Manufacturer=TE Connectivity
+PartNumber=1825967-1
+PartCategory=Switch
+PackageCategory=Other
+PinCount=4
+Version=3.4
+Released=2020-06-02 11:47:42
+Downloaded=2024-04-23 11:23:39
+3D=Y

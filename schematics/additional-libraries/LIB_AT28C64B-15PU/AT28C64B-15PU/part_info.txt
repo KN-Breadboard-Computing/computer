@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=AT28C64B-15PU
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=28
+Version=2.1
+Released=2015-09-17 10:56:35
+Downloaded=2024-04-09 22:24:59
+3D=Y

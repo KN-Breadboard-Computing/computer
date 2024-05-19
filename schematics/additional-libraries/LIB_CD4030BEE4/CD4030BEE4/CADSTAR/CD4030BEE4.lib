@@ -1,0 +1,16 @@
+.CD4030BEE4 :1 ;Logic Gates Quad Exclusive
+DIP794W53P254L1930H508Q14N
+*STM IC
+*NGS
+*PLB 1="A" 2="B" 3="J=A+B" 4="K=C+D" 5="C" 6="D" 7="VSS" 8="E" 9="F" 10="L=E+F" 11="M=G+H" 12="G" 13="H" 14="VDD"
+*MXP 14
+*DFN CD4030BEE4
+~!Mouser Part Number (595-CD4030BEE4)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CD4030BEE4?qs=HTr%252BoA4jRimUi4oK1XWqng%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (CD4030BEE4)
+~!Link Datasheet (https://www.ti.com/lit/gpn/CD4030B)
+~!Height (5.08mm)
+~!3D_Model (CD4030BEE4)
+CD4030BEE4
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 8.1!U 

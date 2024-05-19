@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=CD4081BEE4
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=14
+Version=2.1
+Released=2016-03-31 03:07:37
+Downloaded=2024-04-09 17:17:02
+3D=Y

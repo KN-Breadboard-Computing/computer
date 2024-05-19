@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=CD4030BEE4
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=14
+Version=1.1
+Released=2021-05-01 08:02:48
+Downloaded=2024-04-09 17:14:20
+3D=Y

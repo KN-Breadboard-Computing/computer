@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SN74HC574N'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "SN74HC574N" (!) = "", "DIP794W53P254L2540H508Q20N", "Dual-In-Line Packages", "595-SN74HC574N", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74HC574N?qs=7KMwW2o1%252BmTGh61cX6rAtQ%3D%3D", "OCTAL EDGE-TRIGGERED D-TYPE FLIP-FLOPS WITH 3-STATE OUTPUTS", "http://componentsearchengine.com/Datasheets/1/SN74HC574N.pdf", "5.08 mm"
+END_PART
+
+END.

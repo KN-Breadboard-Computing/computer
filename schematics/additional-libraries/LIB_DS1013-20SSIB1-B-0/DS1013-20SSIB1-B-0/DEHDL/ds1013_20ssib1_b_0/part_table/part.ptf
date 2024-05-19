@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'DS1013_20SSIB1_B_0'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "TME_ELECTRONIC_COMPONENTS_PART_NUMBER", "TME_ELECTRONIC_COMPONENTS_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Connfly", "DS1013-20SSIB1-B-0" (!) = "", "SHDR20W69P254X254_2X10_3300X910X955P", "Header, Shrouded - Straight PTH Box", "", "", "Socket; IDC; male; PIN: 20; straight; THT; gold-plated; 2.54mm", "https://www.tme.eu/Document/e9117e1c80532ff2c20cc520b4694ed9/DS1013.pdf", "9.55 mm"
+END_PART
+
+END.

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SN74AC245N"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-10-28-08:08:15)
+    (mountForm default
+        (footprintRef "DIP794W53P254L2540H508Q20N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=SN74HC151N
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=16
+Version=1.1
+Released=2020-12-01 04:10:05
+Downloaded=2024-04-09 18:04:23
+3D=Y

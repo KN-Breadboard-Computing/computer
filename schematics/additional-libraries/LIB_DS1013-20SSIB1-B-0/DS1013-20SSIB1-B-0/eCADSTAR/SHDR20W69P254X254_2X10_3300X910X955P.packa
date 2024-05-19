@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "DS1013-20SSIB1-B-0"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-01-22-05:00:04)
+    (mountForm default
+        (footprintRef "SHDR20W69P254X254_2X10_3300X910X955P")
+        (spec "System")
+    )
+)

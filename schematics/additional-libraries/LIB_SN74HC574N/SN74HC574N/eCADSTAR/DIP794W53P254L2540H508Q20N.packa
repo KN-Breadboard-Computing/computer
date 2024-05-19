@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SN74HC574N"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-09-26-14:55:55)
+    (mountForm default
+        (footprintRef "DIP794W53P254L2540H508Q20N")
+        (spec "System")
+    )
+)

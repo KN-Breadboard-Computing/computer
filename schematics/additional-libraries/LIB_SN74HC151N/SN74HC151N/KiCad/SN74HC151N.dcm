@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SN74HC151N
+D Encoders, Decoders, Multiplexers & Demultiplexers 8-1 Line Data Selctr
+K
+F https://www.ti.com/lit/gpn/SN74HC151
+$ENDCMP
+#
+#End Doc Library

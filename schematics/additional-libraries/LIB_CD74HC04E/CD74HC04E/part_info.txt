@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=CD74HC04E
+PartCategory=Integrated Circuit
+PackageCategory=Dual-In-Line Packages
+PinCount=14
+Version=3.1
+Released=2016-04-13 09:09:43
+Downloaded=2024-04-09 17:17:55
+3D=Y

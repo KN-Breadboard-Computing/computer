@@ -163,6 +163,8 @@ auto main() -> int {
 
     rlImGuiSetup(true);
 
+    size_t gpu_frame = 0;
+
     while (!WindowShouldClose()) {
         // handle_input(keyboard);
         
@@ -191,6 +193,32 @@ auto main() -> int {
             gpu.eval();
         }
 
+        if (IsKeyReleased(KEY_P)) {
+            static char message[] = "Hello, KN\0Breadboard Computing! This is a text for testing our text-mode card...";
+
+            gpu.interrupt_enable = 0;
+            gpu.eval();
+
+            for (size_t i = 0; i < sizeof(message) - 1; i++) {
+                gpu.interrupt_data_in = message[i];
+                gpu.interrupt_enable = 1;
+                gpu.interrupt_code_in = 0;
+                gpu.eval();
+                gpu.interrupt_enable = 0;
+                gpu.eval();
+
+                unsigned char color = (((((i % 3) + 1) & 0x0F) << 4) | ((i & 1) << 2)) & 0xFF;
+
+                gpu.interrupt_data_in = color;
+                gpu.interrupt_enable = 1;
+                gpu.eval();
+                gpu.interrupt_enable = 0;
+                gpu.eval();
+            }
+
+            puts("[sim] Sent debug message");
+        }
+
         if (IsKeyReleased(KEY_SPACE)) {
             for (int i = 0; i < 800 * 525; i++) {
                 clock_scheduler.advance();
@@ -205,6 +233,7 @@ auto main() -> int {
                 h_counter = (h_counter + 1) % 800;
                 v_counter = (v_counter + (h_counter == 0)) % 525;
             }
+            gpu_frame++;
         }
 
         UpdateTexture(texture, pixels.data());
@@ -215,7 +244,8 @@ auto main() -> int {
 
         rlImGuiBegin();
         ImGui::Begin("Hello, world!");
-        ImGui::Text("This is some useful text.");
+        //ImGui::Text("This is some useful text.");
+        ImGui::Text("Frame: %lu", gpu_frame);
         ImGui::End();
         rlImGuiEnd();
 

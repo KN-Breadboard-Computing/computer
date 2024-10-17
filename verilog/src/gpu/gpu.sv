@@ -17,6 +17,7 @@
 
 module gpu(
     input wire clk,
+    input wire rst, // active low
     input wire [1:0] interrupt_code_in,
     input wire [7:0] interrupt_data_in,
     input wire interrupt_enable,
@@ -25,18 +26,36 @@ module gpu(
     output reg [7:0] blue_out
 );
 
+// verilator lint_off MULTIDRIVEN
+// NOTE: interrupts during reset will result in undefined behaivour
+reg active_buf;
+
+/* verilator lint_off UNDRIVEN */
 // NOTE: The order of array sizes might need to be reversed
 // NOTE: The array is 2D because we need to store two buffers
 //       - one active, one inactive
 reg [7:0] glyph_buffers [0:`TEXT_MODE_WIDTH * `TEXT_MODE_HEIGHT - 1][0:1];
 reg [7:0] color_buffers [0:`DISPLAY_WIDTH * `DISPLAY_HEIGHT - 1][0:1];
-reg active_buf;
+/* verilator lint_on UNDRIVEN */
+
+// Characters are just glyph indices
+// Shades are 2 packed color palette indices
+//  |-- lower nibble (bits 3:0) - background color
+//  `-- higher niggle (bits 7:4) - foreground color
+// `chars` and `shades` together make a text bufffer
+reg [7:0] text [0:(2 * `TEXT_MODE_WIDTH * `TEXT_MODE_HEIGHT) - 1][0:1];
+
+// Glyph data
+reg [7:0] glyphs [0:`GLYPH_COUNT * `GLYPH_HEIGHT * (`GLYPH_WIDTH / 8) - 1];
+// Color palette
+reg [7:0] palette [0:47];
+
 
 // NOTE: glyph_data[glyph_number + x%8 + (y%8 * 8)] = 1 <=> FG color
 //       glyph_data[glyph_number + x%8 + (y%8 * 8)] = 0 <=> BG color
 reg [7:0] glyph_data [0:(`GLYPH_COUNT * `GLYPH_WIDTH * `GLYPH_HEIGHT) / 8 - 1];
 
-reg [6:0] text_mode_cursor_x; // [0,TEXT_MODE_WIDTH - 1]
+reg [7:0] text_mode_cursor_x; // [0,TEXT_MODE_WIDTH - 1]
 reg [5:0] text_mode_cursor_y; // [0,TEXT_MODE_HEIGHT - 1]
 
 reg [9:0] h_counter_val;
@@ -50,19 +69,25 @@ wire [18:0] pixel;
 wire shift_reg_load;
 reg [7:0] shift_reg_in;
 wire shift_reg_out;
+
+reg [3:0] bg_color_idx;
+reg [3:0] fg_color_idx;
+
 //wire shift_reg_enable;
 wire visible_area;
 wire load_pixel;
+wire load_color;
 
 //assign shift_reg_enable = h_counter_val < `DISPLAY_WIDTH && v_counter_val < `DISPLAY_HEIGHT;
 //assign shift_reg_clk = clk & v_counter_val < `DISPLAY_HEIGHT;
 assign visible_area = pixel_x < `DISPLAY_WIDTH && pixel_y < `DISPLAY_HEIGHT;
-assign load_pixel = visible_area && ((pixel_x & 7) == 7);
-assign shift_reg_load = (visible_area && ((pixel_x & 7) == 7)) || v_counter_clk;
+assign load_pixel = visible_area && ((pixel_x & 7) == 0);
+assign load_color = visible_area && ((pixel_x & 7) == 7);
+assign shift_reg_load = (visible_area && ((pixel_x & 7) == 0) & clk) || ~rst;
 
-assign red_out = shift_reg_out ? 255 : 0;
-assign blue_out = shift_reg_out ? 255 : 0;
-assign green_out = shift_reg_out ? 255 : 0;
+assign red_out = shift_reg_out ? palette[{ 2'h0, fg_color_idx }] : palette[{ 2'h0, bg_color_idx }];
+assign blue_out = shift_reg_out ? palette[{ 2'h1, fg_color_idx }] : palette[{ 2'h1, bg_color_idx }];
+assign green_out = shift_reg_out ? palette[{ 2'h2, fg_color_idx }] : palette[{ 2'h2, bg_color_idx }];
 
 shift_reg glyph_row(
     .clk(clk),
@@ -75,7 +100,8 @@ shift_reg glyph_row(
 modcounter #(.rst_value(799), .width(10)) h_counter (
     .clk(clk),
     .overflow(v_counter_clk),
-    .data_out(pixel_x)
+    .data_out(pixel_x),
+    .rst(rst)
 );
 
 wire v_counter_ov;
@@ -84,7 +110,8 @@ wire v_counter_ov;
 modcounter #(.rst_value(524), .width(10)) v_counter (
     .clk(v_counter_clk),
     .overflow(v_counter_ov),
-    .data_out(pixel_y)
+    .data_out(pixel_y),
+    .rst(rst)
 );
 /* verilator lint_on PINMISSING */
 
@@ -97,8 +124,30 @@ counter #(.width(19)) px_counter (
     .out(pixel)
 );
 
-always_ff @(posedge load_pixel || v_counter_clk) begin
-    shift_reg_in <= glyph_data[{glyph_buffers[pixel_x / 8 + (pixel_y / 8) * `TEXT_MODE_WIDTH][active_buf], pixel[2:0]}];
+// TODO: why this starts 8 (possibly less) pixels too late
+// TODO: stack says that always block should be clocked by one clock and then
+// ifed inside
+//always_ff @(posedge load_pixel or posedge v_counter_clk or posedge v_counter_ov) begin
+//    //shift_reg_in <= glyph_data[{glyph_buffers[pixel_x / 8 + (pixel_y / 8) * `TEXT_MODE_WIDTH][active_buf], pixel[2:0]}];
+//    // cx * 2 + cy * WIDTH * 2
+//    // tmp var just to debug
+//    logic [7:0] char = text[(pixel_x / 8) * 2 + (pixel_y / 8) * `TEXT_MODE_WIDTH * 2][active_buf];
+//    shift_reg_in <= glyphs[{ char, pixel_y[2:0] }];
+//end
+
+always_ff @(posedge ((pixel_x & 7) == 7) or negedge rst) begin
+    logic [7:0] char = text[((pixel_x + 1) / 8) * 2 + (pixel_y / 8) * `TEXT_MODE_WIDTH * 2][active_buf];
+    shift_reg_in <= glyphs[{ char, pixel_y[2:0] }];
+end
+
+always_ff @(posedge ((pixel_x & 7) == 0) or negedge rst) begin
+    logic [7:0] char_color = text[2 * (pixel_x / 8 + (pixel_y / 8) * `TEXT_MODE_WIDTH) + 1][active_buf];
+    bg_color_idx <= char_color[3:0];
+    fg_color_idx <= char_color[7:4];
+end
+
+always_ff @(negedge rst) begin
+    active_buf <= 0;
 end
 
 initial begin
@@ -113,13 +162,14 @@ initial begin
         $display("Error opening file");
         $finish;
     end
-    $fread(glyph_data, file);
+    //$fread(glyph_data, file);
+    $fread(glyphs, file);
 
     text_mode_cursor_x = 0;
     text_mode_cursor_y = 0;
-    active_buf = 0;
-    h_counter_val = 0;
-    v_counter_val = 0;
+
+    //h_counter_val = 0;
+    //v_counter_val = 0;
 end
 
 always_ff @(posedge interrupt_enable) begin
@@ -129,14 +179,15 @@ always_ff @(posedge interrupt_enable) begin
             $display("=====================================");
             $display("writing to buffer: ", 1 - active_buf);
             $display("cursor: %d %d", text_mode_cursor_x, text_mode_cursor_y);
-            $display("character: %d", interrupt_data_in);
+            $display("character: %d %hh", interrupt_data_in, interrupt_data_in);
             $display("=====================================");
-            glyph_buffers[text_mode_cursor_x + text_mode_cursor_y * `TEXT_MODE_WIDTH][1 - active_buf] <= interrupt_data_in;
+
+            text[text_mode_cursor_x + text_mode_cursor_y * `TEXT_MODE_WIDTH * 2][1 - active_buf] <= interrupt_data_in;
             text_mode_cursor_x <= text_mode_cursor_x + 1;
-            if ((text_mode_cursor_x + 1) == `TEXT_MODE_WIDTH) begin
+            if (text_mode_cursor_x == (2 * `TEXT_MODE_WIDTH) - 1) begin
                 text_mode_cursor_x <= 0;
                 text_mode_cursor_y <= text_mode_cursor_y + 1;
-                if ((text_mode_cursor_y + 1) == `TEXT_MODE_HEIGHT) begin
+                if (text_mode_cursor_y == (`TEXT_MODE_HEIGHT - 1)) begin
                     text_mode_cursor_y <= 0;
                 end
             end
@@ -144,7 +195,7 @@ always_ff @(posedge interrupt_enable) begin
         `SIG_MOVE_CURSOR:
         // depending on the MSB either move x or y
         if (interrupt_data_in[7]) begin
-           text_mode_cursor_x <= text_mode_cursor_x + interrupt_data_in[6:0];
+           text_mode_cursor_x <= text_mode_cursor_x + interrupt_data_in[7:0];
         end else begin
            text_mode_cursor_y <= text_mode_cursor_y + interrupt_data_in[5:0];
         end

@@ -151,7 +151,7 @@
                 1
             ]
         },
-        "~PC_RST": {
+        "PC_RST": {
             "type": "integer",
             "enum": [
                 0,
@@ -291,7 +291,7 @@
                 1
             ]
         },
-        "~MCC_RST": {
+        "MCC_RST": {
             "type": "integer",
             "enum": [
                 0,

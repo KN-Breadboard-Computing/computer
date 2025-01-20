@@ -85,7 +85,7 @@ class Microcode:
                 'REG_TMPH_DATA_DIR': 1,
                 'REG_TMPL_DATA_DIR': 1,
                 '~PC_LOAD': 1,
-                '~PC_RST': 1,
+                'PC_RST': 0,
                 'PC_TICK': 0,
                 '~PC_OUT': 1,
                 '~STC_LOAD': 1,
@@ -106,7 +106,7 @@ class Microcode:
                 'MEMORY_SELECTOR': 1,
                 'REG_IR_LOAD': 0,
                 'MCC_TICK': 1,
-                '~MCC_RST': 1,
+                'MCC_RST': 0,
                 'INT_OUT_0': 0,
                 'INT_OUT_1': 0,
                 'INT_OUT_2': 0,
@@ -128,7 +128,7 @@ class Microcode:
         return self 
 
     def mcc_rst(self):
-        self._signals['~MCC_RST'] = 0
+        self._signals['MCC_RST'] = 1
 
     def reg_to_bus(self, reg):
         assert reg in WORD_REGS or reg == REG_F or reg == REG_INT
@@ -267,6 +267,10 @@ class Microcode:
     
     def intterrupt(self, i):
         self._signals[f'INT_OUT_{i}'] = 1
+        return self
+    
+    def select_boot_memory(self):
+        self._signals['MEMORY_SELECTOR'] = 0
         return self
 
     def to_json(self):
@@ -414,6 +418,7 @@ microcodes.add('LOAD_PC_TO_TMP').tmp_addr_in().pc_out()
 microcodes.add('LOAD_PC_TO_TMP_SET_ISR_FLAG').tmp_addr_in().pc_out().rst_int_enable()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPL_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TL).mbr_in()
 microcodes.add('LOAD_MBR_TO_MEM[MAR]_STC--').stc_dec().mbr_to_mem(stack=True)
+microcodes.add('LOAD_MBR_TO_MEM[MAR]_PC++').pc_inc().mbr_to_mem()
 microcodes.add('LOAD_STC_TO_MAR_LOAD_TMPH_TO_MBR').stc_out().mar_in().reg_to_bus(REG_TH).mbr_in()
 microcodes.add('LOAD_STC_TO_MAR').stc_out().mar_in()
 microcodes.add('LOAD_MEM[MAR]_TO_TMPH_STC++').mem_to_bus(stack=True).reg_from_bus(REG_TH).stc_inc()
@@ -424,7 +429,8 @@ microcodes.add('LOAD_MEM[MAR]_TO_MBR').mem_to_mbr()
 microcodes.add('LOAD_MEM[MAR]_TO_MBR_STC++').mem_to_mbr(stack=True).stc_inc()
 microcodes.add('DO_NOTHING')
 microcodes.add('HALT').no_mcc_tick()
-microcodes.add('LOAD_DATA_FROM_BUS_TO_MAR_AND_MBR').mbr_in().mar_in()
+microcodes.add('GET_BOOT').pc_out().select_boot_memory()
+microcodes.add('LOAD_DATA_FROM_PC_AND_BOOT_TO_MAR_AND_MBR').select_boot_memory().pc_out().mbr_in().mar_in()
 microcodes.add('LOAD_ISR_ADDRESS_TO_PC_AND_MAR').pc_in().mar_in().int_addr_out()
 
 for i in range(OUT_INTERRUPTS_NUMBER):

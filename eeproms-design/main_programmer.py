@@ -7,6 +7,7 @@ from eeproms.config import Config
 from eeproms.identity_eeprom import IdentityEeprom
 from eeproms.alu_eeprom import AluLogicEeprom
 from eeproms.control_unit_eeproms import ControlUnitEeproms
+from eeproms.boot_eeprom import BootEeprom
 
 parser = ArgumentParser(description='Program the EEPROMs')
 parser.add_argument('--config-dir', default=Path(__file__).parent.parent / 'config',
@@ -27,6 +28,7 @@ config = Config(Path(args.config_dir), instructions_filename='instructions.json'
 identity_eeprom = IdentityEeprom()
 alu_logic_eeprom = AluLogicEeprom(config)
 control_logic_eeproms = ControlUnitEeproms(config)
+boot_eeprom = BootEeprom(config)
 
 try:
     os.system(f'sudo chmod a+rw {args.device_name}')
@@ -52,8 +54,12 @@ elif args.eeprom_label == 'decoderE':
     control_logic_eeproms.get_eeprom('E').send_to_serial(serial_device)
 elif args.eeprom_label == 'decoderF':
     control_logic_eeproms.get_eeprom('F').send_to_serial(serial_device)
+elif args.eeprom_label == 'decoderG':
+    control_logic_eeproms.get_eeprom('G').send_to_serial(serial_device)
+elif args.eeprom_label == 'boot':
+    boot_eeprom.send_to_serial(serial_device)
 else:
-    print("Enter EEPROM name:\n[identity / alu / decoderA / decoderB / decoderC / decoderD / decoderE / decoderF]")
+    print("Enter EEPROM name:\n[identity / alu / decoderA / decoderB / decoderC / decoderD / decoderE / decoderF /decoderG / boot]")
 
 serial_device.flushInput()
 serial_device.flushOutput()

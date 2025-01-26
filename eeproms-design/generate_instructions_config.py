@@ -662,12 +662,12 @@ for flag_index, flag in enumerate(FLAGS):
         if type == "":
             type_name = "address with given offset"
             target_instruction = "JMPREL"
-            arguments = ["MEM8"]
+            arguments = ["CONST"]
             branch = { "taken": "JMPREL", "not_taken": "SKIP1" }
         else:
             type_name = f"address with given offset from {MMB} {build_text('REG_TMPL')} {MME}"
             target_instruction = "JMPRELTL"
-            arguments = ["T"]
+            arguments = ["TL"]
             branch = { "taken": "JMPRELTL", "not_taken": "SKIP" }
 
         for condition in ["", "N"]:
@@ -691,7 +691,8 @@ for flag_index, flag in enumerate(FLAGS):
             instructions.add(name, category, mnemonic, arguments, microcodes, description, microcodes_description,
                                   flag=condition + flag, total_microcodes_number='6 or 3', branch=branch)
 
-name = f"{mnemonic}FUN"
+mnemonic = "JMPFUN"
+name = f"{mnemonic}"
 arguments = ["MEM16"]
 microcodes = [
     "LOAD_PC_TO_MAR",
@@ -713,7 +714,8 @@ microcodes_description = f"{MMB} {build_text('REG_TMP')} {LEFTARROW} {build_text
 
 instructions.add(name, category, mnemonic, arguments, microcodes, description, microcodes_description)
 
-name = f"{mnemonic}RET"
+mnemonic = "JMPRET"
+name = f"{mnemonic}"
 arguments = []
 microcodes = [
     "LOAD_PC_TO_MAR",

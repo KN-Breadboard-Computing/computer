@@ -4657,7 +4657,7 @@
         "opcode": "0b10111010",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4678,7 +4678,7 @@
         "opcode": "0b10111011",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4699,7 +4699,7 @@
         "opcode": "0b10111100",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4720,7 +4720,7 @@
         "opcode": "0b10111101",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4741,7 +4741,7 @@
         "opcode": "0b10111110",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4762,7 +4762,7 @@
         "opcode": "0b10111111",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4783,7 +4783,7 @@
         "opcode": "0b11000000",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4804,7 +4804,7 @@
         "opcode": "0b11000001",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4825,7 +4825,7 @@
         "opcode": "0b11000010",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4846,7 +4846,7 @@
         "opcode": "0b11000011",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4867,7 +4867,7 @@
         "opcode": "0b11000100",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4888,7 +4888,7 @@
         "opcode": "0b11000101",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4909,7 +4909,7 @@
         "opcode": "0b11000110",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4930,7 +4930,7 @@
         "opcode": "0b11000111",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4951,7 +4951,7 @@
         "opcode": "0b11001000",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4972,7 +4972,7 @@
         "opcode": "0b11001001",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -4993,7 +4993,7 @@
         "opcode": "0b11001010",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -5014,7 +5014,7 @@
         "opcode": "0b11001011",
         "mnemonic": "JMPREL",
         "arguments": [
-            "MEM8"
+            "CONST"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -5035,7 +5035,7 @@
         "opcode": "0b11001100",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -5056,7 +5056,7 @@
         "opcode": "0b11001101",
         "mnemonic": "JMPREL",
         "arguments": [
-            "T"
+            "TL"
         ],
         "microcodes": [
             "LOAD_PC_TO_MAR",
@@ -5070,12 +5070,12 @@
         "max-cycles-number": "6",
         "total-microcodes-number": "6 or 3"
     },
-    "JMPRELFUN": {
+    "JMPFUN": {
         "id": 205,
-        "name": "JMPRELFUN",
+        "name": "JMPFUN",
         "category": "Jump instructions",
         "opcode": "0b11001110",
-        "mnemonic": "JMPREL",
+        "mnemonic": "JMPFUN",
         "arguments": [
             "MEM16"
         ],
@@ -5102,12 +5102,12 @@
         "max-cycles-number": "12",
         "total-microcodes-number": "12"
     },
-    "JMPRELRET": {
+    "JMPRET": {
         "id": 206,
-        "name": "JMPRELRET",
+        "name": "JMPRET",
         "category": "Jump instructions",
         "opcode": "0b11001111",
-        "mnemonic": "JMPREL",
+        "mnemonic": "JMPRET",
         "arguments": [],
         "microcodes": [
             "LOAD_PC_TO_MAR",

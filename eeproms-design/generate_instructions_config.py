@@ -3,12 +3,12 @@ import json
 from argparse import ArgumentParser
 from pathlib import Path
 
-MMB = "\\\\("  # math mode begin symbol
-MME = "\\\\)"  # math mode end symbol
-TEXT = "\\\\texttt"  # text mode function name
-LEFTARROW = "\\\\leftarrow"  # left arrow symbol
-AND = "\\\\ \\\\& \\\\"  # and symbol
-SPACE = "\\\\ "  # space symbol
+MMB = "\\("  # math mode begin symbol
+MME = "\\)"  # math mode end symbol
+TEXT = "\\texttt"  # text mode function name
+LEFTARROW = "\\leftarrow"  # left arrow symbol
+AND = "\\ \\& \\"  # and symbol
+SPACE = "\\ "  # space symbol
 
 REGS8 = ["REG_A", "REG_B", "REG_TMPH", "REG_TMPL", "REG_F", "REG_INT"]  # names of 8bit registers
 REGS16 = ["REG_TMP"]  # names of 16bit registers

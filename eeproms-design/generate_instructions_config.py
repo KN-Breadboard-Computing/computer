@@ -175,7 +175,7 @@ for reg in ["REG_A", "REG_B"]:
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_IR_PC++",
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
         "LOAD_TMP_TO_MAR",
         f"LOAD_ZP_MEM[MAR]_TO_{REGS8ABR[reg]}",
         "RST_MC"
@@ -256,7 +256,7 @@ for reg in ["REG_A", "REG_B", "REG_INT"]:
         "LOAD_PC_TO_MAR",
         "LOAD_MEM[MAR]_TO_IR_PC++",
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_TMPH_PC++",
+        "LOAD_MEM[MAR]_TO_TMPL_PC++",
         f"LOAD_TMP_TO_MAR_{REGS8ABR[reg]}_TO_MBR",
         "LOAD_MBR_TO_ZP_MEM[MAR]",
         "RST_MC"
@@ -292,7 +292,7 @@ microcodes = [
     "LOAD_PC_TO_MAR",
     "LOAD_MEM[MAR]_TO_IR_PC++",
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_TMPH_PC++",
+    "LOAD_MEM[MAR]_TO_TMPL_PC++",
     "LOAD_PC_TO_MAR",
     "LOAD_MEM[MAR]_TO_MBR_PC++",
     "LOAD_TMP_TO_MAR",
@@ -444,7 +444,7 @@ for operation in OPERATIONS:
             elif destination[0] == "MEMZP":
                 microcodes_core = [
                     "LOAD_PC_TO_MAR",
-                    "LOAD_MEM[MAR]_TO_TMPH_PC++",
+                    "LOAD_MEM[MAR]_TO_TMPL_PC++",
                     "LOAD_TMP_TO_MAR",
                     f"MOV_{operation[0]}{''.join(args_abr)}_TO_MBR_SAVE_FLAGS",
                     "LOAD_MBR_TO_ZP_MEM[MAR]",
@@ -761,11 +761,11 @@ name = f"{mnemonic}"
 arguments = []
 microcodes = [
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_IR_PC++",
+    "LOAD_MEM[MAR]_TO_IR_PC++_STC++",
     "LOAD_STC_TO_MAR",
     "LOAD_MEM[MAR]_TO_TMPH_STC++",
     "LOAD_STC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_TMPL_STC++",
+    "LOAD_MEM[MAR]_TO_TMPL",
     "LOAD_TMP_TO_PC",
     "PC++",
     "RST_MC"
@@ -856,7 +856,7 @@ microcodes = [
     "LOAD_PC_TO_MAR",
     "LOAD_MEM[MAR]_TO_TMPL_PC++",
     "LOAD_TMP_TO_MAR",
-    "LOAD_MEM[MAR]_TO_MBR",
+    "LOAD_ZP_MEM[MAR]_TO_MBR",
     "LOAD_STC_TO_MAR",
     "LOAD_MBR_TO_MEM[MAR]_STC--",
     "RST_MC"
@@ -877,9 +877,9 @@ for reg in REGS8:
     arguments = [REGS8ABR[reg]]
     microcodes = [
         "LOAD_PC_TO_MAR",
-        "LOAD_MEM[MAR]_TO_IR_PC++",
+        "LOAD_MEM[MAR]_TO_IR_PC++_STC++",
         "LOAD_STC_TO_MAR",
-        f"LOAD_MEM[MAR]_TO_{REGS8ABR[reg]}_STC++",
+        f"LOAD_MEM[MAR]_TO_{REGS8ABR[reg]}",
         "RST_MC"
     ]
     description = f"Pop value from stack to {MMB} {build_text(reg)} {MME}"
@@ -892,11 +892,11 @@ name = f"{mnemonic}{REGS16ABR[reg]}"
 arguments = [REGS16ABR[reg]]
 microcodes = [
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_IR_PC++",
+    "LOAD_MEM[MAR]_TO_IR_PC++_STC++",
     "LOAD_STC_TO_MAR",
     f"LOAD_MEM[MAR]_TO_{REGS8ABR['REG_TMPL']}_STC++",
     "LOAD_STC_TO_MAR",
-    f"LOAD_MEM[MAR]_TO_{REGS8ABR['REG_TMPH']}_STC++",
+    f"LOAD_MEM[MAR]_TO_{REGS8ABR['REG_TMPH']}",
     "RST_MC"
 ]
 description = f"Pop value from stack to {MMB} {build_text(reg)} {MME}"
@@ -912,9 +912,9 @@ microcodes = [
     "LOAD_PC_TO_MAR",
     "LOAD_MEM[MAR]_TO_TMPH_PC++",
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_TMPL_PC++",
+    "LOAD_MEM[MAR]_TO_TMPL_PC++_STC++",
     "LOAD_STC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_MBR_STC++",
+    "LOAD_MEM[MAR]_TO_MBR",
     "LOAD_TMP_TO_MAR",
     "LOAD_MBR_TO_MEM[MAR]",
     "RST_MC"
@@ -930,9 +930,9 @@ microcodes = [
     "LOAD_PC_TO_MAR",
     "LOAD_MEM[MAR]_TO_IR_PC++",
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_TMPL_PC++",
+    "LOAD_MEM[MAR]_TO_TMPL_PC++_STC++",
     "LOAD_STC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_MBR_STC++",
+    "LOAD_MEM[MAR]_TO_MBR",
     "LOAD_TMP_TO_MAR",
     "LOAD_MBR_TO_ZP_MEM[MAR]",
     "RST_MC"
@@ -1028,11 +1028,11 @@ mnemonic = "IRET"
 arguments = []
 microcodes = [
     "LOAD_PC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_IR_PC++",
+    "LOAD_MEM[MAR]_TO_IR_PC++_STC++",
     "LOAD_STC_TO_MAR",
     "LOAD_MEM[MAR]_TO_TMPH_STC++",
     "LOAD_STC_TO_MAR",
-    "LOAD_MEM[MAR]_TO_TMPL_STC++",
+    "LOAD_MEM[MAR]_TO_TMPL",
     "LOAD_TMP_TO_PC",
     "PC++_RESET_ISR_FLAG",
     "RST_MC"
